@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 /* nav */
 
 .navbar-brand {
@@ -17,7 +22,7 @@
 footer {
     background-color: #2B4570;
     color: white;
-    position: fixed;
+    height: 75px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -25,8 +30,9 @@ footer {
 }
 
 footer>p {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 110%;
+    padding-top: 25px;
 }
 
 /* Cards */
@@ -59,4 +65,11 @@ nav {
 
 #card3 {
     border: 5px solid #A37A74;
+}
+
+/* i frame */
+
+.address {
+    text-align: center;
+    margin-top: 20px;
 }
