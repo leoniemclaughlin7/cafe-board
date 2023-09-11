@@ -32,8 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://cafe-board-0e3b1578d9eb.herokuapp.com/',
-                 '8001-leoniemclaughlin7-cafe-b-dkzz4nf47q.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['cafe-board-0e3b1578d9eb.herokuapp.com',
+                 '8000-leoniemclaughlin7-cafe-b-dkzz4nf47q.us2.codeanyapp.com']
 
 
 # Application definition
