@@ -46,9 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'cloudinary',
-    'booking',
+    'review',
 ]
+
+CRISPY_TEMPLLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block content %}
+{% load crispy_forms_tags %}
 
 <section class="container about">
   <div class="row">
@@ -56,6 +57,16 @@
             <h3><strong>ADDRESS:</strong></h3>
             <p>Cafe-Board,<br>Donegal street,<br>Dublin</p>
             <iframe src="https://bit.ly/2QVfkiy" height="300" width="100%"></iframe>
+        </div>
+    
+        <div class="col-sm-8 review">
+            <h3><strong>REVIEWS:</strong></h3>
+                <h3>Leave a Review:</h3>
+                <form method="post" style="margin-top: 1.3em">
+                    {{ review_form | crispy }} {% csrf_token %}
+                    <button type="submit" class="btn btn-lg">Submit</button>
+                </form>
+                </div>
         </div>
     </div>
 </section>

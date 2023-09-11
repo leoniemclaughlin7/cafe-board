@@ -73,3 +73,14 @@ nav {
     text-align: center;
     margin-top: 20px;
 }
+
+/* Review */
+
+.review {
+    margin-top: 20px;
+}
+
+.review button {
+    background-color: #2B4570;
+    color: white;
+}
