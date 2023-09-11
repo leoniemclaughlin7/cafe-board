@@ -1,0 +1,29 @@
+/* nav */
+
+.navbar-brand {
+    margin-left: 20px;
+    font-size: 220%;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: white;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: black;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer>p {
+    margin-top: 20px;
+    font-size: 110%;
+}
