@@ -1,7 +1,7 @@
-from review.views import leave_review
+from . import views
 from django.urls import path
 
 
 urlpatterns = [
-    path('', leave_review, name='home'),
+    path('', views.review, name='review'),
 ]
