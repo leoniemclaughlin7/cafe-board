@@ -69,13 +69,15 @@
 
                 <div class="col-sm-4 reviews">
                 <h3>Reviews:</h3>
-                <div class="card-body">
+                <div class="card-body"> 
                     {% for review in reviews %}
                     <div>
                         <p>
                             <strong>{{ review.name }}</strong>
                             <span>
+                                
                                 {{ review.created_on }}
+                                
                             </span>
                             <span>{{review.stars}}<i class="fas fa-star" style="color: #f9e406;"></i></span>
                         </p>
