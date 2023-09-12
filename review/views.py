@@ -13,6 +13,7 @@ def review(request):
 
         if review_form.is_valid():
             review_form.save()
+            review_form = ReviewForm()
     else:
         review_form = ReviewForm()
 

@@ -61,7 +61,8 @@
     
         <div class="col-sm-4 review">
                 <h3>Leave a Review:</h3>
-                <form method="post" ew' %}" {% url 'review' %}g style="margin-top: 1.3em" autocomplete="off"                    {{ review_form | crispy }} {% csrf_token %}
+                <form method="post" action="{% url 'review' %}" style="margin-top: 1.3em;">
+                    {{ review_form | crispy }} {% csrf_token %}
                     <button type="submit" class="btn btn-lg">Submit</button>
                 </form>
                 </div>
@@ -90,6 +91,5 @@
                 </div>
                 </div>
         </div>
-    </div>
 </section>
 {%endblock%}
