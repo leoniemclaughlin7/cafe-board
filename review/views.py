@@ -17,4 +17,5 @@ def review(request):
     else:
         review_form = ReviewForm()
 
-    return render(request, 'index.html', {'review_form': review_form, 'reviews': reviews})
+    return render(request, 'index.html', {'review_form': review_form,
+                                          'reviews': reviews})

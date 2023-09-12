@@ -59,7 +59,7 @@
             <iframe src="https://bit.ly/2QVfkiy" height="300" width="100%"></iframe>
         </div>
     
-        <div class="col-sm-4 review">
+        <div class="col-sm-4 submit-review">
                 <h3>Leave a Review:</h3>
                 <form method="post" action="{% url 'review' %}" style="margin-top: 1.3em;">
                     {{ review_form | crispy }} {% csrf_token %}
@@ -67,26 +67,20 @@
                 </form>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-4 reviews">
                 <h3>Reviews:</h3>
                 <div class="card-body">
-                    <!-- We want a for loop inside the tags to iterate through each comment in comments -->
                     {% for review in reviews %}
-                    <div class="comments" style="padding: 10px">
-                        <p class="font-weight-bold">
-                            <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                            {{ review.name }}
-                            <span class="text-muted font-weight-normal">
-                                <!-- The comment's created date goes here -->
+                    <div>
+                        <p>
+                            <strong>{{ review.name }}</strong>
+                            <span>
                                 {{ review.created_on }}
                             </span>
-                            wrote:
+                            <span>{{review.stars}}<i class="fas fa-star" style="color: #f9e406;"></i></span>
                         </p>
-                        
-                        <!-- The body of the comment goes before the | -->
                         {{ review.body | linebreaks }}
                     </div>
-                    <!-- Our for loop ends here -->
                     {% endfor %}
                 </div>
                 </div>

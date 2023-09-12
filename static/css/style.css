@@ -76,11 +76,17 @@ nav {
 
 /* Review */
 
-.review {
+.submit-review {
     margin-top: 20px;
+    text-align: center;
 }
 
 .review button {
     background-color: #2B4570;
     color: white;
+}
+
+.reviews {
+    margin-top: 20px;
+    text-align: center;
 }
