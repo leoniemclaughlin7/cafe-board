@@ -105,7 +105,8 @@ nav {
 /* Sign up/sign out */
 
 .sign-up-btn,
-.sign-out-btn {
+.sign-out-btn,
+.sign-in-btn {
     background-color: #2B4570;
     border-radius: 5px;
     color: white;
