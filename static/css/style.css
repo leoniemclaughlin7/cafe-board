@@ -102,9 +102,10 @@ nav {
     height: 150px;
 }
 
-/* Sign up */
+/* Sign up/sign out */
 
-.sign-up-btn {
+.sign-up-btn,
+.sign-out-btn {
     background-color: #2B4570;
     border-radius: 5px;
     color: white;
