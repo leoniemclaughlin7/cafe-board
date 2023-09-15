@@ -105,3 +105,15 @@ nav {
 .card-body {
     height: 150px;
 }
+
+/* Sign up */
+
+.sign-up-btn {
+    background-color: #2B4570;
+    border-radius: 5px;
+    color: white;
+}
+
+.link {
+    color: #2B4570;
+}
