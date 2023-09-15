@@ -58,7 +58,7 @@
             <p>Cafe-Board,<br>Donegal street,<br>Dublin</p>
             <iframe src="https://bit.ly/2QVfkiy" height="300" width="100%"></iframe>
         </div>
-    
+        {% if user.is_authenticated %}
         <div class="col-sm-4 submit-review">
                 <h3>Leave a Review:</h3>
                 <form method="post" action="{% url 'review' %}" style="margin-top: 1.3em;">
@@ -66,6 +66,13 @@
                     <button type="submit" class="btn btn-lg">Submit</button>
                 </form>
                 </div>
+                {% else %}
+                <div class="col-sm-4">
+                    <div class="col d-flex justify-content-center">
+                        <img class="logo" src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694797798/yfx7pvjje62dvikwigec.png" alt="cafe-board logo">
+                    </div>
+                </div>
+                {% endif %}
 
                 <div class="col-sm-4 reviews">
                 <h3>Reviews:</h3>
