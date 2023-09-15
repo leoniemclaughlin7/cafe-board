@@ -18,19 +18,15 @@
 
 
 /* Footer */
+/* https: //stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page */
 
 footer {
     background-color: #2B4570;
     color: white;
-    height: 75px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     text-align: center;
 }
 
 footer>p {
-    margin-top: 40px;
     font-size: 110%;
     padding-top: 25px;
 }
@@ -116,4 +112,8 @@ nav {
 
 .link {
     color: #2B4570;
+}
+
+.address-reviews-position {
+    padding-bottom: 25px;
 }
