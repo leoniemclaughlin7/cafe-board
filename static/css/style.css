@@ -63,6 +63,18 @@ nav {
     border: 5px solid #A37A74;
 }
 
+.color1 {
+    background-color: #7180AC;
+}
+
+.color2 {
+    background-color: #E49273;
+}
+
+.color3 {
+    background-color: #A37A74;
+}
+
 /* i frame */
 
 .address {
@@ -135,4 +147,36 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     border-radius: 50%;
     border: 5px solid #E49273;
     margin-top: 75px;
+}
+
+.menu-card {
+    height: auto;
+    font-size: 110%;
+}
+
+/*https://picjumbo.com/roasted-coffee-beans/*/
+#coffee-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #E49273;
+    margin-top: 5px;
+}
+
+/*https://centreforhealthyaging.org/wp-content/uploads/2014/03/loose-tea-vs-teabag.jpg*/
+#tea-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #A37A74;
+    margin-top: 5px;
+}
+
+/*https://www.marmiton.org/recettes/recette_pains-au-chocolat_29672.aspx*/
+#snack-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #7180AC;
+    margin-top: 5px;
 }
