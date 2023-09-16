@@ -12,6 +12,7 @@ def review(request):
         review_form = ReviewForm(request.POST)
 
         if review_form.is_valid():
+            review_form.instance.name = request.user.username
             review_form.save()
             review_form = ReviewForm()
     else:
