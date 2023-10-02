@@ -3,17 +3,18 @@ from .forms import CustomerBookingForm
 
 # Create your views here.
 
+
 def customer_booking(request):
     if request.method == 'POST':
-        form = CustomerBookingForm(request.POST)
-        if form.is_valid():
-
+        customer_booking_form = CustomerBookingForm(request.POST)
+        # if form.is_valid():
+        #     form.save()
 
     else:
-        form = CustomerBookingForm()
+        customer_booking_form = CustomerBookingForm()
 
     context = {
-        'form': form,
+        'form': customer_booking_form,
     }
 
     return render(request, 'booking.html', context)
