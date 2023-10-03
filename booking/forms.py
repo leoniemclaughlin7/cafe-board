@@ -14,6 +14,3 @@ class BookingForm(forms.ModelForm):
         fields = ('booking_date', 'booking_time', 'number_attending')
 
 
-class CustomerBookingForm(forms.Form):
-    customer_form = CustomerForm()
-    booking_form = BookingForm()

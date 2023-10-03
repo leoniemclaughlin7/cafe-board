@@ -21,5 +21,6 @@ def review(request):
     return render(request, 'index.html', {'review_form': review_form,
                                           'reviews': reviews})
 
+
 def menu(request):
     return render(request, 'menu.html')

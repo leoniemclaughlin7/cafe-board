@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %} {% load crispy_forms_tags %}
 
 <form method="post" style="margin-top: 1.3em">
-  {{ form.customer_form | crispy }} {{ form.booking_form | crispy }}
+  {{ customer_form | crispy }} {{ booking_form | crispy }}
   {%csrf_token %}
   <button type="submit" class="btn btn-lg review-submit">Submit</button>
 </form>
