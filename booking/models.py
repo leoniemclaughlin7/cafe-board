@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -10,9 +11,10 @@ class Customer(models.Model):
     last_name = models.CharField(max_length=80)
     email = models.EmailField()
     phone_number = models.CharField(max_length=20)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"Customer {self.first_name + ' ' + self.last_name}"
+        return f"{self.user}"
 
 
 class Booking(models.Model):
@@ -20,7 +22,7 @@ class Booking(models.Model):
     booking_time = models.TimeField()
     number_attending = models.IntegerField(default=2)
     booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
-    customer = models.ForeignKey('Customer', on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"Booking by {self.customer}"

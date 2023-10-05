@@ -5,7 +5,7 @@ from django import forms
 class CustomerForm(forms.ModelForm):
     class Meta:
         model = Customer
-        fields = '__all__'
+        fields = ('first_name', 'last_name', 'email', 'phone_number')
 
 
 class BookingForm(forms.ModelForm):

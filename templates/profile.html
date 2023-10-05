@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %} 
+
+<div class="card-body">
+    {% for booking in bookings %}
+    <div>
+        <p>
+            <strong>{{ booking.booking_date }}</strong>
+            <span> {{ booking.booking_time }} </span>
+            <span>{{booking.number_attending}}</span>
+        </p>
+        {{ booking.booking_status | linebreaks }}
+    </div>
+    {% endfor %}
+</div>
+
+{%endblock%}

@@ -1,9 +1,12 @@
 {% extends "base.html" %} {% block content %} {% load crispy_forms_tags %}
 
 <form method="post" style="margin-top: 1.3em">
-  {{ customer_form | crispy }} {{ booking_form | crispy }}
-  {%csrf_token %}
+  {{ customer_form | crispy }} {{ booking_form | crispy }} {%csrf_token %}
   <button type="submit" class="btn btn-lg review-submit">Submit</button>
 </form>
+<div>
+  If you would like to view your booking or make changes please visit your
+  <a href="{% url 'display_booking' %}">profile</a>
+</div>
 
 {%endblock%}

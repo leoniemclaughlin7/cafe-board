@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .forms import CustomerForm, BookingForm
+from django.contrib.auth.models import User
+from .models import Booking, Customer
 
 
 # Create your views here.
@@ -10,10 +12,12 @@ def customer_booking(request):
         customer_form = CustomerForm(request.POST, prefix='customer')
         booking_form = BookingForm(request.POST, prefix='booking')
         if customer_form.is_valid() and booking_form.is_valid():
-            customer_instance = customer_form.save()
-            booking_instance = booking_form.save(commit=False)
-            booking_instance.customer = customer_instance
-            booking_instance.save()
+            customer = customer_form.save(commit=False)
+            customer.user = request.user
+            customer.save()
+            booking = booking_form.save(commit=False)
+            booking.customer = customer
+            booking.save()
             customer_form = CustomerForm()
             booking_form = BookingForm()
 
@@ -27,3 +31,13 @@ def customer_booking(request):
     }
 
     return render(request, 'booking.html', context)
+
+
+def display_booking(request):
+    customer_instances = Customer.objects.filter(user=request.user)
+    for customer_instance in customer_instances:
+        bookings = Booking.objects.filter(customer=customer_instance)
+    context = {
+        'bookings': bookings,
+    }
+    return render(request, 'profile.html', context)
