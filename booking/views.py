@@ -61,3 +61,11 @@ def edit_booking(request, booking_id, customer_id):
         'customer_form': customer_form
     }
     return render(request, 'edit_booking.html', context)
+
+
+def delete_booking(request, booking_id, customer_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    customer = get_object_or_404(Customer, id=customer_id)
+    booking.delete()
+    customer.delete()
+    return redirect('display_booking')

@@ -23,8 +23,17 @@
       ><a href="{% url 'edit_booking' booking.id booking.customer.id %}">
         <button>Edit</button></a
       >
+      <a href="{% url 'delete_booking' booking.id booking.customer.id %}">
+        <button>Delete</button>
+      </a>
       {% elif booking.booking_status == 1 %}
-      <span>Confirmed</span>{%else%}<span>Cancelled</span>{% endif %}
+      <span>Confirmed</span
+      ><a href="{% url 'delete_booking' booking.id booking.customer.id %}">
+        <button>Delete</button> </a
+      >{%else%}<span>Cancelled</span
+      ><a href="{% url 'delete_booking' booking.id booking.customer.id %}">
+        <button>Delete</button> </a
+      >{% endif %}
     </p>
   </div>
   {% endfor %}
