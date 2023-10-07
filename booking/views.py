@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import CustomerForm, BookingForm
 from django.contrib.auth.models import User
 from .models import Booking, Customer
@@ -42,3 +42,22 @@ def display_booking(request):
         'bookings': bookings,
     }
     return render(request, 'profile.html', context)
+
+
+def edit_booking(request, booking_id, customer_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    customer = get_object_or_404(Customer, id=customer_id)
+    if request.method == "POST":
+        booking_form = BookingForm(request.POST, instance=booking)
+        customer_form = CustomerForm(request.POST, instance=customer)
+        if customer_form.is_valid() and booking_form.is_valid():
+            booking_form.save()
+            customer_form.save()
+            return redirect('display_booking')
+    booking_form = BookingForm(instance=booking)
+    customer_form = CustomerForm(instance=customer)
+    context = {
+        'booking_form': booking_form,
+        'customer_form': customer_form
+    }
+    return render(request, 'edit_booking.html', context)

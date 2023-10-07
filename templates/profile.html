@@ -13,15 +13,18 @@
         ><strong>Name:</strong> {{ booking.customer.first_name }}
         {{booking.customer.last_name}}</span
       >
+      <strong>Booking reference:</strong><span>{{ booking.id }}</span>
       <strong>Date:</strong><span>{{ booking.booking_date }}</span>
       <strong>Time:</strong><span>{{ booking.booking_time }} </span>
       <strong>Number attending:</strong
       ><span>{{booking.number_attending}}</span>
       <strong>Status:</strong>
-      {% if booking.booking_status == 0 %} <span>To be confirmed</span>
+      {% if booking.booking_status == 0 %} <span>To be confirmed</span
+      ><a href="{% url 'edit_booking' booking.id booking.customer.id %}">
+        <button>Edit</button></a
+      >
       {% elif booking.booking_status == 1 %}
       <span>Confirmed</span>{%else%}<span>Cancelled</span>{% endif %}
-      <strong>Booking reference:</strong><span>{{ booking.id }}</span>
     </p>
   </div>
   {% endfor %}
