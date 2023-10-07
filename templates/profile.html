@@ -1,16 +1,30 @@
-{% extends "base.html" %} {% block content %} 
-
+{% extends "base.html" %} {% block content %}
+<div>
+  <h3>Welcome {{user.username}}!</h3>
+</div>
+<div>
+  <h3>Bookings:</h3>
+</div>
 <div class="card-body">
-    {% for booking in bookings %}
-    <div>
-        <p>
-            <strong>{{ booking.booking_date }}</strong>
-            <span> {{ booking.booking_time }} </span>
-            <span>{{booking.number_attending}}</span>
-        </p>
-        {{ booking.booking_status | linebreaks }}
-    </div>
-    {% endfor %}
+  {% for booking in bookings %}
+  <div>
+    <p>
+      <span
+        ><strong>Name:</strong> {{ booking.customer.first_name }}
+        {{booking.customer.last_name}}</span
+      >
+      <strong>Date:</strong><span>{{ booking.booking_date }}</span>
+      <strong>Time:</strong><span>{{ booking.booking_time }} </span>
+      <strong>Number attending:</strong
+      ><span>{{booking.number_attending}}</span>
+      <strong>Status:</strong>
+      {% if booking.booking_status == 0 %} <span>To be confirmed</span>
+      {% elif booking.booking_status == 1 %}
+      <span>Confirmed</span>{%else%}<span>Cancelled</span>{% endif %}
+      <strong>Booking reference:</strong><span>{{ booking.id }}</span>
+    </p>
+  </div>
+  {% endfor %}
 </div>
 
 {%endblock%}

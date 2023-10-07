@@ -36,8 +36,8 @@ def customer_booking(request):
 
 
 def display_booking(request):
-    customer_instances = Customer.objects.filter(user=request.user)
-    bookings = Booking.objects.filter(customer__in=customer_instances)
+    customer = Customer.objects.filter(user=request.user)
+    bookings = Booking.objects.filter(customer__in=customer)
     context = {
         'bookings': bookings,
     }
