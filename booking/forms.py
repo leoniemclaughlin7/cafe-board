@@ -8,7 +8,9 @@ class CustomerForm(forms.ModelForm):
         model = Customer
         fields = ('first_name', 'last_name', 'email', 'phone_number')
 
-# https://stackoverflow.com/questions/61077802/how-to-use-a-datepicker-in-a-modelform-in-django 
+# https://stackoverflow.com/questions/61077802/how-to-use-a-datepicker-in-a-modelform-in-django
+
+
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking

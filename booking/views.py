@@ -32,11 +32,12 @@ def customer_booking(request):
 
     return render(request, 'booking.html', context)
 
+# https://www.w3schools.com/django/django_queryset_filter.php
+
 
 def display_booking(request):
     customer_instances = Customer.objects.filter(user=request.user)
-    for customer_instance in customer_instances:
-        bookings = Booking.objects.filter(customer=customer_instance)
+    bookings = Booking.objects.filter(customer__in=customer_instances)
     context = {
         'bookings': bookings,
     }
