@@ -3,6 +3,7 @@ from .forms import CustomerForm, BookingForm
 from django.contrib.auth.models import User
 from .models import Booking, Customer
 from django.db.models import Sum
+from django.contrib import messages
 
 
 # Create your views here.
@@ -53,6 +54,11 @@ def customer_booking(request):
                 booking.save()
                 customer_form = CustomerForm()
                 booking_form = BookingForm()
+                messages.add_message(request, messages.SUCCESS,
+                                     'Your booking request was successful, please visit your profile to view the status!')
+            else:
+                messages.add_message(request, messages.ERROR,
+                                     'Date and time unavailable!')
 
     else:
         customer_form = CustomerForm(prefix='customer')
