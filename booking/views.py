@@ -2,9 +2,41 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import CustomerForm, BookingForm
 from django.contrib.auth.models import User
 from .models import Booking, Customer
+from django.db.models import Sum
 
 
 # Create your views here.
+# https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query
+def check_availability(date, time):
+    all_bookings = Booking.objects.all()
+    unavailable = Booking.objects.filter(
+        booking_date=date, booking_time=time)
+    available = True
+    total_attendees = unavailable.aggregate(Sum('number_attending'))[
+        'number_attending__sum']
+    for booking in all_bookings:
+        if unavailable.exists() and total_attendees > 20:
+            available = False
+        else:
+            available = True
+    return available
+
+
+def limit_no_attendees(date, time, attending):
+    attendees_limit = False
+    unavailable = Booking.objects.filter(
+        booking_date=date, booking_time=time)
+    total_attendees = unavailable.aggregate(Sum('number_attending'))[
+        'number_attending__sum']
+
+    if total_attendees is None:
+        total_attendees = 0
+    if total_attendees + attending < 20:
+        attendees_limit = True
+    else:
+        attendees_limit = False
+    return attendees_limit
+
 
 # https://stackoverflow.com/questions/77218397/how-to-access-instances-of-models-in-view-in-order-to-save-both-forms-at-once?noredirect=1&lq=1
 def customer_booking(request):
@@ -17,9 +49,10 @@ def customer_booking(request):
             customer.save()
             booking = booking_form.save(commit=False)
             booking.customer = customer
-            booking.save()
-            customer_form = CustomerForm()
-            booking_form = BookingForm()
+            if check_availability(booking.booking_date, booking.booking_time) and limit_no_attendees(booking.booking_date, booking.booking_time, booking.number_attending):
+                booking.save()
+                customer_form = CustomerForm()
+                booking_form = BookingForm()
 
     else:
         customer_form = CustomerForm(prefix='customer')
