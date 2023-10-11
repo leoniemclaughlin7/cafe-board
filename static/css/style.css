@@ -185,5 +185,18 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
 
 #customer-booking {
     margin-top: 1.3em;
-    
+
+}
+
+/* datepicker */
+
+.highlighted-date a {
+    color: red !important;
+}
+
+.ui-widget-content {
+    background-color: white;
+    width: 160px;
+    height: auto;
+    border: 1px solid blue;
 }
