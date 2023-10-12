@@ -17,19 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
         alert.close();
     }, 3000);
 
-    var dates = ['14-10-2023', '15-10-2023', '16-10-2023'];
 
-    $('#datepicker').datepicker
-        ({
-            beforeShowDay: function (date) {
-                var string = jQuery.datepicker.formatDate('dd-mm-yy', date);
-                if ($.inArray(string, dates) != -1) {
-                    return [true, 'highlighted-date'];
-                } else {
-                    return [true, ''];
-                }
-            },
-        });
+{{ unavailable_dates|json_script:'unavailable' }}
+
+const dates = JSON.parse(document.getElementById('unavailable').textContent);
+console.log(dates)
+
+$('#datepicker').datepicker
+    ({
+        beforeShowDay: function (date) {
+            var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+            if ($.inArray(string, dates) != -1) {
+                return [true, 'highlighted-date'];
+            } else {
+                return [true, ''];
+            }
+        },
+    });
 
 
 });

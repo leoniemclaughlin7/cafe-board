@@ -4,10 +4,15 @@ from django.contrib.auth.models import User
 from .models import Booking, Customer
 from django.db.models import Sum
 from django.contrib import messages
+import json
+from django.core.serializers.json import DjangoJSONEncoder
+from django.http import JsonResponse
 
 
 # Create your views here.
 # https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query
+
+
 def check_availability(date, time):
     all_bookings = Booking.objects.all()
     unavailable = Booking.objects.filter(
@@ -32,15 +37,26 @@ def limit_no_attendees(date, time, attending):
 
     if total_attendees is None:
         total_attendees = 0
-    if total_attendees + attending < 20:
+    if total_attendees + attending <= 20:
         attendees_limit = True
     else:
         attendees_limit = False
     return attendees_limit
 
 
+def unavailable_dates():
+    confirmed_bookings = Booking.objects.filter(booking_status=1)
+    bookings_max_attendees = confirmed_bookings.values(
+        'booking_date', 'booking_time').annotate(
+            attendees=Sum('number_attending')).filter(attendees=20)
+    unavailable_dates = [booking['booking_date'] for booking in bookings_max_attendees]
+    dataJSON = json.dumps(unavailable_dates, cls=DjangoJSONEncoder)
+    return dataJSON
+   
+
 # https://stackoverflow.com/questions/77218397/how-to-access-instances-of-models-in-view-in-order-to-save-both-forms-at-once?noredirect=1&lq=1
 def customer_booking(request):
+    
     if request.method == 'POST':
         customer_form = CustomerForm(request.POST, prefix='customer')
         booking_form = BookingForm(request.POST, prefix='booking')
@@ -50,7 +66,7 @@ def customer_booking(request):
             customer.save()
             booking = booking_form.save(commit=False)
             booking.customer = customer
-            if check_availability(booking.booking_date, booking.booking_time) and limit_no_attendees(booking.booking_date, booking.booking_time, booking.number_attending):
+            if limit_no_attendees(booking.booking_date, booking.booking_time, booking.number_attending):
                 booking.save()
                 customer_form = CustomerForm()
                 booking_form = BookingForm()
@@ -63,10 +79,14 @@ def customer_booking(request):
     else:
         customer_form = CustomerForm(prefix='customer')
         booking_form = BookingForm(prefix='booking')
+        unavailable_booking_dates = unavailable_dates()
+        print(unavailable_booking_dates)
+        
 
     context = {
         'customer_form': customer_form,
         'booking_form': booking_form,
+        'unavailable_dates': unavailable_booking_dates,
     }
 
     return render(request, 'booking.html', context)
