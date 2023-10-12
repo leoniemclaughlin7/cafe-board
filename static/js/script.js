@@ -18,22 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
 
 
-{{ unavailable_dates|json_script:'unavailable' }}
 
-const dates = JSON.parse(document.getElementById('unavailable').textContent);
-console.log(dates)
 
-$('#datepicker').datepicker
-    ({
-        beforeShowDay: function (date) {
-            var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-            if ($.inArray(string, dates) != -1) {
-                return [true, 'highlighted-date'];
-            } else {
-                return [true, ''];
-            }
-        },
-    });
+    const dates = JSON.parse(document.getElementById('unavailableDates').textContent);
+    console.log(dates);
+
+    $('#datepicker').datepicker
+        ({
+            beforeShowDay: function (date) {
+                var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+                if ($.inArray(string, dates) != -1) {
+                    return [true, 'highlighted-date'];
+                } else {
+                    return [true, ''];
+                }
+            },
+        });
 
 
 });

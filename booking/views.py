@@ -4,28 +4,9 @@ from django.contrib.auth.models import User
 from .models import Booking, Customer
 from django.db.models import Sum
 from django.contrib import messages
-import json
-from django.core.serializers.json import DjangoJSONEncoder
-from django.http import JsonResponse
-
 
 # Create your views here.
 # https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query
-
-
-def check_availability(date, time):
-    all_bookings = Booking.objects.all()
-    unavailable = Booking.objects.filter(
-        booking_date=date, booking_time=time)
-    available = True
-    total_attendees = unavailable.aggregate(Sum('number_attending'))[
-        'number_attending__sum']
-    for booking in all_bookings:
-        if unavailable.exists() and total_attendees > 20:
-            available = False
-        else:
-            available = True
-    return available
 
 
 def limit_no_attendees(date, time, attending):
@@ -43,20 +24,23 @@ def limit_no_attendees(date, time, attending):
         attendees_limit = False
     return attendees_limit
 
+# https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#json-script
+# https://stackoverflow.com/questions/60249631/how-to-use-django-annotate
+
 
 def unavailable_dates():
     confirmed_bookings = Booking.objects.filter(booking_status=1)
     bookings_max_attendees = confirmed_bookings.values(
         'booking_date', 'booking_time').annotate(
             attendees=Sum('number_attending')).filter(attendees=20)
-    unavailable_dates = [booking['booking_date'] for booking in bookings_max_attendees]
-    dataJSON = json.dumps(unavailable_dates, cls=DjangoJSONEncoder)
-    return dataJSON
-   
+    unavailable_dates = [booking['booking_date']
+                         for booking in bookings_max_attendees]
+    return unavailable_dates
+
 
 # https://stackoverflow.com/questions/77218397/how-to-access-instances-of-models-in-view-in-order-to-save-both-forms-at-once?noredirect=1&lq=1
 def customer_booking(request):
-    
+    unavailable_booking_dates = []
     if request.method == 'POST':
         customer_form = CustomerForm(request.POST, prefix='customer')
         booking_form = BookingForm(request.POST, prefix='booking')
@@ -80,8 +64,6 @@ def customer_booking(request):
         customer_form = CustomerForm(prefix='customer')
         booking_form = BookingForm(prefix='booking')
         unavailable_booking_dates = unavailable_dates()
-        print(unavailable_booking_dates)
-        
 
     context = {
         'customer_form': customer_form,
