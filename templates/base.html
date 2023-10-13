@@ -20,6 +20,10 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"
+    />
     {{ unavailable_dates|json_script:'unavailableDates' }}
 
     <script src="{% static 'js/script.js' %}"></script>
@@ -108,5 +112,6 @@
       rel="stylesheet"
       href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
     />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
   </body>
 </html>

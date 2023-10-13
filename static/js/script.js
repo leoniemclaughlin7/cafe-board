@@ -1,6 +1,7 @@
 //https://stackoverflow.com/questions/15400775/jquery-ui-datepicker-disable-array-of-dates
 document.addEventListener("DOMContentLoaded", function () {
 
+    console.log("JavaScript loaded");
     $('#collapseOne').click(function () {
         $('#CollapsibleOne').collapse('toggle');
     });
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const dates = JSON.parse(document.getElementById('unavailableDates').textContent);
-    console.log(dates);
+
 
     $('#datepicker').datepicker
         ({
@@ -35,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
 
+    $('#timepicker').timepicker
+        ({
+            startTime: '10:00',
+            interval: 120,
+            timeFormat: 'HH:mm',
+            disableTimeRanges: [["02:00", "04:00"], ["06:00", "08:00"]]
+        });
 
 });
-

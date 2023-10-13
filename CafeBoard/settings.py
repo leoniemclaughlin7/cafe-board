@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['cafe-board-0e3b1578d9eb.herokuapp.com',
-                 '8003-leoniemclaughlin7-cafe-b-dkzz4nf47q.us2.codeanyapp.com']
+                 '8000-leoniemclaughlin7-cafe-b-dkzz4nf47q.us2.codeanyapp.com']
 
 
 # Application definition

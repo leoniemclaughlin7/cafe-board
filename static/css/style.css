@@ -200,3 +200,8 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     height: auto;
     border: 1px solid blue;
 }
+
+/* timepicker */
+.highlighted-time a {
+    color: red !important;
+}

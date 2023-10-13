@@ -1,6 +1,6 @@
 from .models import Customer, Booking
 from django import forms
-from django.forms.widgets import DateInput
+from django.forms.widgets import DateInput, TimeInput
 
 
 class CustomerForm(forms.ModelForm):
@@ -18,5 +18,6 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = ('booking_date', 'booking_time', 'number_attending')
         widgets = {
-            'booking_date': DateInput(attrs={'id': 'datepicker', 'autocomplete': 'off'})
+            'booking_date': DateInput(attrs={'id': 'datepicker', 'autocomplete': 'off'}),
+            'booking_time': TimeInput(attrs={'id': 'timepicker', 'autocomplete': 'off'})
         }
