@@ -51,6 +51,11 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'display_booking' %}"
+            ><i class="fas fa-user"></i
+          ></a>
+        </li>
         {% else %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'account_signup' %}">Register</a>

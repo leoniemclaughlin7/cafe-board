@@ -6,7 +6,9 @@
   <div>
     <h3>Profile information:</h3>
     <span><strong>Username:</strong> {{ user.username }}</span>
-    <a href="{% url 'edit_user' user.id %}"> <button>Edit</button></a>
+    <a href="{% url 'edit_user' user.id %}">
+      <button class="btn btn-secondary">Edit</button></a
+    >
   </div>
 
   <button
@@ -74,20 +76,20 @@
       <strong>Number attending:</strong
       ><span>{{booking.number_attending}}</span>
       <strong>Status:</strong>
-      {% if booking.booking_status == 0 %} <span>To be confirmed</span
-      ><a href="{% url 'edit_booking' booking.id booking.customer.id %}">
-        <button>Edit</button></a
+      {% if booking.booking_status == 0 %} <span>To be confirmed</span>
+      <a href="{% url 'edit_booking' booking.id booking.customer.id %}">
+        <button class="btn btn-secondary">Edit</button></a
       >
       <a href="{% url 'delete_booking' booking.id booking.customer.id %}">
-        <button>Delete</button>
+        <button class="btn btn-danger">Delete</button>
       </a>
       {% elif booking.booking_status == 1 %}
       <span>Confirmed</span
       ><a href="{% url 'delete_booking' booking.id booking.customer.id %}">
-        <button>Delete</button> </a
+        <button class="btn btn-danger">Delete</button> </a
       >{%else%}<span>Cancelled</span
       ><a href="{% url 'delete_booking' booking.id booking.customer.id %}">
-        <button>Delete</button> </a
+        <button class="btn btn-danger">Delete</button> </a
       >{% endif %}
     </p>
   </div>
