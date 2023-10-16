@@ -185,7 +185,6 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
 
 #customer-booking {
     margin-top: 1.3em;
-
 }
 
 /* datepicker */
@@ -206,6 +205,20 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
 
 .bookings {
     margin-top: 30px;
+    border: 5px solid #A37A74;
+    height: 350px;
+    overflow-y: scroll;
+}
 
+.bookings tr {
+    border-bottom: 1px solid #ddd;
+}
 
+.no-booking {
+    margin-top: 30px;
+    font-size: 150%;
+}
+
+#booking-table {
+    width: 100%;
 }
