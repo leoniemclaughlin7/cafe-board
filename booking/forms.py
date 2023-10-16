@@ -1,4 +1,4 @@
-from .models import Customer, Booking
+from .models import Customer, Booking, User
 from django import forms
 from django.forms.widgets import DateInput, TimeInput
 
@@ -21,3 +21,9 @@ class BookingForm(forms.ModelForm):
             'booking_date': DateInput(attrs={'id': 'datepicker', 'autocomplete': 'off'}),
             'booking_time': TimeInput(attrs={'id': 'timepicker', 'autocomplete': 'off'})
         }
+
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('username',)

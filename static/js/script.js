@@ -36,12 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
 
+    //https://timepicker.co/#
+
+
     $('#timepicker').timepicker
         ({
             startTime: '10:00',
-            interval: 120,
+            interval: 60,
             timeFormat: 'HH:mm',
-            disableTimeRanges: [["02:00", "04:00"], ["06:00", "08:00"]]
+            minTime: '10:00',
+            maxTime: '23:00',
+
         });
 
 });

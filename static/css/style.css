@@ -191,7 +191,7 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
 /* datepicker */
 
 .highlighted-date a {
-    color: red !important;
+    color: red;
 }
 
 .ui-widget-content {
@@ -199,9 +199,4 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     width: 160px;
     height: auto;
     border: 1px solid blue;
-}
-
-/* timepicker */
-.highlighted-time a {
-    color: red !important;
 }

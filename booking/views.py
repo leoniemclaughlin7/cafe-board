@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import CustomerForm, BookingForm
+from .forms import CustomerForm, BookingForm, UserForm
 from django.contrib.auth.models import User
 from .models import Booking, Customer
 from django.db.models import Sum
@@ -110,3 +110,18 @@ def delete_booking(request, booking_id, customer_id):
     booking.delete()
     customer.delete()
     return redirect('display_booking')
+
+
+def edit_username(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    if request.method == "POST":
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('display_booking')
+    form = UserForm(instance=user)
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'edit_user.html', context)
