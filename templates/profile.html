@@ -7,9 +7,54 @@
     <h3>Profile information:</h3>
     <span><strong>Username:</strong> {{ user.username }}</span>
     <a href="{% url 'edit_user' user.id %}"> <button>Edit</button></a>
-    <a href="{% url 'delete_user' user.id %}">
-      <button>Delete account!</button>
-    </a>
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-danger"
+    data-bs-toggle="modal"
+    data-bs-target="#accountDeleteModal"
+  >
+    Delete Account!
+  </button>
+  <!-- Modal https://getbootstrap.com/docs/5.1/components/modal/-->
+  <div
+    class="modal fade"
+    id="accountDeleteModal"
+    tabindex="-1"
+    aria-labelledby="delete account"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete your account</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you would like to delete your account?
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <a href="{% url 'delete_user' user.id %}">
+            <button type="button" class="btn btn-danger">
+              Delete account!
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <div>
