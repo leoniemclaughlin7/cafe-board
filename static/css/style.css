@@ -44,7 +44,7 @@ footer>p {
 /* Colours */
 
 body {
-    background-color: #A8D0DB;
+    background-color: white;
 }
 
 nav {
@@ -193,4 +193,19 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
 .highlighted-date a {
     color: red !important;
     pointer-events: none;
+}
+
+/* Profile page */
+.profile {
+    margin-top: 30px;
+}
+
+.welcome {
+    border: 5px solid #7180AC;
+}
+
+.bookings {
+    margin-top: 30px;
+
+
 }

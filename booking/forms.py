@@ -26,4 +26,4 @@ class BookingForm(forms.ModelForm):
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ('username',)
+        fields = ('username', 'email')

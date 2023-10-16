@@ -127,7 +127,7 @@ def delete_booking(request, booking_id, customer_id):
     return redirect('display_booking')
 
 
-def edit_username(request, user_id):
+def edit_user(request, user_id):
     user = get_object_or_404(User, id=user_id)
     if request.method == "POST":
         form = UserForm(request.POST, instance=user)
