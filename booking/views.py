@@ -31,8 +31,8 @@ def limit_no_attendees(date, time, attending):
 def unavailable_dates():
     confirmed_bookings = Booking.objects.filter(booking_status=1)
     bookings_max_attendees = confirmed_bookings.values(
-        'booking_date', 'booking_time').annotate(
-            attendees=Sum('number_attending')).filter(attendees=20)
+        'booking_date').annotate(
+            attendees=Sum('number_attending')).filter(attendees=280)
     unavailable_dates = [booking['booking_date']
                          for booking in bookings_max_attendees]
     return unavailable_dates
