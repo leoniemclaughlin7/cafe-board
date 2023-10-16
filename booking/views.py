@@ -44,7 +44,7 @@ def check_availability(date, time):
     available = True
     total_attendees = unavailable.aggregate(Sum('number_attending'))[
         'number_attending__sum']
-    if unavailable.exists() and total_attendees > 20:
+    if unavailable.exists() and total_attendees >= 20:
         available = False
     else:
         available = True
@@ -122,6 +122,8 @@ def delete_booking(request, booking_id, customer_id):
     customer = get_object_or_404(Customer, id=customer_id)
     booking.delete()
     customer.delete()
+    messages.add_message(request, messages.WARNING,
+                         'Booking has been deleted!')
     return redirect('display_booking')
 
 
@@ -138,3 +140,11 @@ def edit_username(request, user_id):
         'form': form,
     }
     return render(request, 'edit_user.html', context)
+
+
+def delete_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    user.delete()
+    messages.add_message(request, messages.WARNING,
+                         'User account has been deleted!')
+    return redirect('review')

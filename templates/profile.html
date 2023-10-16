@@ -7,6 +7,9 @@
     <h3>Profile information:</h3>
     <span><strong>Username:</strong> {{ user.username }}</span>
     <a href="{% url 'edit_user' user.id %}"> <button>Edit</button></a>
+    <a href="{% url 'delete_user' user.id %}">
+      <button>Delete account!</button>
+    </a>
   </div>
 </section>
 <div>
