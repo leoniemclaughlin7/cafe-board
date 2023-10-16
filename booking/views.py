@@ -38,6 +38,19 @@ def unavailable_dates():
     return unavailable_dates
 
 
+def check_availability(date, time):
+    unavailable = Booking.objects.filter(
+        booking_date=date, booking_time=time, booking_status=1)
+    available = True
+    total_attendees = unavailable.aggregate(Sum('number_attending'))[
+        'number_attending__sum']
+    if unavailable.exists() and total_attendees > 20:
+        available = False
+    else:
+        available = True
+    return available
+
+
 # https://stackoverflow.com/questions/77218397/how-to-access-instances-of-models-in-view-in-order-to-save-both-forms-at-once?noredirect=1&lq=1
 def customer_booking(request):
     unavailable_booking_dates = []
@@ -50,7 +63,7 @@ def customer_booking(request):
             customer.save()
             booking = booking_form.save(commit=False)
             booking.customer = customer
-            if limit_no_attendees(booking.booking_date, booking.booking_time, booking.number_attending):
+            if check_availability(booking.booking_date, booking.booking_time) and limit_no_attendees(booking.booking_date, booking.booking_time, booking.number_attending):
                 booking.save()
                 customer_form = CustomerForm()
                 booking_form = BookingForm()
