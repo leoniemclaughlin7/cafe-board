@@ -61,7 +61,7 @@
         {% if user.is_authenticated %}
         <div class="col-sm-4 submit-review">
                 <h3>Leave a Review:</h3>
-                <form method="post" action="{% url 'review' %}" style="margin-top: 1.3em;">
+                <form method="post" action="{% url 'review' %}" id="review-form">
                     {{ review_form | crispy }} {% csrf_token %}
                     <button type="submit" class="btn btn-lg review-submit">Submit</button>
                 </form>
