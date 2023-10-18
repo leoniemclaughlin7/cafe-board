@@ -1,11 +1,17 @@
 {% extends "base.html" %} {% block content %}
-<h1>Edit username:</h1>
-<form method="POST">
-  {% csrf_token %} {{ form.as_p }}
-  <div>
-    <p>
-      <button type="submit">Update user</button>
-    </p>
+<section class="container">
+  <div class="row">
+    <div class="col-sm-12 center-form">
+      <h1>Edit User:</h1>
+      <form method="POST" id="edit-user-form">
+        {% csrf_token %} {{ form.as_p }}
+        <div>
+          <p>
+            <button type="submit">Update user</button>
+          </p>
+        </div>
+      </form>
+    </div>
   </div>
-</form>
+</section>
 {%endblock%}
