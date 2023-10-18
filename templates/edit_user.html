@@ -1,13 +1,15 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% load crispy_forms_tags %}
 <section class="container">
   <div class="row">
     <div class="col-sm-12 center-form">
       <h1>Edit User:</h1>
       <form method="POST" id="edit-user-form">
-        {% csrf_token %} {{ form.as_p }}
+        {{ form | crispy }} {% csrf_token %}
         <div>
           <p>
-            <button type="submit">Update user</button>
+            <button type="submit" class="btn btn-lg submit-button">
+              Update user
+            </button>
           </p>
         </div>
       </form>

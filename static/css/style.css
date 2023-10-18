@@ -124,10 +124,12 @@ nav {
 
 .sign-up-btn,
 .sign-out-btn,
-.sign-in-btn {
+.sign-in-btn,
+.submit-button {
     background-color: #2B4570;
     border-radius: 5px;
     color: white;
+    margin-top: 10px;
 }
 
 .link {
@@ -205,6 +207,11 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
 }
 
 #edit-user-form input {
+    border: 2px solid #A37A74;
+    border-radius: 4px;
+}
+
+#edit-booking-form input {
     border: 2px solid #A37A74;
     border-radius: 4px;
 }
