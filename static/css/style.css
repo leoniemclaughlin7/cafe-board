@@ -277,6 +277,18 @@ select {
     color: #2B4570;
 }
 
+#CollapsibleThree {
+    margin-bottom: 15px;
+}
+
+.menu-table {
+    width: 100%;
+}
+
+.menu-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 576px) {
