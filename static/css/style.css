@@ -86,6 +86,13 @@ nav {
 
 }
 
+/* https: //stackoverflow.com/questions/21140338/convert-place-name-address-to-google-maps-url-and-iframe */
+
+.iframe {
+    height: 300px;
+    width: 100%;
+}
+
 /* Review */
 
 .submit-review {
@@ -228,7 +235,12 @@ select {
 
 .highlighted-date a {
     color: red !important;
-    pointer-events: None;
+
+}
+
+/*https: //stackoverflow.com/questions/43492742/how-to-use-the-disabled-attribute-for-a-a-tag-in-html*/
+.highlighted-date {
+    pointer-events: none;
 }
 
 /* Profile page */
