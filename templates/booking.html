@@ -1,17 +1,21 @@
 {% extends "base.html" %} {% block content %} {% load crispy_forms_tags %}
 <div class="container">
   <div class="row">
-    <div class="d-flex justify-content-center">
+    <div class="col-sm-12 center-form">
+      <h3>Booking Form:</h3>
       <form method="post" id="customer-booking">
         {{ customer_form | crispy }} {{ booking_form | crispy }} {%csrf_token %}
-        <button type="submit" class="btn btn-lg booking-submit">Submit</button>
+        <button type="submit" class="btn btn-lg submit-button">Submit</button>
       </form>
     </div>
-    <div class="d-flex justify-content-center">
-      If you would like to view your booking or make changes, please visit your
-      <a href="{% url 'display_booking' %}"
-        ><i class="fas fa-user profile-icon"></i
-      ></a>
+    <div class="col-sm-12 center-form">
+      <p>
+        If you would like to view your booking or make changes, please visit
+        your
+        <a href="{% url 'display_booking' %}"
+          ><i class="fas fa-user profile-icon"></i
+        ></a>
+      </p>
     </div>
   </div>
 </div>

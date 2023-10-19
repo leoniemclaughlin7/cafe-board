@@ -183,7 +183,6 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
 }
 
 #customer-booking input {
-    width: 150%;
     border: 2px solid #A37A74;
     border-radius: 4px;
 }
@@ -216,13 +215,11 @@ select {
 }
 
 #signup-form input {
-    width: 25%;
     border: 2px solid #A37A74;
     border-radius: 4px;
 }
 
 #signin-form input {
-    width: 25%;
     border: 2px solid #A37A74;
     border-radius: 4px;
 }
@@ -263,14 +260,6 @@ select {
     width: 100%;
 }
 
-.booking-submit {
-    margin-top: 20px;
-    background-color: #2B4570;
-    border-radius: 5px;
-    color: white;
-    margin-left: 80px;
-}
-
 .profile-icon {
     margin-left: 10px;
     font-size: 110%;
@@ -302,6 +291,7 @@ select {
     }
 }
 
+/*https: //www.sitepoint.com/bootstrap-grid-mastering-flexbox/#:~:text=Every%20direct%20child%20element%20of%20a%20flex%20container,sets%20the%20horizontal%20direction%20from%20right%20to%20left*/
 @media screen and (max-width: 992px) {
 
     #logo-position {
