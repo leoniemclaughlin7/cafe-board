@@ -114,17 +114,9 @@ nav {
     height: 150px;
 }
 
-.review-submit {
-    background-color: #2B4570;
-    border-radius: 5px;
-    color: white;
-}
 
 /* Sign up/sign out */
 
-.sign-up-btn,
-.sign-out-btn,
-.sign-in-btn,
 .submit-button {
     background-color: #2B4570;
     border-radius: 5px;
