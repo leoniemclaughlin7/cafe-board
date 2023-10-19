@@ -1,7 +1,6 @@
 //https://stackoverflow.com/questions/15400775/jquery-ui-datepicker-disable-array-of-dates
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("JavaScript loaded");
     $('#collapseOne').click(function () {
         $('#CollapsibleOne').collapse('toggle');
     });
