@@ -221,6 +221,12 @@ select {
     border-radius: 4px;
 }
 
+#signin-form input {
+    width: 25%;
+    border: 2px solid #A37A74;
+    border-radius: 4px;
+}
+
 /* datepicker */
 
 .highlighted-date a {
