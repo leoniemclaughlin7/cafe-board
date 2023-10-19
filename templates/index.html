@@ -3,7 +3,7 @@
 
 <section class="container about">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-md-12">
       <div class="card" id="card1">
         <img
           src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694442030/zwycdd3okwn47wocf5m2.jpg"
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-md-12">
       <div class="card" id="card2">
         <img
           src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694450999/pxfzbjvycufwsmodtl8e.jpg"
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-lg-4 col-md-12">
       <div class="card" id="card3">
         <img
           src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694447368/aljzlwdpk7iw7sgjh4cj.jpg"
@@ -53,13 +53,13 @@
 </section>
 <section class="container address-reviews-position">
     <div class="row">
-        <div class="col-sm-4 address">
+        <div class="col-lg-4 address col-md-12">
             <h3><strong>ADDRESS:</strong></h3>
             <p>Cafe-Board,<br>Donegal street,<br>Dublin</p>
             <iframe src="https://bit.ly/2QVfkiy" height="300" width="100%"></iframe>
         </div>
         {% if user.is_authenticated %}
-        <div class="col-sm-4 submit-review">
+        <div class="col-lg-4 submit-review col-md-12">
                 <h3>Leave a Review:</h3>
                 <form method="post" action="{% url 'review' %}" id="review-form">
                     {{ review_form | crispy }} {% csrf_token %}
@@ -67,14 +67,14 @@
                 </form>
                 </div>
                 {% else %}
-                <div class="col-sm-4">
+                <div class="col-lg-4 col-md-12" id="logo-position">
                     <div class="col d-flex justify-content-center">
                         <img class="logo" src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694797798/yfx7pvjje62dvikwigec.png" alt="cafe-board logo">
                     </div>
                 </div>
                 {% endif %}
 
-                <div class="col-sm-4 reviews">
+                <div class="col-lg-4 reviews col-md-12">
                 <h3>Reviews:</h3>
                 <div class="card-body"> 
                     {% for review in reviews %}

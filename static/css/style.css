@@ -289,3 +289,19 @@ select {
         margin-top: 15px;
     }
 }
+
+@media screen and (max-width: 992px) {
+
+    #logo-position {
+        order: 1;
+    }
+
+    .logo {
+        margin-top: 15px;
+    }
+
+    #card2 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
