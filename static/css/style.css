@@ -276,3 +276,16 @@ select {
     font-size: 110%;
     color: #2B4570;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 576px) {
+    #card2 {
+        margin-top: 15px;
+        margin-bottom: 15PX;
+    }
+
+    .logo {
+        margin-top: 15px;
+    }
+}
