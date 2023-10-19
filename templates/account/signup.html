@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% load i18n %} {% block head_title %} {%
-trans"Signup" %}{% endblock %} {% block content %}
+trans"Signup" %}{% endblock %} {% block content %} {% load crispy_forms_tags %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 offset-md-4">
+<section class="container">
+    <div class="row">
+        <div class="col-sm-12 center-form">
       <h1>{% trans "Sign Up" %}</h1>
 
       <p>
@@ -13,18 +13,18 @@ trans"Signup" %}{% endblock %} {% block content %}
 
       <form
         class="signup"
-        id="signup_form"
+        id="signup-form"
         method="post"
         action="{% url 'account_signup' %}"
       >
-        {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+        {% csrf_token %} {{ form | crispy }} {% if redirect_field_value %}
         <input
           type="hidden"
           name="{{ redirect_field_name }}"
           value="{{ redirect_field_value }}"
         />
         {% endif %}
-        <button class="sign-up-btn" type="submit">{% trans "Sign Up" %}</button>
+        <button class="btn btn-lg submit-button" type="submit">{% trans "Sign Up" %}</button>
       </form>
 
       {% endblock %}
