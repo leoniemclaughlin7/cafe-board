@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     return [true, 'highlighted-date'];
                 } else {
                     return [true, ''];
+
+
                 }
             },
         });
