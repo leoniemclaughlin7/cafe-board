@@ -2,6 +2,7 @@
 /** @jest-environment jsdom */
 
 
+
 //https://stackoverflow.com/questions/72013449/upgrading-jest-to-v29-error-test-environment-jest-environment-jsdom-cannot-be
 describe("Menu collapsible when title clicked", () => {
 
@@ -13,16 +14,20 @@ describe("Menu collapsible when title clicked", () => {
         document.close();
     });
 
-    test('use jsdom in this test file', () => {
-        const element = document.createElement('div');
-        expect(element).not.toBeNull();
-    });
+    test("expect element by id collapseOne to exist and collapse once clicked",
+        () => {
+            const element = document.getElementById("CollapsibleOne");
+            const button = document.getElementById("collapseOne");
+            expect(element).not.toBeNull();
 
-    test("expect element by id collapseOne to exist", () => {
-        const element = document.getElementById("collapseOne");
-        expect(element).not.toBeNull();
+            const hasToggleUnclicked = element.classList.contains('toggle');
+            expect(hasToggleUnclicked).toBe(false);
+            button.click();
 
-    });
+            const hasToggleClicked = element.classList.contains('toggle');
+            expect(hasToggleClicked).toBe(true);
+
+        });
 
     test("expect element by id collapseTwo to exist", () => {
         const element = document.getElementById("collapseTwo");
@@ -40,6 +45,7 @@ describe("Menu collapsible when title clicked", () => {
 });
 
 //https://jestjs.io/docs/timer-mocks
+//https://stackoverflow.com/questions/77348090/testing-settimout-with-jest/77348344#77348344
 
 jest.useFakeTimers();
 jest.spyOn(global, 'setTimeout');

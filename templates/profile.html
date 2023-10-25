@@ -4,20 +4,15 @@
 <div class="col-sm-6 welcome d-flex justify-content-center align-items-center">
   <h3>Welcome {{user.username}}!</h3>
 </div>
-  <div class="col-sm-3 text-center">
-    <h3>Profile Information:</h3>
+    <div class="col-sm-3 text-center">
+        <h3>Profile Information:</h3>
     </div>
     <div class="col-sm-3">
     <span><strong>Username:</strong> {{ user.username }}</span><br>
     <span><strong>Email:</strong> {{ user.email }}</span><br>
     <a href="{% url 'edit_user' user.id %}">
         <button class="btn btn-secondary">Edit</button></a>
-  <button
-    type="button"
-    class="btn btn-danger"
-    data-bs-toggle="modal"
-    data-bs-target="#accountDeleteModal"
-  >
+  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#accountDeleteModal">
     Delete Account!
   </button>
 </div>
@@ -32,8 +27,7 @@
     id="accountDeleteModal"
     tabindex="-1"
     aria-labelledby="delete account"
-    aria-hidden="true"
-  >
+    aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -49,18 +43,13 @@
           Are you sure you would like to delete your account?
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Close
           </button>
           <a href="{% url 'delete_user' user.id %}">
             <button type="button" class="btn btn-danger">
               Delete account!
-            </button></a
-          >
+            </button></a>
         </div>
       </div>
     </div>
@@ -93,8 +82,7 @@
       <td>{{booking.number_attending}}</td>
       {% if booking.booking_status == 0 %} <td>To be confirmed</td>
       <td><a href="{% url 'edit_booking' booking.id booking.customer.id %}">
-        <button class="btn btn-secondary">Edit</button></a
-      >
+        <button class="btn btn-secondary">Edit</button></a>
       <a href="{% url 'delete_booking' booking.id booking.customer.id %}">
         <button class="btn btn-danger">Delete</button>
       </a></td>
