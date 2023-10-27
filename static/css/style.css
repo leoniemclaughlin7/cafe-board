@@ -194,12 +194,11 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     border-radius: 4px;
 }
 
-/* Review Form */
+/* Forms */
 #review-form {
     margin-top: 1.3em;
 }
 
-/* Forms */
 .center-form {
     text-align: center;
     margin-top: 20px;
@@ -227,6 +226,16 @@ select {
 }
 
 #signin-form input {
+    border: 2px solid #A37A74;
+    border-radius: 4px;
+}
+
+#contact-form input {
+    border: 2px solid #A37A74;
+    border-radius: 4px;
+}
+
+#contact-form textarea {
     border: 2px solid #A37A74;
     border-radius: 4px;
 }
