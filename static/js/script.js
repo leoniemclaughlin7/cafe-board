@@ -50,4 +50,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
+    function sendMail(contactForm) {
+        console.log("contactform")
+        emailjs.send("service_3xo1o8q", "leonie", {
+            "from_name": contactForm.name.value,
+            "from_email": contactForm.email.value,
+        })
+            .then(
+                function (response) {
+                    console.log("SUCCESS", response);
+                },
+                function (error) {
+                    console.log("FAILED", error);
+                }
+            );
+        return false;
+    }
+
 });
