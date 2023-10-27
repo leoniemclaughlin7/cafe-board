@@ -97,3 +97,23 @@ class DeleteBookingTestCase(TestCase):
         self.assertRedirects(response, '/bookings/display_booking',
                              target_status_code=200)
 
+
+class EditUserTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(
+            username="testuser", password='testpassword')
+        self.client.login(username='testuser', password='testpassword')
+
+    def test_view_url_exists_at_desired_location(self):
+        response = self.client.get('/bookings/edit_user/1')
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_url_accessible_by_name(self):
+        response = self.client.get(reverse('edit_user', kwargs={
+                                   'user_id': 1, }))
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_uses_correct_template(self):
+        response = self.client.get('/bookings/edit_user/1')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'edit_user.html')
