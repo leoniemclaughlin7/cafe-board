@@ -72,3 +72,28 @@ class EditBookingTestCase(TestCase):
         response = self.client.get('/bookings/edit_booking/1/1')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'edit_booking.html')
+
+
+# https://stackoverflow.com/questions/71919799/assertionerror-302-200-couldnt-retrieve-redirection-page-api-v2-app-nex
+class DeleteBookingTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(
+            username="testuser", password='testpassword')
+        self.client.login(username='testuser', password='testpassword')
+        Customer.objects.create(first_name="Mark", last_name="Itest",
+                                email='mark@itest.com', phone_number='0123456', user=self.user)
+        customer = Customer.objects.get(first_name='Mark')
+        Booking.objects.create(booking_date='2023-10-25', booking_time='10:00',
+                               number_attending='2', booking_status='1', customer=customer)
+
+    def test_view_url_exists_at_desired_location(self):
+        response = self.client.get('/bookings/delete_booking/1/1')
+        self.assertRedirects(response, '/bookings/display_booking',
+                             target_status_code=200)
+
+    def test_view_url_accessible_by_name(self):
+        response = self.client.get(reverse('delete_booking', kwargs={
+                                   'booking_id': 1, 'customer_id': 1}))
+        self.assertRedirects(response, '/bookings/display_booking',
+                             target_status_code=200)
+
