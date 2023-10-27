@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'review',
     'booking',
+    'django_nose',
 ]
 
 
@@ -71,6 +72,18 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+# https://django-testing-docs.readthedocs.io/en/latest/coverage.html
+
+# Use nose to run all tests
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+# Tell nose to measure coverage on the 'review' and 'booking' apps
+
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=review,booking',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
