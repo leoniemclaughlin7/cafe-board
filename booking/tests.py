@@ -117,3 +117,21 @@ class EditUserTestCase(TestCase):
         response = self.client.get('/bookings/edit_user/1')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'edit_user.html')
+
+
+class DeleteUserTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(
+            username="testuser", password='testpassword')
+        self.client.login(username='testuser', password='testpassword')
+
+    def test_view_url_exists_at_desired_location(self):
+        response = self.client.get('/bookings/delete_user/1')
+        self.assertRedirects(response, '/',
+                             target_status_code=200)
+
+    def test_view_url_accessible_by_name(self):
+        response = self.client.get(reverse('delete_user', kwargs={
+                                   'user_id': 1,}))
+        self.assertRedirects(response, '/',
+                             target_status_code=200)
