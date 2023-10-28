@@ -31,11 +31,6 @@
     />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("px6m6zmesXakX1q3N");
-        })();
-    </script>
     {{ unavailable_dates|json_script:'unavailableDates' }}
 
     <script src="{% static 'js/script.js' %}"></script>
@@ -114,7 +109,7 @@
         Follow us: <i class="fab fa-facebook-square ms-3"></i>
         <i class="fab fa-instagram-square ms-3"></i>
       </p>
-      <a href="{% url 'contact' %}" class="link">Contact us</a>
+      <a href="{% url 'contact' %}" class="contact-link">Contact us</a>
     </footer>
 
     <script
