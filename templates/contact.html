@@ -4,7 +4,7 @@
         <div class="col-sm-6 center-form">
             <h1>Contact Us:</h1>
             <form method="POST" id="contact-form">
-                <form method="post" action="{% url 'contact' %}">
+                <form method="post" action="{% url 'mail' %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="name">Name</label>

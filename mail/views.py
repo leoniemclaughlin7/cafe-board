@@ -11,7 +11,7 @@ def send_email(request):
            host=settings.EMAIL_HOST,
            port=settings.EMAIL_PORT,
            username=settings.EMAIL_HOST_USER,
-           password=settings.EMAIL_HOST_PASSWORD,
+           password=settings.EMAIL_HOST_PASS,
            use_tls=settings.EMAIL_USE_TLS
         ) as connection:
             name = request.POST.get("name")
