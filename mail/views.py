@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage, get_connection
 from django.conf import settings
+from django.contrib import messages
 
 # Create your views here.
 
@@ -22,5 +23,7 @@ def send_email(request):
             message = request.POST.get("message")
             EmailMessage(name, message, email_from,
                          recipient_list, connection=connection).send()
+        messages.add_message(request, messages.SUCCESS,
+                             'Your message was sent. Please check your email for a reply.')
          
     return render(request, 'contact.html')
