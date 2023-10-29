@@ -18,12 +18,11 @@ def send_email(request):
            use_tls=settings.EMAIL_USE_TLS
         ) as connection:
             name = request.POST.get("name")
-            email_from = request.POST.get("email")
-            recipient_list = settings.EMAIL_HOST_USER
+            email_from = settings.EMAIL_HOST_USERrequest.POST.get("email")
+            recipient_list = request.POST.get("email")
             message = request.POST.get("message")
             EmailMessage(name, message, email_from,
                          recipient_list, connection=connection).send()
         messages.add_message(request, messages.SUCCESS,
-                             'Your message was sent. Please check your email for a reply.')
-         
+                             'Your message was sent. Please check your email for a reply.')     
     return render(request, 'contact.html')
