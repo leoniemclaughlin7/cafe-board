@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import EmailMessage, get_connection
 from django.conf import settings
 
 # Create your views here.
+
+# https://opensource.com/article/22/12/django-send-emails-smtp
 
 
 def send_email(request):
@@ -20,5 +22,5 @@ def send_email(request):
             message = request.POST.get("message")
             EmailMessage(name, message, email_from,
                          recipient_list, connection=connection).send()
-
+           
     return render(request, 'contact.html')
