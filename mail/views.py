@@ -22,5 +22,5 @@ def send_email(request):
             message = request.POST.get("message")
             EmailMessage(name, message, email_from,
                          recipient_list, connection=connection).send()
-           
+         
     return render(request, 'contact.html')
