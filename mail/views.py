@@ -18,8 +18,8 @@ def send_email(request):
            use_tls=settings.EMAIL_USE_TLS
         ) as connection:
             name = request.POST.get("name")
-            email_from = settings.EMAIL_HOST_USERrequest.POST.get("email")
-            recipient_list = request.POST.get("email")
+            email_from = request.POST.get("email")
+            recipient_list = [settings.EMAIL_HOST_USER,]
             message = request.POST.get("message")
             EmailMessage(name, message, email_from,
                          recipient_list, connection=connection).send()
