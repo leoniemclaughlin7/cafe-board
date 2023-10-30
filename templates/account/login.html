@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% load i18n %} {% load account socialaccount %}
 {%block head_title %}{% trans "Sign In" %}{% endblock %} {% block content %} {% load crispy_forms_tags %}
-
+<!-- Sign up link if user not registered -->
 <section class="container">
     <div class="row">
         <div class="col-sm-12 center-form">
@@ -11,7 +11,7 @@
         </div>
     </div>
 </section>
-
+<!-- login form -->
 <section class="container">
     <div class="row">
         <div class="col-sm-12 center-form">

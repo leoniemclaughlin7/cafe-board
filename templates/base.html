@@ -9,28 +9,34 @@
         <meta name="description" content="A boardgame cafe based in Dublin" />
         <meta name="keywords" content="Coffee, boardgames, tea, cafe, Dublin" />
         <title>Cafe-Board</title>
+        <!-- Font awesome -->
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Bootstrap -->
         <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
         crossorigin="anonymous"/>
+        <!-- Bootstrap JS -->
         <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous">
         </script>
+        <!-- Jquery Timepicker CSS -->
         <link
         rel="stylesheet"
         href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"/>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
         </script>
+        <!--Unavailable dates from views.py in booking app -->
         {{ unavailable_dates|json_script:'unavailableDates' }}
         <script src="{% static 'js/script.js' %}"></script>
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <!-- Favicon -->
         <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}" />
     </head>
 
@@ -72,6 +78,7 @@
         </nav>
     </header>
 
+<!-- Container for rendering messages taken from I Think Therefore I Blog walkthrough -->
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -99,7 +106,7 @@
         </p>
         <a href="{% url 'mail' %}" class="contact-link">Contact us</a>
     </footer>
-
+<!-- Jquery -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="

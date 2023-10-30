@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block content %}
+<!-- Welcome to profile and profile information section -->
 <section class="container profile">
     <div class="row">
         <div class="col-sm-6 welcome d-flex justify-content-center align-items-center">
@@ -18,7 +19,7 @@
     </div>
 </section>
 
-  <!-- Modal https://getbootstrap.com/docs/5.1/components/modal/-->
+  <!-- Modal for deleteing user account https://getbootstrap.com/docs/5.1/components/modal/-->
   <div class="modal fade" id="accountDeleteModal" tabindex="-1" aria-labelledby="delete account" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -40,7 +41,7 @@
       </div>
     </div>
   </div>
-
+<!-- Section for displaying bookings -->
 {% if bookings %}
 <section class="container bookings">
     <div class="row">
@@ -99,6 +100,7 @@
     </div>
 </section>
 {% else %}
+<!-- If no bookings to display -->
 <strong><p class="text-center no-booking">Please Visit the booking tab to make a booking.</p></strong>
 {% endif %}
 {%endblock%}
