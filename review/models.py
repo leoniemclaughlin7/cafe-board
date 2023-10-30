@@ -1,11 +1,11 @@
 from django.db import models
 
-# Create your models here.
-
-# https://www.geeksforgeeks.org/positiveintegerfield-django-models/
-
 
 class Review(models.Model):
+    """
+    Model for review form. Assistance with the positive integer field
+    came from: https://www.geeksforgeeks.org/positiveintegerfield-django-models/
+    """
     name = models.CharField(max_length=80)
     body = models.TextField()
     stars = models.PositiveIntegerField(choices=(

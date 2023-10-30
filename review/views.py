@@ -3,10 +3,11 @@ from .forms import ReviewForm
 from django.views import generic, View
 from .models import Review
 
-# Create your views here.
-
 
 def review(request):
+    """
+    View to display review and if post method then leave a review
+    """
     reviews = Review.objects.order_by('-created_on').all()
     if request.method == 'POST':
         review_form = ReviewForm(request.POST)
@@ -23,4 +24,7 @@ def review(request):
 
 
 def menu(request):
+    """
+    View to render the menu.html page
+    """
     return render(request, 'menu.html')
