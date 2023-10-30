@@ -1,7 +1,7 @@
 
 /** @jest-environment jsdom */
 
-//https://stackoverflow.com/questions/72013449/upgrading-jest-to-v29-error-test-environment-jest-environment-jsdom-cannot-be
+// Tests for menu collapsibles 
 describe("Menu collapsible when title clicked", () => {
 
     beforeAll(() => {
@@ -37,9 +37,9 @@ describe("Menu collapsible when title clicked", () => {
     });
 });
 
+// Test for timeout function for messages, help from the links below. 
 //https://jestjs.io/docs/timer-mocks
 //https://stackoverflow.com/questions/77348090/testing-settimout-with-jest/77348344#77348344
-
 jest.useFakeTimers();
 jest.spyOn(global, 'setTimeout');
 describe("Timer alerts and then closes after 3000", () => {
