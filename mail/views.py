@@ -3,12 +3,14 @@ from django.core.mail import EmailMessage, get_connection
 from django.conf import settings
 from django.contrib import messages
 
-# Create your views here.
-
-# https://opensource.com/article/22/12/django-send-emails-smtp
-
 
 def send_email(request):
+    """
+    Send email function connects the hosts details from settings.py
+    and then set the details for the email to be sent to the host user.
+    Assistance with django emails: https://opensource.com/article/22/12/django-send-emails-smtp
+    A Success message is displayed once email is sent successfully. 
+    """
     if request.method == "POST":
         with get_connection(
            host=settings.EMAIL_HOST,
