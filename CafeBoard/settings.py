@@ -59,13 +59,16 @@ INSTALLED_APPS = [
     'mail',
 ]
 
-
+# Set up for crispy forms 
 CRISPY_TEMPLLATE_PACK = 'bootstrap4'
+
+# Details neccessary for allauth
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+# Details of message alerts
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
     messages.INFO: 'alert-info',
@@ -74,8 +77,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-# https://django-testing-docs.readthedocs.io/en/latest/coverage.html
-
+# Nose was installed to determin coverage help here: https://django-testing-docs.readthedocs.io/en/latest/coverage.html
 # Use nose to run all tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
@@ -180,7 +182,7 @@ MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
-# Default primary key field type
+# Set up to send emails with django, assistance from the link below.
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

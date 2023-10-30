@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
 
 BOOKING_STATUS = ((0, 'To be confirmed'), (1, 'Confirmed'), (2, 'Declined'))
 
 
 class Customer(models.Model):
+    """
+    Customer model. Foregin key present to User.
+    """
     first_name = models.CharField(max_length=80)
     last_name = models.CharField(max_length=80)
     email = models.EmailField()
@@ -18,6 +20,9 @@ class Customer(models.Model):
 
 
 class Booking(models.Model):
+    """
+    Booking model. Foreign key present to Customer model
+    """
     booking_date = models.DateField()
     booking_time = models.TimeField()
     number_attending = models.IntegerField(default=2)
