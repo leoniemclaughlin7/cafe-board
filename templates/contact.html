@@ -3,8 +3,8 @@
     <div class="row justify-content-md-center">
         <div class="col-sm-6 center-form">
             <h1>Contact Us:</h1>
-                <form method="POST" action="{% url 'mail' %}" id="contact-form">
-                    {% csrf_token %}
+            <form method="POST" action="{% url 'mail' %}" id="contact-form">
+                {% csrf_token %}
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
