@@ -5,11 +5,7 @@
   <div class="row">
     <div class="col-lg-4 col-md-12">
       <div class="card" id="card1">
-        <img
-          src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694442030/zwycdd3okwn47wocf5m2.jpg"
-          class="card-img-top"
-          alt="coffee and boardgames"
-        />
+        <img src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694442030/zwycdd3okwn47wocf5m2.jpg" class="card-img-top" alt="coffee and boardgames"/>
         <div class="card-body">
           <p class="card-text">
             <strong>MENU & GAMES:</strong>
@@ -21,30 +17,22 @@
     </div>
     <div class="col-lg-4 col-md-12">
       <div class="card" id="card2">
-        <img
-          src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694450999/pxfzbjvycufwsmodtl8e.jpg"
-          class="card-img-top"
-          alt="people playing boardgames"
-        />
+        <img src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694450999/pxfzbjvycufwsmodtl8e.jpg" class="card-img-top" alt="people playing boardgames"/>
         <div class="card-body">
           <p class="card-text">
-          <strong>ABOUT:</strong>
-          <p>This Dublin city center cafe is the ideal place to grab a coffee and play some boardgames with friends.</p>
+            <strong>ABOUT:</strong>
+            <p>This Dublin city center cafe is the ideal place to grab a coffee and play some boardgames with friends.</p>
           </p>
         </div>
       </div>
     </div>
     <div class="col-lg-4 col-md-12">
       <div class="card" id="card3">
-        <img
-          src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694447368/aljzlwdpk7iw7sgjh4cj.jpg"
-          class="card-img-top"
-          alt="coffee with a person playing a game in the background"
-        />
+        <img src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694447368/aljzlwdpk7iw7sgjh4cj.jpg" class="card-img-top" alt="coffee with a person playing a game in the background"/>
         <div class="card-body">
           <p class="card-text">
-           <strong>OPENING HOURS:</strong>
-           <p>Mon-Sun 10:00am-12:00am</p>
+            <strong>OPENING HOURS:</strong>
+            <p>Mon-Sun 10:00am-12:00am</p>
           </p>
         </div>
       </div>
@@ -56,45 +44,42 @@
         <div class="col-lg-4 address col-md-12">
             <h3><strong>Address:</strong></h3>
             <p>Cafe-Board,<br>Donegal street,<br>Dublin</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.890636828619!2d-6.270802840590484!3d53.345213858947815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e82ccaed2b7%3A0xd1d25c00d489c2a6!2sJoy%20of%20Ch%C3%A1!5e0!3m2!1sen!2sie!4v1697738310433!5m2!1sen!2sie"
-                allowfullscreen="" loading="lazy" class="iframe" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.890636828619!2d-6.270802840590484!3d53.345213858947815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e82ccaed2b7%3A0xd1d25c00d489c2a6!2sJoy%20of%20Ch%C3%A1!5e0!3m2!1sen!2sie!4v1697738310433!5m2!1sen!2sie"
+                allowfullscreen="" loading="lazy" class="iframe" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
         {% if user.is_authenticated %}
         <div class="col-lg-4 submit-review col-md-12">
-                <h3>Leave a Review:</h3>
-                <form method="post" action="{% url 'review' %}" id="review-form">
-                    {{ review_form | crispy }} {% csrf_token %}
-                    <button type="submit" class="btn btn-lg submit-button">Submit</button>
-                </form>
-                </div>
-                {% else %}
-                <div class="col-lg-4 col-md-12" id="logo-position">
-                    <div class="col d-flex justify-content-center">
-                        <img class="logo" src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694797798/yfx7pvjje62dvikwigec.png" alt="cafe-board logo">
-                    </div>
-                </div>
-                {% endif %}
-
-                <div class="col-lg-4 reviews col-md-12">
-                <h3>Reviews:</h3>
-                <div class="card-body"> 
-                    {% for review in reviews %}
+            <h3>Leave a Review:</h3>
+            <form method="post" action="{% url 'review' %}" id="review-form">
+                {{ review_form | crispy }} {% csrf_token %}
+                <button type="submit" class="btn btn-lg submit-button">Submit</button>
+            </form>
+        </div>
+        {% else %}
+        <div class="col-lg-4 col-md-12" id="logo-position">
+            <div class="col d-flex justify-content-center">
+                <img class="logo" src="https://res.cloudinary.com/dcuhp2osv/image/upload/v1694797798/yfx7pvjje62dvikwigec.png" alt="cafe-board logo">
+            </div>
+        </div>
+        {% endif %}
+        <div class="col-lg-4 reviews col-md-12">
+            <h3>Reviews:</h3>
+            <div class="card-body"> 
+                {% for review in reviews %}
                     <div>
                         <p>
                             <strong>{{ review.name }}</strong>
                             <span>
-                                
                                 {{ review.created_on }}
-                                
                             </span>
                             <span>{{review.stars}}<i class="fas fa-star" style="color: #f9e406;"></i></span>
                         </p>
                         {{ review.body | linebreaks }}
                     </div>
                     {% endfor %}
-                </div>
-                </div>
+            </div>
         </div>
+    </div>
 </section>
 {%endblock%}
