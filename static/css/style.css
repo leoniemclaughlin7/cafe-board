@@ -1,10 +1,10 @@
+/* Global style */
 * {
     padding: 0;
     margin: 0;
 }
 
-/* nav */
-
+/* Nav */
 .navbar-brand {
     margin-left: 20px;
     font-size: 220%;
@@ -16,10 +16,8 @@
     color: white;
 }
 
-
 /* Footer */
 /* https: //stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page */
-
 footer {
     background-color: #2B4570;
     color: white;
@@ -32,7 +30,6 @@ footer>p {
 }
 
 /* Cards */
-
 .about {
     margin-top: 30px;
 }
@@ -42,7 +39,6 @@ footer>p {
 }
 
 /* Colours */
-
 body {
     background-color: white;
 }
@@ -76,25 +72,21 @@ nav {
 }
 
 /* i frame */
-
 .address {
     text-align: center;
     margin-top: 20px;
     background-color: #7180AC;
     border-radius: 10px;
     border: 5px solid black;
-
 }
 
 /* https: //stackoverflow.com/questions/21140338/convert-place-name-address-to-google-maps-url-and-iframe */
-
 .iframe {
     height: 300px;
     width: 100%;
 }
 
 /* Review */
-
 .submit-review {
     margin-top: 20px;
     text-align: center;
@@ -114,16 +106,17 @@ nav {
     background-color: #A37A74;
     border-radius: 10px;
     border: 5px solid black;
-
 }
 
 .card-body {
     height: 150px;
 }
 
+.address-reviews-position {
+    padding-bottom: 25px;
+}
 
-/* Sign up/sign out */
-
+/* Submit buttons */
 .submit-button {
     background-color: #2B4570;
     border-radius: 5px;
@@ -131,6 +124,7 @@ nav {
     margin-top: 10px;
 }
 
+/* Links */
 .link {
     color: #2B4570;
     text-decoration: none;
@@ -142,13 +136,8 @@ nav {
     margin-bottom: 10px;
 }
 
-.address-reviews-position {
-    padding-bottom: 25px;
-}
-
 /* Logo 
 https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-bootstrap*/
-
 .logo {
     height: 300px;
     width: 300px;
@@ -157,6 +146,7 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     margin-top: 75px;
 }
 
+/* Menu page */
 .menu-card {
     height: auto;
     font-size: 110%;
@@ -189,8 +179,19 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     margin-top: 5px;
 }
 
-/*  Customer-Booking Form */
+#CollapsibleThree {
+    margin-bottom: 15px;
+}
 
+.menu-table {
+    width: 100%;
+}
+
+.menu-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/*  Customer-Booking Form */
 #customer-booking {
     margin-top: 1.3em;
 }
@@ -247,10 +248,8 @@ select {
 }
 
 /* datepicker */
-
 .highlighted-date a {
     color: red !important;
-
 }
 
 /*https: //stackoverflow.com/questions/43492742/how-to-use-the-disabled-attribute-for-a-a-tag-in-html*/
@@ -293,20 +292,7 @@ select {
     color: #2B4570;
 }
 
-#CollapsibleThree {
-    margin-bottom: 15px;
-}
-
-.menu-table {
-    width: 100%;
-}
-
-.menu-table tr {
-    border-bottom: 1px solid #ddd;
-}
-
 /* Media Queries */
-
 @media screen and (max-width: 576px) {
     #card2 {
         margin-top: 15px;
@@ -320,7 +306,6 @@ select {
 
 /*https: //www.sitepoint.com/bootstrap-grid-mastering-flexbox/#:~:text=Every%20direct%20child%20element%20of%20a%20flex%20container,sets%20the%20horizontal%20direction%20from%20right%20to%20left*/
 @media screen and (max-width: 992px) {
-
     #logo-position {
         order: 1;
     }
@@ -336,7 +321,6 @@ select {
 }
 
 @media screen and (max-width: 366px) {
-
     .nav-link {
         font-size: 77%;
     }

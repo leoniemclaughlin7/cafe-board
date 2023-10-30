@@ -15,7 +15,6 @@ def limit_no_attendees(date, time, attending):
         booking_date=date, booking_time=time)
     total_attendees = unavailable.aggregate(Sum('number_attending'))[
         'number_attending__sum']
-
     if total_attendees is None:
         total_attendees = 0
     if total_attendees + attending <= 20:
@@ -68,11 +67,11 @@ def customer_booking(request):
                 customer_form = CustomerForm()
                 booking_form = BookingForm()
                 messages.add_message(request, messages.SUCCESS,
-                                     'Your booking request was successful, please visit your profile to view the status!')
+                                     'Your booking request was successful, please visit" \
+                                        "your profile to view the status!')
             else:
                 messages.add_message(request, messages.ERROR,
                                      'Date and time unavailable!')
-
     else:
         customer_form = CustomerForm(prefix='customer')
         booking_form = BookingForm(prefix='booking')
@@ -135,7 +134,6 @@ def edit_user(request, user_id):
             form.save()
             return redirect('display_booking')
     form = UserForm(instance=user)
-
     context = {
         'form': form,
     }

@@ -1,8 +1,6 @@
 
 /** @jest-environment jsdom */
 
-
-
 //https://stackoverflow.com/questions/72013449/upgrading-jest-to-v29-error-test-environment-jest-environment-jsdom-cannot-be
 describe("Menu collapsible when title clicked", () => {
 
@@ -26,22 +24,17 @@ describe("Menu collapsible when title clicked", () => {
 
             const hasToggleClicked = element.classList.contains('toggle');
             expect(hasToggleClicked).toBe(true);
-
         });
 
     test("expect element by id collapseTwo to exist", () => {
         const element = document.getElementById("collapseTwo");
         expect(element).not.toBeNull();
-
     });
 
     test("expect element by id collapseThree to exist", () => {
         const element = document.getElementById("collapseThree");
         expect(element).not.toBeNull();
-
     });
-
-
 });
 
 //https://jestjs.io/docs/timer-mocks
@@ -63,8 +56,6 @@ describe("Timer alerts and then closes after 3000", () => {
         const element = document.getElementById("msg");
         expect(element).not.toBeNull();
         expect(document.querySelector('.alert')).toBeTruthy();
-
-
         require('../script');
         setTimeout(() => {
             jest.runAllTimers();
@@ -73,6 +64,5 @@ describe("Timer alerts and then closes after 3000", () => {
             expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 3000);
             expect(document.querySelector('.alert')).toBeNull();
         }, 3000);
-
     });
 });

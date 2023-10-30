@@ -13,5 +13,4 @@ urlpatterns = [
          views.edit_user, name='edit_user'),
     path('delete_user/<user_id>',
          views.delete_user, name='delete_user'),
-
 ]

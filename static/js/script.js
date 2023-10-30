@@ -17,9 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert.close();
     }, 3000);
 
-
     const dates = JSON.parse(document.getElementById('unavailableDates').textContent);
-
 
     $('#datepicker').datepicker
         ({
@@ -36,8 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     //https://timepicker.co/#
-
-
     $('#timepicker').timepicker
         ({
             startTime: '10:00',
@@ -47,7 +43,4 @@ document.addEventListener("DOMContentLoaded", function () {
             maxTime: '23:00',
 
         });
-
-   
-
 });
