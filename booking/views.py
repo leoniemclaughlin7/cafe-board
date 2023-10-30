@@ -15,8 +15,8 @@ def limit_no_attendees(date, time, attending):
     here: https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query 
     """
     attendees_limit = False
-    unavailable = Booking.objects.filter(
-        booking_date=date, booking_time=time)
+    unavailable = Booking.objects.filter(booking_status=1,
+                                          booking_date=date, booking_time=time)
     total_attendees = unavailable.aggregate(Sum('number_attending'))[
         'number_attending__sum']
     if total_attendees is None:
@@ -83,8 +83,7 @@ def customer_booking(request):
                 customer_form = CustomerForm()
                 booking_form = BookingForm()
                 messages.add_message(request, messages.SUCCESS,
-                                     'Your booking request was successful, please visit" \
-                                        "your profile to view the status!')
+                                     'Your booking request was successful, please visit your profile to view the status!')
             else:
                 messages.add_message(request, messages.ERROR,
                                      'Date and time unavailable!')
