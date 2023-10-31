@@ -9,8 +9,8 @@
         <div class="card-body">
           <p class="card-text">
             <strong>MENU & GAMES:</strong>
-            <p>You can see our Menu here: <a href="{% url 'menu' %}">Menu</a></p>
-            <p>For a list of our games please check here: <a href="#">Games</a></p>
+            <p>You can see our Menu here: <a href="{% url 'menu' %}" aria-label="Navigates to the menu page">Menu</a></p>
+            <p>For a list of our games please check here: <a href="#" aria-label="Navigates to the games page" >Games</a></p>
           </p>
         </div>
       </div>
@@ -55,7 +55,7 @@
             <h3>Leave a Review:</h3>
             <form method="post" action="{% url 'review' %}" id="review-form">
                 {{ review_form | crispy }} {% csrf_token %}
-                <button type="submit" class="btn btn-lg submit-button">Submit</button>
+                <button type="submit" class="btn btn-lg submit-button" aria-label="Submits review">Submit</button>
             </form>
         </div>
         {% else %}

@@ -49,29 +49,29 @@
             </span>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'review' %}">Home</a>
+                    <a class="nav-link" href="{% url 'review' %}" aria-label="Navigates to the home page">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                    <a class="nav-link" href="{% url 'menu' %}" aria-label="Navigates to the menu page">Menu</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'booking' %}">Booking</a>
+                    <a class="nav-link" href="{% url 'booking' %}" aria-label="Navigates to the booking page">Booking</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}" aria-label="Navigates to the logout page">Logout</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'display_booking' %}">
+                    <a class="nav-link" href="{% url 'display_booking' %}" aria-label="Navigates to the profile page">
                         <i class="fas fa-user"></i>
                     </a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    <a class="nav-link" href="{% url 'account_signup' %}" aria-label="Navigates to the register page">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+                    <a class="nav-link" href="{% url 'account_login' %}" aria-label="Navigates to the sign in page">Sign In</a>
                 </li>
                 {% endif %}
             </ul>
@@ -101,11 +101,11 @@
     <!-- Footer -->
     <footer class="mt-auto">
         <p>
-            Follow us: <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-square ms-3"></i></a>
-            <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram-square ms-3"></i></a>
+            Follow us: <a target="_blank" href="https://www.facebook.com/" aria-label="Navigates to the facebook page"><i class="fab fa-facebook-square ms-3"></i></a>
+            <a target="_blank" href="https://www.instagram.com/" aria-label="Navigates to the instagram page"><i class="fab fa-instagram-square ms-3"></i></a>
         </p>
         <p id="contact-us">
-        <a href="{% url 'mail' %}" class="contact-link">Contact us</a>
+        <a href="{% url 'mail' %}" class="contact-link" aria-label="Navigates to the contact us page">Contact us</a>
         </p>
     </footer>
 <!-- Jquery -->

@@ -6,14 +6,14 @@
       <h3>Booking Form:</h3>
       <form method="post" id="customer-booking">
         {{ customer_form | crispy }} {{ booking_form | crispy }} {%csrf_token %}
-            <button type="submit" class="btn btn-lg submit-button">Submit</button>
+            <button type="submit" class="btn btn-lg submit-button" aria-label="Submit booking">Submit</button>
       </form>
     </div>
     <div class="col-sm-12 center-form">
       <p>
         If you would like to view your booking or make changes, please visit
         your
-        <a href="{% url 'display_booking' %}">
+        <a href="{% url 'display_booking' %}" aria-label="Navigates to the profile page">
             <i class="fas fa-user profile-icon"></i>
         </a>
       </p>
