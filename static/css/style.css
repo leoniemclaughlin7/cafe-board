@@ -26,7 +26,15 @@ footer {
 
 footer>p {
     font-size: 110%;
-    padding-top: 25px;
+    padding-top: 10px;
+}
+
+footer a {
+    color: white;
+}
+
+#contact-us {
+    padding-top: 0px;
 }
 
 /* Cards */
