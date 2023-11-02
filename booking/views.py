@@ -121,6 +121,7 @@ def edit_booking(request, booking_id, customer_id):
     Edit booking function will display a pre filled form for a 
     specific booking of the users choosing and allows this booking to be edited.
     """
+    unavailable_booking_dates = []
     booking = get_object_or_404(Booking, id=booking_id)
     customer = get_object_or_404(Customer, id=customer_id)
     if request.method == "POST":
@@ -132,9 +133,11 @@ def edit_booking(request, booking_id, customer_id):
             return redirect('display_booking')
     booking_form = BookingForm(instance=booking)
     customer_form = CustomerForm(instance=customer)
+    unavailable_booking_dates = unavailable_dates()
     context = {
         'booking_form': booking_form,
-        'customer_form': customer_form
+        'customer_form': customer_form,
+        'unavailable_dates': unavailable_booking_dates,
     }
     return render(request, 'edit_booking.html', context)
 
