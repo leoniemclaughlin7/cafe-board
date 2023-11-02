@@ -169,16 +169,21 @@ def edit_user(request, user_id):
     Edit user allows the user to edit their username and email.
     """
     user = get_object_or_404(User, id=user_id)
-    if request.method == "POST":
-        form = UserForm(request.POST, instance=user)
-        if form.is_valid():
-            form.save()
-            return redirect('display_booking')
-    form = UserForm(instance=user)
-    context = {
-        'form': form,
-    }
-    return render(request, 'edit_user.html', context)
+    if not user == request.user:
+        messages.error(request, 
+        'Error, you are unauthorised to edit this users account')
+        return redirect(reverse('display_booking'))
+    else:
+        if request.method == "POST":
+            form = UserForm(request.POST, instance=user)
+            if form.is_valid():
+                form.save()
+                return redirect('display_booking')
+        form = UserForm(instance=user)
+        context = {
+            'form': form,
+        }
+        return render(request, 'edit_user.html', context)
 
 
 def delete_user(request, user_id):
