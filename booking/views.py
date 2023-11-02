@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .forms import CustomerForm, BookingForm, UserForm
 from django.contrib.auth.models import User
 from .models import Booking, Customer
@@ -120,26 +120,33 @@ def edit_booking(request, booking_id, customer_id):
     """
     Edit booking function will display a pre filled form for a 
     specific booking of the users choosing and allows this booking to be edited.
+    Help with securing the url:
+    https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_
     """
     unavailable_booking_dates = []
     booking = get_object_or_404(Booking, id=booking_id)
     customer = get_object_or_404(Customer, id=customer_id)
-    if request.method == "POST":
-        booking_form = BookingForm(request.POST, instance=booking)
-        customer_form = CustomerForm(request.POST, instance=customer)
-        if customer_form.is_valid() and booking_form.is_valid():
-            booking_form.save()
-            customer_form.save()
-            return redirect('display_booking')
-    booking_form = BookingForm(instance=booking)
-    customer_form = CustomerForm(instance=customer)
-    unavailable_booking_dates = unavailable_dates()
-    context = {
-        'booking_form': booking_form,
-        'customer_form': customer_form,
-        'unavailable_dates': unavailable_booking_dates,
-    }
-    return render(request, 'edit_booking.html', context)
+    if not customer.user == request.user:
+        messages.error(request, 
+        'Error, you are unauthorised to edit this booking')
+        return redirect(reverse('display_booking'))
+    else:
+        if request.method == "POST":
+            booking_form = BookingForm(request.POST, instance=booking)
+            customer_form = CustomerForm(request.POST, instance=customer)
+            if customer_form.is_valid() and booking_form.is_valid():
+                booking_form.save()
+                customer_form.save()
+                return redirect('display_booking')
+        booking_form = BookingForm(instance=booking)
+        customer_form = CustomerForm(instance=customer)
+        unavailable_booking_dates = unavailable_dates()
+        context = {
+            'booking_form': booking_form,
+            'customer_form': customer_form,
+            'unavailable_dates': unavailable_booking_dates,
+        }
+        return render(request, 'edit_booking.html', context)
 
 
 def delete_booking(request, booking_id, customer_id):
