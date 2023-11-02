@@ -9,7 +9,8 @@ def send_email(request):
     Send email function connects the hosts details from settings.py
     and then set the details for the email to be sent to the host user.
     Assistance with django emails: https://opensource.com/article/22/12/django-send-emails-smtp
-    A Success message is displayed once email is sent successfully. 
+    A Success message is displayed once email is sent successfully.
+    Help with EmailMessage class: https://stackoverflow.com/questions/59802624/contact-form-sending-emails-from-and-to-the-same-email-django 
     """
     if request.method == "POST":
         with get_connection(

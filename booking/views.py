@@ -83,7 +83,8 @@ def customer_booking(request):
                 customer_form = CustomerForm()
                 booking_form = BookingForm()
                 messages.add_message(request, messages.SUCCESS,
-                                     'Your booking request was successful, please visit your profile to view the status!')
+                                     'Your booking request was successful, please see status below!')
+                return redirect('display_booking')
             else:
                 messages.add_message(request, messages.ERROR,
                                      'Date and time unavailable!')
