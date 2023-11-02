@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'booking',
     'django_nose',
     'mail',
+    'django_extensions',
 ]
 
 # Set up for crispy forms 
@@ -193,3 +194,9 @@ EMAIL_PORT = 587
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASS = os.environ.get('EMAIL_HOST_PASS')
+
+
+GRAPH_MODELS = {
+    'all_applications': True,
+    'graph_models': True,
+}

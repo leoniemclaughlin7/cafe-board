@@ -23,8 +23,8 @@ def send_email(request):
             from_email = request.POST.get("email")
             recipient_list = [settings.EMAIL_HOST_USER,]
             message = request.POST.get("message")
-            EmailMessage(name, message, from_email,
-                         recipient_list, connection=connection).send()
+            EmailMessage(subject=name, body=message, from_email=from_email,
+                         to=recipient_list, reply_to=[from_email], connection=connection).send()
         messages.add_message(request, messages.SUCCESS,
                              'Your message was sent. Please check your" \
                                 "email for a reply in 24hrs.')
