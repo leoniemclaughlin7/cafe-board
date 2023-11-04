@@ -31,7 +31,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEV")
+DEBUG = False
 
 ALLOWED_HOSTS = ['cafe-board-0e3b1578d9eb.herokuapp.com',
                  '8000-leoniemclaughlin7-cafe-b-dkzz4nf47q.us2.codeanyapp.com']
@@ -194,9 +194,3 @@ EMAIL_PORT = 587
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASS = os.environ.get('EMAIL_HOST_PASS')
-
-
-GRAPH_MODELS = {
-    'all_applications': True,
-    'graph_models': True,
-}
