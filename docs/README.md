@@ -4,5 +4,28 @@ Café-Board is an online booking website for a boardgame café based in Dublin. 
 
 A live version of the project can be accessed here: [Café-Board](https://cafe-board-0e3b1578d9eb.herokuapp.com/)
 
-<img src="../docs/readme_images/am-i-responsice-cafe-board.png">
+<img src="../docs/readme_images/am-i-responsive-cafe-board.png">
+
+# User Experience Design
+
+## User Demographic
+
+This website is intended for:
+
+* Users that have a keen interest in boardgames.
+* Users that would like to socialise in Dublin.
+* Users that wish to book a table in a boardgame café.
+* Users that are interested in coffee shops.  
+
+## User Stories
+
+As a User of this website:
+
+* I want to play boardgames with a group of people. 
+* I want to be able to book my table. 
+* I want to order some coffee and food. 
+* I want to be able to leave a review.
+* I want to be able to contact site admin with any concerns.
+* I want to be able to manage my booking.
+* I want to be able to manage my account. 
 
