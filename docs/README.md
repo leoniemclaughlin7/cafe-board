@@ -29,3 +29,8 @@ As a User of this website:
 * I want to be able to manage my booking.
 * I want to be able to manage my account. 
 
+## Flowchart 
+
+This flowchart was created to determine the flow of the website. It shows which pages are available to the user. It takes into account if the user is logged in to the website or not.
+
+<img src="../docs/readme_images/flowchart-cafe-board.png">
