@@ -39,36 +39,19 @@ footer a {
 
 /* Hero Image */
 #hero-image {
-    height: 600px;
+    height: 400px;
     width: 100%;
     background: url("https://res.cloudinary.com/dcuhp2osv/image/upload/v1700680280/hero-image-cafe_d7dxhd.jpg") no-repeat center center;
     background-size: cover;
 }
 
 #hero-outer {
-    height: 600px;
+    height: 400px;
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-
-#cover-text,
-#cover-text h2 {
-    color: #fff;
-}
-
-#cover-text {
-    font-size: 130%;
-    text-transform: uppercase;
-    width: 300px;
-    height: 200px;
-    padding-top: 40px;
-    padding-left: 10px;
-    bottom: 30px;
-    right: 150px;
-    position: absolute;
-}
 
 /* Cards */
 .about {
@@ -116,9 +99,9 @@ nav {
 .address {
     text-align: center;
     margin-top: 20px;
-    background-color: #7180AC;
+    background-color: white;
     border-radius: 10px;
-    border: 5px solid black;
+    border: 5px solid #7180AC;
 }
 
 /* https: //stackoverflow.com/questions/21140338/convert-place-name-address-to-google-maps-url-and-iframe */
@@ -144,9 +127,9 @@ nav {
     text-align: center;
     height: 500px;
     overflow-y: auto;
-    background-color: #A37A74;
+    background-color: white;
     border-radius: 10px;
-    border: 5px solid black;
+    border: 5px solid #A37A74;
 }
 
 .card-body {
