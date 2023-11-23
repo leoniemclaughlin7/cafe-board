@@ -45,16 +45,6 @@ footer a {
 
 }
 
-#hero-outer {
-    height: 600px;
-    width: 100%;
-    overflow: hidden;
-
-    position: relative;
-
-}
-
-
 #cover-text,
 #cover-text h2 {
     color: #fff;
@@ -73,7 +63,6 @@ footer a {
 
     bottom: 30px;
     right: 150px;
-    position: absolute;
 }
 
 /* Cards */
