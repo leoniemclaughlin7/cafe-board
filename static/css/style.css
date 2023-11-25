@@ -52,6 +52,27 @@ footer a {
     position: relative;
 }
 
+#cover-text,
+#cover-text h2 {
+    color: #fff;
+}
+
+#cover-text {
+    font-size: 130%;
+    text-transform: uppercase;
+
+    width: 300px;
+    height: 200px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+
+    background-color: rgba(10, 10, 10, 0.582);
+
+    bottom: 30px;
+    left: 150px;
+    position: absolute;
+}
 
 /* Cards */
 .about {
@@ -316,6 +337,14 @@ select {
     color: #2B4570;
 }
 
+td > a {
+    text-decoration: none;
+}
+
+#edit-account {
+    text-decoration: none;
+}
+
 /* Media Queries */
 @media screen and (max-width: 576px) {
     #card2 {
@@ -341,6 +370,10 @@ select {
     #card2 {
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+
+    #cover-text {
+        left: 0;
     }
 }
 

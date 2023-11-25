@@ -31,10 +31,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['cafe-board-0e3b1578d9eb.herokuapp.com',
-                 '8000-leoniemclaughlin7-cafe-b-dkzz4nf47q.us2.codeanyapp.com']
+                 '8000-leoniemclaughlin7-cafe-b-gsyfbhmgy3.us2.codeanyapp.com']
 
 
 # Application definition
@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'django_extensions',
 ]
 
-# Set up for crispy forms 
+# Set up for crispy forms
 CRISPY_TEMPLLATE_PACK = 'bootstrap4'
 
 # Details neccessary for allauth

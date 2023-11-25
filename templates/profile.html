@@ -1,104 +1,123 @@
 {% extends "base.html" %} {% block content %}
 <!-- Welcome to profile and profile information section -->
 <section class="container profile">
-    <div class="row">
-        <div class="col-sm-6 welcome d-flex justify-content-center align-items-center">
-            <h3>Welcome {{user.username}}!</h3>
-        </div>
-        <div class="col-sm-3 text-center">
-            <h3>Profile Information:</h3>
-        </div>
-        <div class="col-sm-3">
-            <span><strong>Username:</strong> {{ user.username }}</span><br>
-            <span><strong>Email:</strong> {{ user.email }}</span><br>
-            <a href="{% url 'edit_user' user.id %}" aria-label="Navigates to edit user form">
-                <button class="btn btn-secondary">Edit</button>
-            </a>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#accountDeleteModal" aria-label="Delete account" >Delete Account!</button>
-        </div>
+  <div class="row">
+    <div
+      class="col-sm-6 welcome d-flex justify-content-center align-items-center"
+    >
+      <h3>Welcome {{user.username}}!</h3>
     </div>
+    <div class="col-sm-3 text-center">
+      <h3>Profile Information:</h3>
+    </div>
+    <div class="col-sm-3">
+      <span><strong>Username:</strong> {{ user.username }}</span><br />
+      <span><strong>Email:</strong> {{ user.email }}</span><br />
+      <a href="{% url 'edit_user' user.id %}" aria-label="Navigates to edit user form" id="edit-account">
+        <button class="btn btn-secondary">Edit</button>
+      </a>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#accountDeleteModal" aria-label="Delete account">
+        Delete Account!
+      </button>
+    </div>
+  </div>
 </section>
 
-  <!-- Modal for deleteing user account https://getbootstrap.com/docs/5.1/components/modal/-->
-  <div class="modal fade" id="accountDeleteModal" tabindex="-1" aria-labelledby="delete account" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">Delete your account</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Are you sure you would like to delete your account?
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close modal">
-            Close
-            </button>
-            <a href="{% url 'delete_user' user.id %}" aria-label="Delete your account" >
-                <button type="button" class="btn btn-danger">Delete account!</button>
-            </a>
-        </div>
+<!-- Modal for deleteing user account https://getbootstrap.com/docs/5.1/components/modal/-->
+<div
+  class="modal fade"
+  id="accountDeleteModal"
+  tabindex="-1"
+  aria-labelledby="delete account"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delete your account</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you would like to delete your account?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close modal">
+          Close
+        </button>
+        <a href="{% url 'delete_user' user.id %}" aria-label="Delete your account">
+          <button type="button" class="btn btn-danger">Delete account!</button>
+        </a>
       </div>
     </div>
   </div>
+</div>
 <!-- Section for displaying bookings -->
 {% if bookings %}
 <section class="container bookings">
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <h3>Bookings:</h3>
-        </div>
-        <div class="card-body text-center">
-            <table id="booking-table">
-                <tr>
-                    <th>Name:</th>
-                    <th>Booking reference:</th>
-                    <th>Date:</th>
-                    <th>Time:</th>
-                    <th>Number attending:</th>
-                    <th>Status:</th>
-                    <th>Make changes:</th>
-                </tr>
-            {% for booking in bookings %}
-                <tr>
-                    <td>{{ booking.customer.first_name }} {{booking.customer.last_name}}</td>
-                    <td>{{ booking.id }}</td>
-                    <td>{{ booking.booking_date }}</td>
-                    <td>{{ booking.booking_time }}</td>
-                    <td>{{booking.number_attending}}</td>
-            {% if booking.booking_status == 0 %} 
-                    <td>To be confirmed</td>
-                    <td>
-                        <a href="{% url 'edit_booking' booking.id booking.customer.id %}" aria-label="Edit booking" >
-                            <button class="btn btn-secondary">Edit</button>
-                        </a>
-                        <a href="{% url 'delete_booking' booking.id booking.customer.id %}" aria-label="Delete booking" >
-                            <button class="btn btn-danger">Delete</button>
-                        </a>
-                    </td>
-            {% elif booking.booking_status == 1 %}
-                    <td>Confirmed</td>
-                    <td>
-                        <a href="{% url 'delete_booking' booking.id booking.customer.id %}" aria-label="Delete booking">
-                            <button class="btn btn-danger">Delete</button> 
-                        </a>
-                    </td>
-            {%else%}
-                    <td>Cancelled</td>
-                    <td>
-                        <a href="{% url 'delete_booking' booking.id booking.customer.id %}" aria-label="Delete booking">
-                            <button class="btn btn-danger">Delete</button> 
-                        </a>
-                    </td>
-            {% endif %}
-            {% endfor %}
-                </tr>
-            </table>
-        </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h3>Bookings:</h3>
     </div>
+    <div class="card-body text-center">
+      <table id="booking-table">
+        <tr>
+          <th>Name:</th>
+          <th>Booking reference:</th>
+          <th>Date:</th>
+          <th>Time:</th>
+          <th>Number attending:</th>
+          <th>Status:</th>
+          <th>Make changes:</th>
+        </tr>
+        {% for booking in bookings %}
+        <tr>
+          <td>
+            {{ booking.customer.first_name }} {{booking.customer.last_name}}
+          </td>
+          <td>{{ booking.id }}</td>
+          <td>{{ booking.booking_date }}</td>
+          <td>{{ booking.booking_time }}</td>
+          <td>{{booking.number_attending}}</td>
+          {% if booking.booking_status == 0 %}
+          <td>To be confirmed</td>
+          <td>
+            <a href="{% url 'edit_booking' booking.id booking.customer.id %}" aria-label="Edit booking">
+                <button class="btn btn-secondary">Edit</button>
+            </a>
+            <a href="{% url 'delete_booking' booking.id booking.customer.id %}" aria-label="Delete booking">
+                <button class="btn btn-danger">Delete</button>
+            </a>
+          </td>
+          {% elif booking.booking_status == 1 %}
+          <td>Confirmed</td>
+          <td>
+            <a href="{% url 'delete_booking' booking.id booking.customer.id %}" aria-label="Delete booking">
+              <button class="btn btn-danger">Delete</button>
+            </a>
+          </td>
+          {%else%}
+          <td>Cancelled</td>
+          <td>
+            <a href="{% url 'delete_booking' booking.id booking.customer.id %}" aria-label="Delete booking">
+              <button class="btn btn-danger">Delete</button>
+            </a>
+          </td>
+          {% endif %} {% endfor %}
+        </tr>
+      </table>
+    </div>
+  </div>
 </section>
 {% else %}
 <!-- If no bookings to display -->
-<strong><p class="text-center no-booking">Please Visit the booking tab to make a booking.</p></strong>
-{% endif %}
-{%endblock%}
+<strong>
+    <p class="text-center no-booking">
+    Please Visit the booking tab to make a booking.
+    </p>
+</strong>
+{% endif %} {%endblock%}
