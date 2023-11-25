@@ -345,6 +345,20 @@ td > a {
     text-decoration: none;
 }
 
+/* Games */
+
+.games-1 {
+    border: 5px solid #7180AC;
+}
+
+.games-2 {
+    border: 5px solid #E49273;
+}
+
+.games-3 {
+    border: 5px solid #A37A74;
+}
+
 /* Media Queries */
 @media screen and (max-width: 576px) {
     #card2 {
