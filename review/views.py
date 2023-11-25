@@ -31,3 +31,10 @@ def menu(request):
     View to render the menu.html page.
     """
     return render(request, 'menu.html')
+
+
+def games(request):
+    """
+    View to render the menu.html page.
+    """
+    return render(request, 'games.html')
