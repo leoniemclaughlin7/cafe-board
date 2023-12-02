@@ -18,7 +18,7 @@ def review(request):
             review_form.save()
             review_form = ReviewForm()
             messages.add_message(request, messages.SUCCESS,
-                                'Your review has been successfully posted!')
+                                 'Your review has been successfully posted!')
     else:
         review_form = ReviewForm()
 

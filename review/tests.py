@@ -31,7 +31,7 @@ class ReviewTestCase(TestCase):
 
     def test_view_uses_correct_template(self):
         """
-        Test to determine if the review view uses the correct template. 
+        Test to determine if the review view uses the correct template.
         """
         response = self.client.get(reverse('review'))
         self.assertEqual(response.status_code, 200)
@@ -56,11 +56,12 @@ class MenuTestCase(TestCase):
 
     def test_view_uses_correct_template(self):
         """
-        Test to determine if menu view uses correct template. 
+        Test to determine if menu view uses correct template.
         """
         response = self.client.get(reverse('menu'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'menu.html')
+
 
 class GamesTestCase(TestCase):
 
@@ -80,9 +81,8 @@ class GamesTestCase(TestCase):
 
     def test_view_uses_correct_template(self):
         """
-        Test to determine if games view uses correct template. 
+        Test to determine if games view uses correct template.
         """
         response = self.client.get(reverse('games'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'games.html')
-        

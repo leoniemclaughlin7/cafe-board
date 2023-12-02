@@ -40,3 +40,20 @@ This flowchart was created to determine the flow of the website. It shows which 
 The database design for this project includes Four tables. The first table is a review table. This table houses all the data associated with making a review on the site. There is a customer table, which houses the details of the customer and this is linked to a booking table via a foreign key relationship. The booking table contains the information needed in order for users to make a booking. The last table present is the user table. This table has the information necessary for users to have an account on the website and has a foreign key relationship with the customer table.
 
 <img src="../docs/readme_images/ERD-cafe-board.png">
+
+## Wireframes
+
+Wireframes were produced for the home, booking and profile pages on desktop and mobile. Some aspects of the wireframes have changed as the website was being produced.
+
+### Home
+
+<img src="../docs/readme_images/home-wireframe.png">
+
+### Booking
+
+<img src="../docs/readme_images/booking-wireframe.png">
+
+### Profile
+
+<img src="../docs/readme_images/profile-wireframe">
+
