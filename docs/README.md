@@ -55,5 +55,14 @@ Wireframes were produced for the home, booking and profile pages on desktop and 
 
 ### Profile
 
-<img src="../docs/readme_images/profile-wireframe">
+<img src="../docs/readme_images/profile-wireframe.png">
 
+## Design
+
+The objective of this project was to design a booking website that is easy to use and that has a clean layout whilst also sticking to the theme of the site which is boardgames and coffee.  
+
+### Colours
+
+The colour palette for this website was derived from [Coolors.](https://coolors.co/). The colours that where chosen complement each other while also having coffee tones but bright and retro enough to represent a boardgame café. Below you can see the colours that where used throughout the design of this website.
+
+<img src="../docs/readme_images/coolors-cafe.png">
