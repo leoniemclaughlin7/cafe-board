@@ -106,3 +106,17 @@ Navigation bar when user is logged in.
 * The third card shows the opening times for the café. 
 
 <img src="../docs/readme_images/about-section.png">
+
+### Address and reviews section
+
+* The location of café-board is provided to the user in the form of an i frame. 
+* This I frame contains a random address for a coffee shop in Dublin as café-board is a fictional place currently. 
+* When the user is logged out the logo for café-board is shown. 
+* When the user is logged in to the site a form is evident to leave a review. 
+* The final section shows a scrollable list of reviews left for café-board.
+
+Address and reviews section when user is logged out.
+<img src="../docs/readme_images/address-review-logged-out.png">
+
+Address and reviews section when user is logged in.
+<img src="../docs/readme_images/address-review-logged-in.png">
