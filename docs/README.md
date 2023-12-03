@@ -121,8 +121,19 @@ Address and reviews section when user is logged out.
 Address and reviews section when user is logged in.
 <img src="../docs/readme_images/address-review-logged-in.png">
 
-### Games 
+### Games
 
 * A list of games is provided to the user. This enables them to be more prepared about what they would like to play when booking into café-board.
 
 <img src="../docs/readme_images/games.png">
+
+### Menu 
+
+* A menu with prices is available for users so they can see what is available from café-board.
+* This menu is collapsible and expands to show the coffee, tea and snack sections of the menu.
+
+Collapsed menu.
+<img src="../docs/readme_images/menu-collasped.png">
+
+Expanded menu.
+<img src="../docs/readme_images/menu.png">
