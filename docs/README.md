@@ -146,3 +146,10 @@ Expanded menu.
 * In order to register the user must fill out a form that includes their username, an optional email address, and a password.
 
 <img src="../docs/readme_images/register.png">
+
+### Sign in
+
+* A sign in page is available to users who have created an account.
+* A user must enter their username and password to sign in to café-board.
+
+<img src="../docs/readme_images/sign-in.png">
