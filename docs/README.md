@@ -136,4 +136,13 @@ Collapsed menu.
 <img src="../docs/readme_images/menu-collasped.png">
 
 Expanded menu.
+<br/>
 <img src="../docs/readme_images/menu.png">
+
+### Register an account
+
+* User can sign up to café-board using the register page.
+* If a user signs up they can leave a review, make a booking, view bookings with edit and delete functionality and carry out user account administration.
+* In order to register the user must fill out a form that includes their username, an optional email address, and a password.
+
+<img src="../docs/readme_images/register.png">
