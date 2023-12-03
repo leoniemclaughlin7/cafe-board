@@ -121,6 +121,10 @@ Address and reviews section when user is logged out.
 Address and reviews section when user is logged in.
 <img src="../docs/readme_images/address-review-logged-in.png">
 
+* A success message is displayed to the user once they have posted a review.
+  
+<img src="../docs/readme_images/review-message.png">
+
 ### Games
 
 * A list of games is provided to the user. This enables them to be more prepared about what they would like to play when booking into café-board.
@@ -153,6 +157,10 @@ Expanded menu.
 * A user must enter their username and password to sign in to café-board.
 
 <img src="../docs/readme_images/sign-in.png">
+
+* Once signed in the user is displayed a success message.
+
+<img src="../docs/readme_images/sign-in-message.png">
 
 ### Booking
 
@@ -223,3 +231,9 @@ Expanded menu.
 * The user will be asked to confirm they would like to logout.
 
 <img src="../docs/readme_images/logout.png">
+
+* When the user signs out they are greeted with a pop up message detailing this.
+
+<img src="../docs/readme_images/logout-message.png">
+
+
