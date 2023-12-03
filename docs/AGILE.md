@@ -124,7 +124,7 @@ User stories completed during stint 1 include:
 * [View reviews](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38896430)
 * [Leave a review](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38826276)
 
-### [Café-board - stint 2](https://github.com/users/leoniemclaughlin7/projects/4/views/1)
+### [Café-board - stint 2](https://github.com/users/leoniemclaughlin7/projects/4)
 
 Stint Two of this project focused on creating the booking app.
 
@@ -137,3 +137,16 @@ User stories completed during stint 2 include:
 * [Edit booking](https://github.com/users/leoniemclaughlin7/projects/4/views/1?pane=issue&itemId=40187111)
 * [Delete booking](https://github.com/users/leoniemclaughlin7/projects/4/views/1?pane=issue&itemId=40187198)
 * [Approve bookings](https://github.com/users/leoniemclaughlin7/projects/4/views/1?pane=issue&itemId=40186986)
+
+### [Café-board - stint 3](https://github.com/users/leoniemclaughlin7/projects/5)
+
+Stint Three of this project continued on with creating the booking app and also looked at  user account administration.  
+
+<img  src="../docs/agile_images/stint-3.png">
+
+User stories completed during stint 3 include:
+
+* [Booking calander](https://github.com/users/leoniemclaughlin7/projects/5/views/1?pane=issue&itemId=41147670)
+* [Timepicker](https://github.com/users/leoniemclaughlin7/projects/5/views/1?pane=issue&itemId=41578875)
+* [Edit username](https://github.com/users/leoniemclaughlin7/projects/5/views/1?pane=issue&itemId=41578914)
+* [Delete account](https://github.com/users/leoniemclaughlin7/projects/5/views/1?pane=issue&itemId=41578962)
