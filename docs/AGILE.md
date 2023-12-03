@@ -162,3 +162,9 @@ User stories completed during stint 4 include:
 * [Contact us](https://github.com/users/leoniemclaughlin7/projects/6/views/1?pane=issue&itemId=43013836)
 * [404 page](https://github.com/users/leoniemclaughlin7/projects/6/views/1?pane=issue&itemId=43503761)
 * [Responsive design](https://github.com/users/leoniemclaughlin7/projects/6/views/1?pane=issue&itemId=43504041)
+
+## Conclusion
+
+In conclusion, this was my first time using agile principles and the benefits where clear to be seen. Using agile helped with the development of my project while also allowing me to keep to a schedule and which functionality I was working on. I learned a great deal by using agile in this project and have gained a skill set which I will bring forward into future work. Upon reflection, I believe I could have been more detailed with my user stories and for the scope of the project I believe I could have added more. Working with the MoSCoW technique could also do with improvement in this project. Moving forward this first attempt at using agile methodology has taught me about Kanban boards, issues and milestones which were all great tools available through GitHub to adopt an agile approach to creating a project.
+
+You can return to my README.md file [here.](../docs/README.md)
