@@ -197,3 +197,18 @@ Expanded menu.
 * A pop up model will confirm if the user is sure they would like to delete their account. This is a good safety measure to prevent the user carrying out an action they did not intend.
 
 <img src="../docs/readme_images/delete-account.png">
+
+* From the profile page the user can also see their bookings.
+* If They have not made any bookings yet, the user is informed of this and directed to the booking link to make a booking.
+
+<img src="../docs/readme_images/no-bookings.png">
+
+* If the user has available bookings they will be given information relating to the booking such as a reference number and the status of the booking.
+* If the booking status is 'Cancelled' or 'Confirmed' the user is given the option to delete their booking.
+
+<img src="../docs/readme_images/booking-status.png">
+
+* If the booking status is 'To be confirmed', the user has the option to edit their booking.
+* The edit booking form is prepopulated with the original booking information, which allows the user to see what they previously had booked and make any changes in accordance.
+
+<img src="../docs/readme_images/edit-booking.png">
