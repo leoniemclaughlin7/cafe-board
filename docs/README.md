@@ -252,3 +252,15 @@ Expanded menu.
 * This is of value to the user as they can have any question they may have about café-board answered or even have their password changed if they have forgotten it.  
 
 <img src="../docs/readme_images/contact-us.png">
+
+### Administration
+
+* The review admin section is labelled by name, stars and created on. Admin can also filter the reviews depending on stars and created on.
+
+<img src="../docs/readme_images/admin-review.png">
+
+* The booking admin section is labelled by customer, booking date, booking time, number attending and booking status. Admin can also filter the bookings by status and booking date.
+* These admin features are nice to have as it allows for easier confirmation of bookings for admin.
+
+<img src="../docs/readme_images/admin-booking.png">
+
