@@ -63,6 +63,10 @@ The objective of this project was to design a booking website that is easy to us
 
 ### Colours
 
-The colour palette for this website was derived from [Coolors.](https://coolors.co/). The colours that where chosen complement each other while also having coffee tones but bright and retro enough to represent a boardgame café. Below you can see the colours that where used throughout the design of this website.
+The colour palette for this website was derived from [Coolors](https://coolors.co/). The colours that where chosen complement each other while also having coffee tones but bright and retro enough to represent a boardgame café. Below you can see the colours that where used throughout the design of this website.
 
 <img src="../docs/readme_images/coolors-cafe.png">
+
+# Agile
+
+Café-Board was developed using the Agile Development Methodology. A detailed overview of the Agile process is available [here.](../docs/AGILE.md)
