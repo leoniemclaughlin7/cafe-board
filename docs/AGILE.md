@@ -94,8 +94,32 @@ A user story is an explanation of a software feature written from the perspectiv
 * Assignee -  Who the user store is assigned too. 
 * Milestone - Which epic this user store is associated with.
 
-Below is an example of how the user stories where structured for this project. 
+Below is an example of how the user stories where structured for this project.
+
+<br/>
+
+A full list of the user stories associated with this project can be found [here.](https://github.com/leoniemclaughlin7/cafe-board/issues?q=is%3Aissue+is%3Aclosed)
 
 <img  src="../docs/agile_images/user-story.png">
 
-In total 18 User stories where created. In reflection there was opportunity to have many more user stories for the size of this project and more planning could have been done to facilitate a more detailed agile user story count. This is something which I will take forward into future projects carried out. A full list of the user stories associated with this project can be found [here.](https://github.com/leoniemclaughlin7/cafe-board/issues?q=is%3Aissue+is%3Aclosed)
+In total 18 User stories where created. In reflection there was opportunity to have many more user stories for the size of this project and more planning could have been done to facilitate a more detailed agile user story count. This is something which I will take forward into future projects carried out.
+
+## Stints
+
+This project was broken down into Four stints of varying duration. The plan was to allow a week for each stint, however this changed during development and some stints required more time than others.
+
+<img  src="../docs/agile_images/stints.png">
+
+### [Café-board - stint 1](https://github.com/users/leoniemclaughlin7/projects/3)
+
+Stint One of this project focused on the epics account registration, main structure of the site and creating the review app.
+
+<img  src="../docs/agile_images/stint-1.png">
+
+User stories completed during stint 1 include:
+
+* [Account registration](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38826175)
+* [View the menu](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38896996)
+* [View the home page](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38896620)
+* [View reviews](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38896430)
+* [Leave a review](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38826276)
