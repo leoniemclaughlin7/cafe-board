@@ -85,8 +85,16 @@ Café-Board was developed using Agile Development Methodology. A detailed overvi
 * To the left hand side of the navigation bar the name and the logo for café-board can be seen. This logo is clickable and will return the user back to the home page. 
   
 <img src="../docs/readme_images/nav-bar-not-logged-in.png">
-_Navigation bar when user is logged out_
+Navigation bar when user is logged out.
 
 <img src="../docs/readme_images/nav-bar-logged-in.png">
-_Navigation bar when user is logged in_
+Navigation bar when user is logged in.
+
+### Hero image with text overlay
+
+* The hero image is displayed on the home page of this booking site.
+* The hero image is in line with the theme of this site depicting a coffee and a boardgame.
+* It has a text overlay that is responsive and contains a short description of the café.
+  
+<img src="../docs/readme_images/hero-image-cb.png">
 
