@@ -12,3 +12,9 @@ As mentioned in the introduction there was a learning curve associated with usin
 2. Having a dedicated timeframe for issues to be done. This helped me stay on track in terms of timeframe for the project.
 3. Initial overall planning of the project. As a lot of thought went into the user stories I was able to have a better picture of the overall project before starting the work. This sped up production and definitely felt more organised.
 4. Easily see the benefits of collaboration. As I was working on this project on my own it was easy to see how the use of agile would benefit collaboration if multiple people where working on a project together. Especially with the Kanban board, being able to see what is being worked on and the status of the work and also being able to assign this work to individual developers.
+
+## MoSCoW
+
+MoSCoW analysis helps developers understand which tasks to prioritise. It is a process by which labels are added to issues. These labels include 'Must-have', 'Could-have', 'Should-have' and ' Wont-have'.  In my project I had nearly an equal amount of 'Must-have' and 'Should-have' labels. On reflection I should have prioritised more 'Must-have' I also did not use 'Wont-have' and 'Could-have' in this project and this is something I would considering using more of in future projects as I found this technique useful to determine important work to be carried out.  The image below shows a portion of the issues associated with this project and their labels in place.
+
+<img src="../docs/agile_images/MoSCoW.png">
