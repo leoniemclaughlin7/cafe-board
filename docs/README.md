@@ -98,3 +98,11 @@ Navigation bar when user is logged in.
   
 <img src="../docs/readme_images/hero-image-cb.png">
 
+### About section
+
+* The about section contains important information relating to café-board.
+* The first card shows a link to both the menu and list of games.
+* The second card has a short paragraph about café-board.
+* The third card shows the opening times for the café. 
+
+<img src="../docs/readme_images/about-section.png">
