@@ -69,4 +69,5 @@ The colour palette for this website was derived from [Coolors](https://coolors.c
 
 # Agile
 
-Café-Board was developed using the Agile Development Methodology. A detailed overview of the Agile process is available [here.](../docs/AGILE.md)
+Café-Board was developed using Agile Development Methodology. A detailed overview of the Agile process is available [here.](../docs/AGILE.md)
+

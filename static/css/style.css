@@ -16,6 +16,10 @@
     color: white;
 }
 
+.nav-link:hover{
+    color: #A8D0DB;
+}
+
 /* Footer */
 /* https: //stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page */
 footer {
