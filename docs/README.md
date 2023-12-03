@@ -153,3 +153,27 @@ Expanded menu.
 * A user must enter their username and password to sign in to café-board.
 
 <img src="../docs/readme_images/sign-in.png">
+
+### Booking
+
+* A signed in user can make a booking for the café. 
+* Users are asked to fill out a form with important information such as name, email, phone number, booking date, booking time and number attending.
+
+<img src="../docs/readme_images/booking-form.png">
+
+* A date picker widget is used for the booking date, this is more accessible for users. 
+* Any confirmed dates which are fully booked are disabled and displayed in red in the date picker.
+* Autocomplete for this field is turned off. 
+
+<img src="../docs/readme_images/date-picker.png">
+
+* A time picker is available for the user to choose a One hour time slot.
+* The time picker only displays the times in which the café is open. From 10am to 11pm. 
+* Café-board is limited to 20 people on any given time slot. If the user tries to book in more attendees than is available on a given date or time (taking into consideration confirmed bookings) they are greeted with an error message.
+
+<img src="../docs/readme_images/error-message-booking.png">
+
+* Upon completion of a successful booking request the user is directed to their profile page.
+* A message is displayed in green to inform the user of their successful booking request.
+
+<img src="../docs/readme_images/successful-booking.png">
