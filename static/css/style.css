@@ -92,6 +92,16 @@ footer a:hover {
     border-radius: 0;
 }
 
+#menu-link a {
+    text-decoration: none;
+    color: #E49273;
+}
+
+#games-link a {
+    text-decoration: none;
+    color: #A37A74;
+}
+
 /* Colours */
 body {
     background-color: #A8D0DB;

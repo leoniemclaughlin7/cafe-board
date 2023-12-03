@@ -16,8 +16,8 @@
         <div class="card-body">
           <p class="card-text">
             <strong>MENU & GAMES:</strong>
-            <p>You can see our Menu here: <a href="{% url 'menu' %}" aria-label="Navigates to the menu page">Menu</a></p>
-            <p>For a list of our games please check here: <a href="{% url 'games' %}" aria-label="Navigates to the games page" >Games</a></p>
+            <p id="menu-link">You can see our Menu here: <a href="{% url 'menu' %}" aria-label="Navigates to the menu page"><i class="fas fa-bars"></i></a></p>
+            <p id="games-link">For a list of our games please check here: <a href="{% url 'games' %}" aria-label="Navigates to the games page"><i class="fas fa-dice"></i></a></p>
           </p>
         </div>
       </div>
@@ -53,7 +53,7 @@
             <h3><strong>Address:</strong></h3>
             <p>Cafe​&#769;-Board,<br>Donegal street,<br>Dublin</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.890636828619!2d-6.270802840590484!3d53.345213858947815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e82ccaed2b7%3A0xd1d25c00d489c2a6!2sJoy%20of%20Ch%C3%A1!5e0!3m2!1sen!2sie!4v1697738310433!5m2!1sen!2sie"
-                allowfullscreen="" loading="lazy" class="iframe" referrerpolicy="no-referrer-when-downgrade">
+                title="Location of cafe-board" allowfullscreen="" loading="lazy" class="iframe" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
         {% if user.is_authenticated %}
