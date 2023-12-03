@@ -37,6 +37,10 @@ footer a {
     color: white;
 }
 
+footer a:hover {
+    color: #A8D0DB;
+}
+
 #contact-us {
     padding-top: 0px;
 }
