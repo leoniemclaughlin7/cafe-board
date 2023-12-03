@@ -120,3 +120,9 @@ Address and reviews section when user is logged out.
 
 Address and reviews section when user is logged in.
 <img src="../docs/readme_images/address-review-logged-in.png">
+
+### Games 
+
+* A list of games is provided to the user. This enables them to be more prepared about what they would like to play when booking into café-board.
+
+<img src="../docs/readme_images/games.png">
