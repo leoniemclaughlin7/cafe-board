@@ -177,3 +177,23 @@ Expanded menu.
 * A message is displayed in green to inform the user of their successful booking request.
 
 <img src="../docs/readme_images/successful-booking.png">
+
+ ### Profile page
+
+ * From the users profile page they are welcomed in by use of their username and some account information is displayed to the user such as their username, email.
+
+<img src="../docs/readme_images/profile-information.png">
+
+* User can edit their username or email address from this page using the edit button.
+
+<img src="../docs/readme_images/edit-information.png">
+
+* If a user tries to access another user account by changing the id in the address bar, they are redirected to the profile page with an error message.
+
+<img src="../docs/readme_images/error-accessing-different-account.png">
+
+* Users can delete their account from the site.
+* If a user account is deleted any booking associated to the user is also deleted due to the foreign key relationship between user and customer.
+* A pop up model will confirm if the user is sure they would like to delete their account. This is a good safety measure to prevent the user carrying out an action they did not intend.
+
+<img src="../docs/readme_images/delete-account.png">
