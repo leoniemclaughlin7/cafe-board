@@ -236,4 +236,11 @@ Expanded menu.
 
 <img src="../docs/readme_images/logout-message.png">
 
+### Footer
+
+* The footer can be seen on all pages of this site.
+* It houses information for the user such as social links which open in a new tab and a link to contact site administration.
+* The links in the footer change to the sites background colour when hovered over.
+
+<img src="../docs/readme_images/footer.png">
 
