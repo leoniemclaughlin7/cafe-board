@@ -28,36 +28,74 @@ An agile epic is a body of work that can be broken down into smaller segments. S
 The Seven epics where:
 
 1. [Account registration](https://github.com/leoniemclaughlin7/cafe-board/milestone/1?closed=1)
+
+<br/>
+
 Achieving account registration. This feature enables users to login and set up accounts on the site. It is also the bases for functionality that requires a user to be logged in.
 
 <img src="../docs/agile_images/epic-1.png">
 
 2. [Main structure of the site](https://github.com/leoniemclaughlin7/cafe-board/milestone/5?closed=1)
+
+<br/>
+
 This epic revolved around setting up the main structure of the site. This included the user being able to view both the home and the menu page.
 
 <img src="../docs/agile_images/epic-2.png">
 
 3. [Create the review app](https://github.com/leoniemclaughlin7/cafe-board/milestone/6?closed=1)
+
+<br/>
+
 This epic was associated with leaving a Review. Once the user is logged in they are able to leave a review and view reviews. On the home page the user is able to see a scrollable list of reviews.
 
 <img src="../docs/agile_images/epic-3.png">
 
 4. [Create the booking app](https://github.com/leoniemclaughlin7/cafe-board/milestone/2?closed=1)
+
+<br/>
+
 This was the largest epic comprising of Seven user stories all associated with leaving a booking on the site. This epic was comprised of making a booking, view the status of bookings, edit bookings, delete bookings,  as admin approve bookings and Implementing a booking calendar in the booking form. To include excluding dates that are fully booked. Finally Implementing a timepicker for the booking form.
 
 <img src="../docs/agile_images/epic-4.png">
 
 5. [User account administration](https://github.com/leoniemclaughlin7/cafe-board/milestone/3?closed=1)
+
+<br/>
+
 This epic allowed the user to edit their account details such as username and email address and delete their user account.
 
 <img src="../docs/agile_images/epic-5.png">
 
 6. [Create the mail app](https://github.com/leoniemclaughlin7/cafe-board/milestone/4?closed=1)
+
+<br/>
+
 This epic was associated with creating a contact us section. This will allow the user to send an email to one of the admin members with any additional questions they might have.
 
 <img src="../docs/agile_images/epic-6.png">
 
 7. [Responsiveness and project finalisation](https://github.com/leoniemclaughlin7/cafe-board/milestone/7?closed=1)
+
+<br/>
+
 This epic resulted in the site being fully responsive on all devices so as it is more accessible to users and also creating a 404 page, so as users are aware if they try to enter a page that is not found.
 
 <img src="../docs/agile_images/epic-7.png">
+
+## User stories 
+
+A user story is an explanation of a software feature written from the perspective of the end user. Its purpose is to articulate how a software feature will provide value to the customer. User stories were created with the help of GitHub issues. Each user story contains:
+* Title - Short description of the user story. 
+* Description - As a **role** i can **capability** so that **received benefit**.
+* Acceptance criteria - A set of conditions that a feature must meet to be accepted by the user. 
+* Unit tasks - A break down of each task needed to complete user story. 
+* A MoSCoW label - To prioritise tasks. 
+* Assignee -  Who the user store is assigned too. 
+* Milestone - Which epic this user store is associated with.
+
+Below is an example of how the user stories where structured for this project. 
+
+<img  src="../docs/agile_images/user-story.png">
+
+In total 18 User stories where created. In reflection there was opportunity to have many more user stories for the size of this project and more planning could have been done to facilitate a more detailed agile user story count. This is something which I will take forward into future projects carried out. A full list of the user stories associated with this project can be found [here.](https://github.com/leoniemclaughlin7/cafe-board/issues?q=is%3Aissue+is%3Aclosed)
