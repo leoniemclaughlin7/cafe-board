@@ -123,3 +123,17 @@ User stories completed during stint 1 include:
 * [View the home page](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38896620)
 * [View reviews](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38896430)
 * [Leave a review](https://github.com/users/leoniemclaughlin7/projects/3/views/1?pane=issue&itemId=38826276)
+
+### [Café-board - stint 2](https://github.com/users/leoniemclaughlin7/projects/4/views/1)
+
+Stint Two of this project focused on creating the booking app.
+
+<img  src="../docs/agile_images/stint-2.png">
+
+User stories completed during stint 2 include:
+
+* [Booking](https://github.com/users/leoniemclaughlin7/projects/4/views/1?pane=issue&itemId=40185663)
+* [View status of a booking](https://github.com/users/leoniemclaughlin7/projects/4/views/1?pane=issue&itemId=40186873)
+* [Edit booking](https://github.com/users/leoniemclaughlin7/projects/4/views/1?pane=issue&itemId=40187111)
+* [Delete booking](https://github.com/users/leoniemclaughlin7/projects/4/views/1?pane=issue&itemId=40187198)
+* [Approve bookings](https://github.com/users/leoniemclaughlin7/projects/4/views/1?pane=issue&itemId=40186986)
