@@ -216,3 +216,10 @@ Expanded menu.
 * If the user tries to edit a booking which is not theirs, they are directed back to their profile page and an error message is displayed or they are directed to the 404.html page if the booking is not found.
 
 <img src="../docs/readme_images/404.png">
+
+### Logout
+
+* If the user wishes to logout of the site, they can do so by following the link in the nav bar.
+* The user will be asked to confirm they would like to logout.
+
+<img src="../docs/readme_images/logout.png">
