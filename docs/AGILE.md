@@ -18,3 +18,46 @@ As mentioned in the introduction there was a learning curve associated with usin
 MoSCoW analysis helps developers understand which tasks to prioritise. It is a process by which labels are added to issues. These labels include 'Must-have', 'Could-have', 'Should-have' and ' Wont-have'.  In my project I had nearly an equal amount of 'Must-have' and 'Should-have' labels. On reflection I should have prioritised more 'Must-have' I also did not use 'Wont-have' and 'Could-have' in this project and this is something I would considering using more of in future projects as I found this technique useful to determine important work to be carried out.  The image below shows a portion of the issues associated with this project and their labels in place.
 
 <img src="../docs/agile_images/MoSCoW.png">
+
+## Epics
+
+An agile epic is a body of work that can be broken down into smaller segments. Seven epics where created for this project. These epics where created using GitHub Milestones and each user story that corresponded to the epic was linked to each epic. The amount of user stories in each epic was depended on the project but they range from Two to Seven user stories. 
+
+<img src="../docs/agile_images/epics.png">
+
+The Seven epics where:
+
+1. [Account registration](https://github.com/leoniemclaughlin7/cafe-board/milestone/1?closed=1)
+Achieving account registration. This feature enables users to login and set up accounts on the site. It is also the bases for functionality that requires a user to be logged in.
+
+<img src="../docs/agile_images/epic-1.png">
+
+2. [Main structure of the site](https://github.com/leoniemclaughlin7/cafe-board/milestone/5?closed=1)
+This epic revolved around setting up the main structure of the site. This included the user being able to view both the home and the menu page.
+
+<img src="../docs/agile_images/epic-2.png">
+
+3. [Create the review app](https://github.com/leoniemclaughlin7/cafe-board/milestone/6?closed=1)
+This epic was associated with leaving a Review. Once the user is logged in they are able to leave a review and view reviews. On the home page the user is able to see a scrollable list of reviews.
+
+<img src="../docs/agile_images/epic-3.png">
+
+4. [Create the booking app](https://github.com/leoniemclaughlin7/cafe-board/milestone/2?closed=1)
+This was the largest epic comprising of Seven user stories all associated with leaving a booking on the site. This epic was comprised of making a booking, view the status of bookings, edit bookings, delete bookings,  as admin approve bookings and Implementing a booking calendar in the booking form. To include excluding dates that are fully booked. Finally Implementing a timepicker for the booking form.
+
+<img src="../docs/agile_images/epic-4.png">
+
+5. [User account administration](https://github.com/leoniemclaughlin7/cafe-board/milestone/3?closed=1)
+This epic allowed the user to edit their account details such as username and email address and delete their user account.
+
+<img src="../docs/agile_images/epic-5.png">
+
+6. [Create the mail app](https://github.com/leoniemclaughlin7/cafe-board/milestone/4?closed=1)
+This epic was associated with creating a contact us section. This will allow the user to send an email to one of the admin members with any additional questions they might have.
+
+<img src="../docs/agile_images/epic-6.png">
+
+7. [Responsiveness and project finalisation](https://github.com/leoniemclaughlin7/cafe-board/milestone/7?closed=1)
+This epic resulted in the site being fully responsive on all devices so as it is more accessible to users and also creating a 404 page, so as users are aware if they try to enter a page that is not found.
+
+<img src="../docs/agile_images/epic-7.png">
