@@ -244,3 +244,11 @@ Expanded menu.
 
 <img src="../docs/readme_images/footer.png">
 
+### Contact us
+
+* The contact us link in the footer opens a form for the user to fill out.
+* The user is asked for their name, email and the message they would like to send.
+* Emails will be sent to myself as site admin and this was accomplished using Django emails.
+* This is of value to the user as they can have any question they may have about café-board answered or even have their password changed if they have forgotten it.  
+
+<img src="../docs/readme_images/contact-us.png">
