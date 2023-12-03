@@ -150,3 +150,15 @@ User stories completed during stint 3 include:
 * [Timepicker](https://github.com/users/leoniemclaughlin7/projects/5/views/1?pane=issue&itemId=41578875)
 * [Edit username](https://github.com/users/leoniemclaughlin7/projects/5/views/1?pane=issue&itemId=41578914)
 * [Delete account](https://github.com/users/leoniemclaughlin7/projects/5/views/1?pane=issue&itemId=41578962)
+
+### [Café-board - stint 4](https://github.com/users/leoniemclaughlin7/projects/6)
+
+Stint Four of this project was associated with the epics creating the mail app, responsiveness and project finalisation.
+
+<img  src="../docs/agile_images/stint-4.png">
+
+User stories completed during stint 4 include:
+
+* [Contact us](https://github.com/users/leoniemclaughlin7/projects/6/views/1?pane=issue&itemId=43013836)
+* [404 page](https://github.com/users/leoniemclaughlin7/projects/6/views/1?pane=issue&itemId=43503761)
+* [Responsive design](https://github.com/users/leoniemclaughlin7/projects/6/views/1?pane=issue&itemId=43504041)
