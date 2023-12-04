@@ -264,3 +264,14 @@ Expanded menu.
 
 <img src="../docs/readme_images/admin-booking.png">
 
+## Future features
+
+There are a number of future features which could be implemented as part of this project in the future.
+These include:
+
+1. A forgotten password link. At present a user can request a password change via the contact form, however a forgotten password link on the sign up page would be advantageous to include in this project.
+2. Sign in using social accounts. It would be nice to give the user the ability to sign into the site using other social accounts such as Google or Facebook. This future feature would make the sign in process more easily accessible for the user.
+3. Dynamic booking. It would be nice to implement a dynamic booking system that takes in to consideration confirmed bookings and displays which times are unavailable on the given date that was chosen. Although some aspects of dynamic booking is present, in that fully booked dates and a limit on the number of attendees is conveyed to the user. It would be nice to show exactly which times are available on each date. This future feature would also make it easier for admin to confirm bookings as only available dates and times would come through to the admin section.
+4. Notification of a status change. As a future feature it would be advantageous to be able to notify the user of a status change on their booking by email. This would be more programmatic for the user and saves them having to check in on their status repeatedly.
+5. More profile information. It would be nice to allow users to create more profile information such as a profile picture, change their password or enter their customer information so as this is prepopulated for them when carrying out a booking. 
+6. Café-board community. It would be nice to add a Reddit style discussion board that allows users to discuss their game play, hobbies or organise get togethers with other boardgame lovers at café-board.
