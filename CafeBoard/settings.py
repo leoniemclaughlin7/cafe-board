@@ -85,7 +85,7 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 # Tell nose to measure coverage on the 'review' and 'booking' apps
 NOSE_ARGS = [
     '--with-coverage',
-    '--cover-package=review,booking',
+    '--cover-package=review,booking,mail',
 ]
 
 MIDDLEWARE = [
