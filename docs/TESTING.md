@@ -14,7 +14,7 @@ The Python in this project was tested using python testing. Coverage was determi
 
 ## Manual testing
 
-Testing of the functionality of the website can be seen in the following tables. Each section of the website has been tested according to the feature and testing different devices and screen resolutions has been conducted using Google DevTools.
+Testing of the functionality of the website can be seen in the following tables. Each section of the website has been tested according to the feature on the deployed site. Testing different devices and screen resolutions has been conducted using Google DevTools.
 
 ### Navigation Bar 
 
@@ -26,3 +26,10 @@ Testing of the functionality of the website can be seen in the following tables.
 |Register nav link| When clicked it will direct the user to the sign up page |Clicked Register on the nav bar | pass
 | Sign in nav link| When clicked it will direct the user to the sign in page |Clicked Sign in on the nav bar | pass
 |Nav menu responsive |When browser is resized the nav bar will remain responsive across all device sizes |Resized browser across different device sizes| pass
+
+### Hero Image
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Hero image responsive |When the screen size is changed the image does not distort and fits to screen |Resized browser and checked hero image at different screen resolutions | pass
+|Text overlay responsive |At different device resolutions the text overlay remains in position| Resized browser and checked the text overlay at different screen resolutions |pass
