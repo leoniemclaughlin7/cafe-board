@@ -275,3 +275,7 @@ These include:
 4. Notification of a status change. As a future feature it would be advantageous to be able to notify the user of a status change on their booking by email. This would be more programmatic for the user and saves them having to check in on their status repeatedly.
 5. More profile information. It would be nice to allow users to create more profile information such as a profile picture, change their password or enter their customer information so as this is prepopulated for them when carrying out a booking. 
 6. Café-board community. It would be nice to add a Reddit style discussion board that allows users to discuss their game play, hobbies or organise get togethers with other boardgame lovers at café-board.
+
+# Testing
+
+Café-Board was tested using both automated and manual testing methodology. A detailed overview of the testing process is available [here.](../docs/TESTING.md)
