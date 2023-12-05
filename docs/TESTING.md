@@ -203,3 +203,10 @@ tests.py
 <img  src="../docs/testing_images/review-tests.py.png">
 views.py
 <img  src="../docs/testing_images/review-views.py.png">
+
+#### Café-Board
+
+urls.py
+<img  src="../docs/testing_images/urls.py.png">
+settings.py
+<img  src="../docs/testing_images/settings.py.py.png">

@@ -78,7 +78,8 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-# Nose was installed to determin coverage help here: https://django-testing-docs.readthedocs.io/en/latest/coverage.html
+# Nose was installed to determin coverage help here:
+# https://django-testing-docs.readthedocs.io/en/latest/coverage.html
 # Use nose to run all tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
@@ -142,18 +143,18 @@ else:
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME':
+     'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'
+     },
+    {'NAME':
+     'django.contrib.auth.password_validation.MinimumLengthValidator'
+     },
+    {'NAME':
+     'django.contrib.auth.password_validation.CommonPasswordValidator'
+     },
+    {'NAME':
+     'django.contrib.auth.password_validation.NumericPasswordValidator'
+     },
 ]
 
 
