@@ -209,4 +209,4 @@ views.py
 urls.py
 <img  src="../docs/testing_images/urls.py.png">
 settings.py
-<img  src="../docs/testing_images/settings.py.py.png">
+<img  src="../docs/testing_images/settings.py.png">
