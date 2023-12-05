@@ -41,3 +41,17 @@ Testing of the functionality of the website can be seen in the following tables.
 |About cards responsive |When the screen size is changed the about cards will adapt to the different screen size |Resized browser and checked about cards at different screen resolutions | pass
 |Menu icon clickable| When clicked the menu icon will open the menu page| Clicked the menu icon |pass
 |Games icon clickable| When clicked the games icon will open the games page| Clicked the games icon |pass
+
+### Address and reviews section
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Address and reviews section logged out |When user is logged out, address, logo and reviews should be shown to the user |Observed address and review section when user is logged out | pass
+|Address and reviews section logged in |When user is logged in, address, review form and reviews should be shown to the user |Observed address and review section when user is logged in | pass
+|Address I frame | The I frame allows you to zoom in and out of the map, move the map around by clicking and dragging the mouse and will open Google maps in a new tab when 'View larger map' is clicked |Zoomed in and out of I frame, clicked and dragged mouse over I frame and clicked 'View larger map' |pass
+|Reviews scrollable| When the review container is full the user shall be able to scroll through reviews |Scrolled through reviews | pass
+|Leave a review| When the user is logged in they can fill out a form to leave a review by pressing the submit button |Filled out review form and pressed submit button | pass
+|Leave a review - empty input| If the user tries to submit the review form with either of the Two field left blank, a pop up message will detail that these fields are required |Press submit button with field left blank | pass
+|Leave a review - success message |When user submits a review a success message will appear at the top of the page |Observed if a success message is displayed to the user upon submitting a review | pass
+|Address and review section responsive |When the screen size is changed the address and review section will adapt to the different screen size |Resized browser and checked the address and review section at different screen resolutions | pass
+
