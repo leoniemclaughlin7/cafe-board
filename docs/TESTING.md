@@ -33,3 +33,11 @@ Testing of the functionality of the website can be seen in the following tables.
 |--|--|--|--|
 |Hero image responsive |When the screen size is changed the image does not distort and fits to screen |Resized browser and checked hero image at different screen resolutions | pass
 |Text overlay responsive |At different device resolutions the text overlay remains in position| Resized browser and checked the text overlay at different screen resolutions |pass
+
+### About Section
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|About cards responsive |When the screen size is changed the about cards will adapt to the different screen size |Resized browser and checked about cards at different screen resolutions | pass
+|Menu icon clickable| When clicked the menu icon will open the menu page| Clicked the menu icon |pass
+|Games icon clickable| When clicked the games icon will open the games page| Clicked the games icon |pass
