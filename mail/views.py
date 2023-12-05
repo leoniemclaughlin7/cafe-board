@@ -27,6 +27,5 @@ def send_email(request):
             EmailMessage(subject=name, body=message, from_email=from_email,
                          to=recipient_list, reply_to=[from_email], connection=connection).send()
         messages.add_message(request, messages.SUCCESS,
-                             'Your message was sent. Please check your" \
-                                "email for a reply in 24hrs.')
+                             'Your message was sent. Please check your email for a reply in 24hrs.')
     return render(request, 'contact.html')

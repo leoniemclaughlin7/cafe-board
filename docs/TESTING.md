@@ -146,3 +146,4 @@ Testing of the functionality of the website can be seen in the following tables.
 |Contact us form validation |If the form is submitted with a required field empty a pop up will detail this to the user |Tried to submit form with empty name input |pass
 |Email validation| Correct email format must be supplied in the email input, if not a pop up will inform user of this| Submitted contact us form with incorrect email format |pass
 |Contact us page responsive |When the screen size is changed the contact us page will adapt to the different screen size |Resized browser and checked the contact us page at different screen resolutions | pass
+
