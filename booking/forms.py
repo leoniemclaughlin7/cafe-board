@@ -17,15 +17,17 @@ class CustomerForm(forms.ModelForm):
 class BookingForm(forms.ModelForm):
     """
     Booking form set up. It includes the widgets for the
-    datepicker and timepicker. Autocomplete is also turned 
+    datepicker and timepicker. Autocomplete is also turned
     off for these fields.
     """
     class Meta:
         model = Booking
         fields = ('booking_date', 'booking_time', 'number_attending')
         widgets = {
-            'booking_date': DateInput(attrs={'id': 'datepicker', 'autocomplete': 'off'}),
-            'booking_time': TimeInput(attrs={'id': 'timepicker', 'autocomplete': 'off'})
+            'booking_date': DateInput(attrs={'id': 'datepicker',
+                                             'autocomplete': 'off'}),
+            'booking_time': TimeInput(attrs={'id': 'timepicker',
+                                             'autocomplete': 'off'})
         }
 
 

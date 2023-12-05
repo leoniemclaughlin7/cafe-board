@@ -164,3 +164,22 @@ No errors were returned when the CSS was passed through the official [Jigsaw val
 ### Lighthouse Testing
 
 <img  src="../docs/testing_images/lighthouse-cb.png">
+
+### CI Python Linter
+
+All Python files in this project where passed through the [CI Python Linter](https://pep8ci.herokuapp.com/#)
+
+#### Booking app
+
+admin.py
+<img  src="../docs/testing_images/booking-admin.py.png">
+forms.py
+<img  src="../docs/testing_images/booking-forms.py.png">
+models.py
+<img  src="../docs/testing_images/booking-models.py.png">
+tests.py
+<img  src="../docs/testing_images/booking-tests.py.png">
+urls.py
+<img  src="../docs/testing_images/booking-urls.py.png">
+views.py
+<img  src="../docs/testing_images/booking-views.py.png">

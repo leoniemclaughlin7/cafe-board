@@ -9,14 +9,15 @@ from django.contrib import messages
 def limit_no_attendees(date, time, attending):
     """
     Function checks if user is trying to book more than 20 places.
-    It takes into consideration the already confirmed bookings for 
+    It takes into consideration the already confirmed bookings for
     specified date and will return false if the total number exceeds 20.
-    Assistance of finding the sum of the number of attendees column was obtained
-    here: https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query 
+    Assistance of finding the sum of the number of attendees column
+    was obtained here:
+    https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query
     """
     attendees_limit = False
     unavailable = Booking.objects.filter(booking_status=1,
-                                          booking_date=date, booking_time=time)
+                                         booking_date=date, booking_time=time)
     total_attendees = unavailable.aggregate(Sum('number_attending'))[
         'number_attending__sum']
     if total_attendees is None:
@@ -30,10 +31,11 @@ def limit_no_attendees(date, time, attending):
 
 def unavailable_dates():
     """
-    Unavailable dates function takes into consideration if the cafe is 
-    fully booked with confirmed bookings on a given date. This information is then passed to JS
-    to block out dates that are unavailable. Assistance with the use of 
-    annotate: https://stackoverflow.com/questions/60249631/how-to-use-django-annotate 
+    Unavailable dates function takes into consideration if the cafe is
+    fully booked with confirmed bookings on a given date. This information is
+    then passed to JS to block out dates that are unavailable. Assistance with
+    the use of annotate:
+    https://stackoverflow.com/questions/60249631/how-to-use-django-annotate
     """
     confirmed_bookings = Booking.objects.filter(booking_status=1)
     bookings_max_attendees = confirmed_bookings.values(
@@ -46,8 +48,9 @@ def unavailable_dates():
 
 def check_availability(date, time):
     """
-    Check availability returns true if there is availability on a given date/time
-    and false if the date or time is fully booked with confirmed bookings. 
+    Check availability returns true if there is availability on a given
+    date/time and false if the date or time is fully booked with confirmed
+    bookings.
     """
     unavailable = Booking.objects.filter(
         booking_date=date, booking_time=time, booking_status=1)
@@ -64,9 +67,10 @@ def check_availability(date, time):
 def customer_booking(request):
     """
     Customer booking function renders the booking form with booking details and
-    customer details. It checks that both check availability and limit no attendees
-    returns true before allowing a booking to be made. Assistance with saving two forms 
-    came from: https://stackoverflow.com/questions/77218397/how-to-access-instances-of-models-in-view-in-order-to-save-both-forms-at-once?noredirect=1&lq=1 
+    customer details. It checks that both check availability and limit no
+    attendees returns true before allowing a booking to be made. Assistance
+    with saving two forms came from:
+    https://stackoverflow.com/questions/77218397/how-to-access-instances-of-models-in-view-in-order-to-save-both-forms-at-once?noredirect=1&lq=1
     """
     unavailable_booking_dates = []
     if request.method == 'POST':
@@ -78,12 +82,15 @@ def customer_booking(request):
             customer.save()
             booking = booking_form.save(commit=False)
             booking.customer = customer
-            if check_availability(booking.booking_date, booking.booking_time) and limit_no_attendees(booking.booking_date, booking.booking_time, booking.number_attending):
+            if check_availability(booking.booking_date,
+                                  booking.booking_time) and limit_no_attendees(
+                                    booking.booking_date, booking.booking_time,
+                                    booking.number_attending):
                 booking.save()
                 customer_form = CustomerForm()
                 booking_form = BookingForm()
                 messages.add_message(request, messages.SUCCESS,
-                                     'Your booking request was successful, please see status below!')
+                                     'Your booking request was successful!')
                 return redirect('display_booking')
             else:
                 messages.add_message(request, messages.ERROR,
@@ -104,7 +111,7 @@ def customer_booking(request):
 
 def display_booking(request):
     """
-    Display booking shows the user their bookings on 
+    Display booking shows the user their bookings on
     the profile page. Assistance with the queryset filter
     came from: https://www.w3schools.com/django/django_queryset_filter.php
     """
@@ -118,17 +125,17 @@ def display_booking(request):
 
 def edit_booking(request, booking_id, customer_id):
     """
-    Edit booking function will display a pre filled form for a 
-    specific booking of the users choosing and allows this booking to be edited.
-    Help with securing the url:
+    Edit booking function will display a pre filled form for a
+    specific booking of the users choosing and allows this booking
+    to be edited. Help with securing the url:
     https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_
     """
     unavailable_booking_dates = []
     booking = get_object_or_404(Booking, id=booking_id)
     customer = get_object_or_404(Customer, id=customer_id)
     if not customer.user == request.user:
-        messages.error(request, 
-        'Error, you are unauthorised to edit this booking')
+        messages.error(request,
+                       'Error, you are unauthorised to edit this booking')
         return redirect(reverse('display_booking'))
     else:
         if request.method == "POST":
@@ -170,8 +177,8 @@ def edit_user(request, user_id):
     """
     user = get_object_or_404(User, id=user_id)
     if not user == request.user:
-        messages.error(request, 
-        'Error, you are unauthorised to edit this users account')
+        messages.error(request,
+                       'Error you are unauthorised to edit this users account')
         return redirect(reverse('display_booking'))
     else:
         if request.method == "POST":
@@ -188,7 +195,7 @@ def edit_user(request, user_id):
 
 def delete_user(request, user_id):
     """
-    Delete user will delete a users account. A message is displayed to the user 
+    Delete user will delete a users account. A message is displayed to the user
     if deletion is successfull.
     """
     user = get_object_or_404(User, id=user_id)
