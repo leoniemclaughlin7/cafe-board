@@ -51,7 +51,7 @@ Testing of the functionality of the website can be seen in the following tables.
 |Address I frame | The I frame allows you to zoom in and out of the map, move the map around by clicking and dragging the mouse and will open Google maps in a new tab when 'View larger map' is clicked |Zoomed in and out of I frame, clicked and dragged mouse over I frame and clicked 'View larger map' |pass
 |Reviews scrollable| When the review container is full the user shall be able to scroll through reviews |Scrolled through reviews | pass
 |Leave a review| When the user is logged in they can fill out a form to leave a review by pressing the submit button |Filled out review form and pressed submit button | pass
-|Leave a review - empty input| If the user tries to submit the review form with either of the Two field left blank, a pop up message will detail that these fields are required |Press submit button with field left blank | pass
+|Leave a review - form validation | If the user tries to submit the review form with either of the Two field left blank, a pop up message will detail that these fields are required |Press submit button with field left blank | pass
 |Leave a review - success message |When user submits a review a success message will appear at the top of the page |Observed if a success message is displayed to the user upon submitting a review | pass
 |Address and review section responsive |When the screen size is changed the address and review section will adapt to the different screen size |Resized browser and checked the address and review section at different screen resolutions | pass
 
@@ -67,3 +67,15 @@ Testing of the functionality of the website can be seen in the following tables.
 |--|--|--|--|
 |Menu will expand when clicked |When the title of each menu section is clicked it will expand to show the full menu for each section |Clicked the title of each section of the menu | pass
 |Menu page responsive |When the screen size is changed the menu page will adapt to the different screen size |Resized browser and checked the menu page at different screen resolutions | pass
+
+### Register
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Sign in link |If the user clicks the sign in link they are redirected to the sign in page |Clicked sign in link | pass
+|Register form |Once the register form is filled out correctly and sign up button is clicked it will create an account for the user and sign them into the site |Filled out all required fields of register form and clicked sign up | pass
+|Register - success message |When user creates an account they are signed in to café-board and a success message is displayed |Created an account on the register page and observed the success message| pass
+|Register form validation |If sign up is clicked without a required input field being filled a pop up will detail this to the user |Clicked sign up and left username blank| pass
+|Register - password matching |If the user tries to use Two different passwords to create an account, a message will detail 'You must type the same password each time' |Try to create and account with Two different passwords | pass
+|Register - username |If the user tries to create an account with an already in use username a message will appear 'A user with that username already exists' |Try to create and account with a username that already exists | pass
+|Register page responsive |When the screen size is changed the register page will adapt to the different screen size |Resized browser and checked the register page at different screen resolutions | pass
+
