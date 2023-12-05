@@ -3,9 +3,8 @@
 <section class="container profile">
   <div class="row">
     <div
-      class="col-sm-6 welcome d-flex justify-content-center align-items-center"
-    >
-      <h3>Welcome {{user.username}}!</h3>
+      class="col-sm-6 welcome d-flex justify-content-center align-items-center">
+        <h3>Welcome {{user.username}}!</h3>
     </div>
     <div class="col-sm-3 text-center">
       <h3>Profile Information:</h3>
@@ -24,23 +23,12 @@
 </section>
 
 <!-- Modal for deleteing user account https://getbootstrap.com/docs/5.1/components/modal/-->
-<div
-  class="modal fade"
-  id="accountDeleteModal"
-  tabindex="-1"
-  aria-labelledby="delete account"
-  aria-hidden="true"
->
+<div class="modal fade" id="accountDeleteModal" tabindex="-1" aria-labelledby="delete account" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Delete your account</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Are you sure you would like to delete your account?

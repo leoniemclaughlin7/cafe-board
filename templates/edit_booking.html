@@ -7,11 +7,9 @@
       <form method="POST" id="edit-booking-form">
         {% csrf_token %} {{customer_form | crispy }} {{ booking_form | crispy }}
         <div>
-          <p>
             <button type="submit" class="btn btn-lg submit-button" aria-label="Updates booking">
               Update booking
             </button>
-          </p>
         </div>
       </form>
     </div>
