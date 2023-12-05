@@ -55,3 +55,8 @@ Testing of the functionality of the website can be seen in the following tables.
 |Leave a review - success message |When user submits a review a success message will appear at the top of the page |Observed if a success message is displayed to the user upon submitting a review | pass
 |Address and review section responsive |When the screen size is changed the address and review section will adapt to the different screen size |Resized browser and checked the address and review section at different screen resolutions | pass
 
+### Games
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Games page responsive |When the screen size is changed the list of games will adapt to the different screen size |Resized browser and checked the games page at different screen resolutions | pass
