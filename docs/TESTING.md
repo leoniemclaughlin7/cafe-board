@@ -91,6 +91,7 @@ Testing of the functionality of the website can be seen in the following tables.
 |Sign in page responsive |When the screen size is changed the sign in page will adapt to the different screen size |Resized browser and checked the sign in page at different screen resolutions | pass
 
 ### Booking
+
 |Feature | Expect | Action | Result |
 |--|--|--|--|
 |Booking form |Once the booking form is filled out correctly and submit button is clicked it will direct the user to their profile page| Filled in booking form and clicked submit |pass
@@ -110,9 +111,19 @@ Testing of the functionality of the website can be seen in the following tables.
 |Welcome section |The users username will be displayed in a welcome message |Observed welcome section for different users |pass
 |Profile information - edit |The user can edit their username or email by clicking the edit button and they will be directed to an edit page |Clicked edit button |pass
 |Edit profile information |The user can edit their username or email by filling out the form on the edit user page and clicking update user |Edited username and clicked update user |pass
+|Accessing a user account that is not users| If a user tries to edit a user account which is not theirs they will be redirected to the profile page with an error message or directed to the 404 page |Changed the id of a user account in the address bar |pass
 |Delete profile| When the delete account button is clicked a modal will pop up to the user to confirm this action, once delete account is clicked the user will be redirected to the logged out home page with a warning message  |Clicked delete account and clicked delete account again on the modal, tried to sign in using the deleted account details |pass
 |Booking display |If there are no bookings present the user is greeted with a message otherwise their booking is displayed |Checked different users profiles and observed the message or bookings |pass
 |Edit bookings |By clicking edit next to a booking the user can edit details of their booking and confirm these edits by clicking update booking |Clicked edit and then edited the details of first name then clicked update booking |pass
 |Delete bookings |Once the user clicks delete next to a booking the booking will be removed and a warning message is displayed to the user |Clicked delete on a booking |pass
 |Booking container scrollable |If there is a large number of bookings for a profile the booking container will be scrollable |Observed a profile with large number of bookings |pass
+|Accessing a booking that is not users| If a user tries to edit a booking which is not theirs they will be redirected to the profile page with an error message or directed to the 404 page |Changed the id of a booking in the address bar |pass
 |Profile page responsive |When the screen size is changed the profile page will adapt to the different screen size |Resized browser and checked the profile page at different screen resolutions | pass
+
+### Logout
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Logout |Users can logout of the site by clicking the sign out button, they will be redirected to the logged out home page |Clicked the sign out button |pass|
+|Logout - warning message |Once logged out a message will detail this to the user |Logged out of the site and observed the message |pass
+|Logout page responsive |When the screen size is changed the logout page will adapt to the different screen size |Resized browser and checked the logout page at different screen resolutions | pass
