@@ -60,3 +60,10 @@ Testing of the functionality of the website can be seen in the following tables.
 |Feature | Expect | Action | Result |
 |--|--|--|--|
 |Games page responsive |When the screen size is changed the list of games will adapt to the different screen size |Resized browser and checked the games page at different screen resolutions | pass
+
+### Menu
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Menu will expand when clicked |When the title of each menu section is clicked it will expand to show the full menu for each section |Clicked the title of each section of the menu | pass
+|Menu page responsive |When the screen size is changed the menu page will adapt to the different screen size |Resized browser and checked the menu page at different screen resolutions | pass
