@@ -183,3 +183,10 @@ urls.py
 <img  src="../docs/testing_images/booking-urls.py.png">
 views.py
 <img  src="../docs/testing_images/booking-views.py.png">
+
+#### Mail app
+
+tests.py
+<img  src="../docs/testing_images/mail-tests.py.png">
+views.py
+<img  src="../docs/testing_images/mail-views.py.png">
