@@ -1,4 +1,4 @@
-# Testing 
+# Testing
 
 Café-Board was tested using both automated and manual testing methodology.
 
@@ -16,9 +16,9 @@ The Python in this project was tested using python testing. Coverage was determi
 
 Testing of the functionality of the website can be seen in the following tables. Each section of the website has been tested according to the feature on the deployed site. Testing different devices and screen resolutions has been conducted using Google DevTools.
 
-### Navigation Bar 
+### Navigation Bar
 
-|Feature  | Expect  | Action | Result | 
+|Feature  | Expect  | Action | Result |
 |--|--|--|--|
 | Logo  | When the logo is clicked it will return the user to the home page |Clicked logo | pass
 | Home nav link| When clicked it will direct the user to the home page |Clicked Home on the nav bar | pass
@@ -69,6 +69,7 @@ Testing of the functionality of the website can be seen in the following tables.
 |Menu page responsive |When the screen size is changed the menu page will adapt to the different screen size |Resized browser and checked the menu page at different screen resolutions | pass
 
 ### Register
+
 |Feature | Expect | Action | Result |
 |--|--|--|--|
 |Sign in link |If the user clicks the sign in link they are redirected to the sign in page |Clicked sign in link | pass
@@ -102,7 +103,7 @@ Testing of the functionality of the website can be seen in the following tables.
 |Booking time widget |The user will only be able to pick a time when the café is open between 10am and 11pm |Observed the options in the time picker |pass
 |Limit number of attendees |Only 20 spaces is available on any given time slot at the café, once a booking is confirmed it will limit the number of attendees for that time slot, as 2 people are confirmed on the 12th of December at 11 am, trying to book anymore than 18 will result in an error message |Tried to book 19 people in on the 12th of December at 11 am and observed error message |pass
 |Profile icon |Clicking the profile icon will direct user to profile page |Clicked profile icon on booking page |pass
-|Booking page responsive |When the screen size is changed the booking page will adapt to the different screen size |Resized browser and checked the booking page at different screen resolutions | pass 
+|Booking page responsive |When the screen size is changed the booking page will adapt to the different screen size |Resized browser and checked the booking page at different screen resolutions | pass
 
 ### Profile
 
@@ -136,3 +137,12 @@ Testing of the functionality of the website can be seen in the following tables.
 |Instagram link clickable | When clicked the Instagram icon will open a new window to Instagram | Clicked the Instagram icon| pass
 |Contact us | When clicked the contact us link will open the contact form | Clicked the contact us link| pass
 |Footer responsive | Footer will fit the screen size, down to 320px width| Resized the browser and checked the footer at different resolutions | pass
+
+### Contact us
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Contact us form |Once successfully filled out and the submit button is clicked the from will send an email to admin of café-board |Filled out form and clicked submit |pass
+|Contact us form validation |If the form is submitted with a required field empty a pop up will detail this to the user |Tried to submit form with empty name input |pass
+|Email validation| Correct email format must be supplied in the email input, if not a pop up will inform user of this| Submitted contact us form with incorrect email format |pass
+|Contact us page responsive |When the screen size is changed the contact us page will adapt to the different screen size |Resized browser and checked the contact us page at different screen resolutions | pass
