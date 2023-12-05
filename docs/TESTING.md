@@ -79,3 +79,13 @@ Testing of the functionality of the website can be seen in the following tables.
 |Register - username |If the user tries to create an account with an already in use username a message will appear 'A user with that username already exists' |Try to create and account with a username that already exists | pass
 |Register page responsive |When the screen size is changed the register page will adapt to the different screen size |Resized browser and checked the register page at different screen resolutions | pass
 
+### Sign in
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Sign up link |If the user clicks the sign up link they are redirected to the register page |Clicked sign up link | pass
+|Sign in form |Once the sign in form is filled out correctly and sign in button is clicked it will sign them into the site |Filled out all required fields of sign in form and clicked sign in | pass
+|Sign in - success message |When user signs in they are redirected to café-board home page and a success message is displayed |Signed in and observed the success message| pass
+|Sign in form validation |If sign in is clicked without a required input field being filled a pop up will detail this to the user |Clicked sign in and left username blank| pass
+|Sign in form incorrect details |If sign in is clicked with incorrect details entered a message detailing 'The username and/or password you specified are not correct' will appear |Clicked sign in with a not registered username| pass
+|Sign in page responsive |When the screen size is changed the sign in page will adapt to the different screen size |Resized browser and checked the sign in page at different screen resolutions | pass
