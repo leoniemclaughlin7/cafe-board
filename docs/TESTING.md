@@ -127,3 +127,12 @@ Testing of the functionality of the website can be seen in the following tables.
 |Logout |Users can logout of the site by clicking the sign out button, they will be redirected to the logged out home page |Clicked the sign out button |pass|
 |Logout - warning message |Once logged out a message will detail this to the user |Logged out of the site and observed the message |pass
 |Logout page responsive |When the screen size is changed the logout page will adapt to the different screen size |Resized browser and checked the logout page at different screen resolutions | pass
+
+### Footer
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Facebook link clickable | When clicked the Facebook icon will open a new window to Facebook | Clicked the Facebook icon| pass
+|Instagram link clickable | When clicked the Instagram icon will open a new window to Instagram | Clicked the Instagram icon| pass
+|Contact us | When clicked the contact us link will open the contact form | Clicked the contact us link| pass
+|Footer responsive | Footer will fit the screen size, down to 320px width| Resized the browser and checked the footer at different resolutions | pass
