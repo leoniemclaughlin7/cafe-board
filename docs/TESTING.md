@@ -147,3 +147,20 @@ Testing of the functionality of the website can be seen in the following tables.
 |Email validation| Correct email format must be supplied in the email input, if not a pop up will inform user of this| Submitted contact us form with incorrect email format |pass
 |Contact us page responsive |When the screen size is changed the contact us page will adapt to the different screen size |Resized browser and checked the contact us page at different screen resolutions | pass
 
+## Validator Testing
+
+### HTML
+
+No errors were returned when the site was passed through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcafe-board-0e3b1578d9eb.herokuapp.com%2F#l101c14)
+
+<img  src="../docs/testing_images/HTML-validator.png">
+
+### CSS
+
+No errors were returned when the CSS was passed through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
+
+<img  src="../docs/testing_images/CSS-validator.png">
+
+### Lighthouse Testing
+
+<img  src="../docs/testing_images/lighthouse-cb.png">
