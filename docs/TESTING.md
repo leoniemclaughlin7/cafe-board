@@ -103,3 +103,16 @@ Testing of the functionality of the website can be seen in the following tables.
 |Profile icon |Clicking the profile icon will direct user to profile page |Clicked profile icon on booking page |pass
 |Booking page responsive |When the screen size is changed the booking page will adapt to the different screen size |Resized browser and checked the booking page at different screen resolutions | pass 
 
+### Profile
+
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Welcome section |The users username will be displayed in a welcome message |Observed welcome section for different users |pass
+|Profile information - edit |The user can edit their username or email by clicking the edit button and they will be directed to an edit page |Clicked edit button |pass
+|Edit profile information |The user can edit their username or email by filling out the form on the edit user page and clicking update user |Edited username and clicked update user |pass
+|Delete profile| When the delete account button is clicked a modal will pop up to the user to confirm this action, once delete account is clicked the user will be redirected to the logged out home page with a warning message  |Clicked delete account and clicked delete account again on the modal, tried to sign in using the deleted account details |pass
+|Booking display |If there are no bookings present the user is greeted with a message otherwise their booking is displayed |Checked different users profiles and observed the message or bookings |pass
+|Edit bookings |By clicking edit next to a booking the user can edit details of their booking and confirm these edits by clicking update booking |Clicked edit and then edited the details of first name then clicked update booking |pass
+|Delete bookings |Once the user clicks delete next to a booking the booking will be removed and a warning message is displayed to the user |Clicked delete on a booking |pass
+|Booking container scrollable |If there is a large number of bookings for a profile the booking container will be scrollable |Observed a profile with large number of bookings |pass
+|Profile page responsive |When the screen size is changed the profile page will adapt to the different screen size |Resized browser and checked the profile page at different screen resolutions | pass
