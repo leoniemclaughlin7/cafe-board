@@ -167,7 +167,7 @@ No errors were returned when the CSS was passed through the official [Jigsaw val
 
 ### CI Python Linter
 
-All Python files in this project where passed through the [CI Python Linter](https://pep8ci.herokuapp.com/#)
+All relevant Python files in this project where passed through the [CI Python Linter](https://pep8ci.herokuapp.com/#)
 
 #### Booking app
 
@@ -190,3 +190,16 @@ tests.py
 <img  src="../docs/testing_images/mail-tests.py.png">
 views.py
 <img  src="../docs/testing_images/mail-views.py.png">
+
+#### Review app
+
+admin.py
+<img  src="../docs/testing_images/review-admin.py.png">
+forms.py
+<img  src="../docs/testing_images/review-forms.py.png">
+models.py
+<img  src="../docs/testing_images/review-models.py.png">
+tests.py
+<img  src="../docs/testing_images/review-tests.py.png">
+views.py
+<img  src="../docs/testing_images/review-views.py.png">
