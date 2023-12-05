@@ -89,3 +89,17 @@ Testing of the functionality of the website can be seen in the following tables.
 |Sign in form validation |If sign in is clicked without a required input field being filled a pop up will detail this to the user |Clicked sign in and left username blank| pass
 |Sign in form incorrect details |If sign in is clicked with incorrect details entered a message detailing 'The username and/or password you specified are not correct' will appear |Clicked sign in with a not registered username| pass
 |Sign in page responsive |When the screen size is changed the sign in page will adapt to the different screen size |Resized browser and checked the sign in page at different screen resolutions | pass
+
+### Booking
+|Feature | Expect | Action | Result |
+|--|--|--|--|
+|Booking form |Once the booking form is filled out correctly and submit button is clicked it will direct the user to their profile page| Filled in booking form and clicked submit |pass
+|Booking form validation| If any of the required fields are left empty a pop up will detail that these fields are required for submission of the form |Submitted booking form with first name left blank |pass
+|Booking - success message |Once the booking form is submitted successfully a success message will be displayed to the user |Submitted booking form an observed success message |pass
+|Unavailable dates |Once a date is fully booked it will become unavailable for the user to choose |Entered 20 bookings on each time slot for the 30th of December |pass
+|Booking date widget |The user wont be able to pick any date which is fully booked, this date will be disabled and in red |Tried to pick the 30th of December |pass
+|Booking time widget |The user will only be able to pick a time when the café is open between 10am and 11pm |Observed the options in the time picker |pass
+|Limit number of attendees |Only 20 spaces is available on any given time slot at the café, once a booking is confirmed it will limit the number of attendees for that time slot, as 2 people are confirmed on the 12th of December at 11 am, trying to book anymore than 18 will result in an error message |Tried to book 19 people in on the 12th of December at 11 am and observed error message |pass
+|Profile icon |Clicking the profile icon will direct user to profile page |Clicked profile icon on booking page |pass
+|Booking page responsive |When the screen size is changed the booking page will adapt to the different screen size |Resized browser and checked the booking page at different screen resolutions | pass 
+
