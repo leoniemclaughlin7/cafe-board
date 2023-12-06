@@ -294,3 +294,111 @@ All known bugs have been fixed, below is a list of bugs encountered and how they
 |When sending emails via the contact us form, emails where being sent to admin from admin | fixed |Resolved by using the ```EmailMessage``` class and adding the following line of code, ```reply_to=[from_email]```|
 |Review form not posting data to the reviews section| fixed |As the form was posting to the same page ```index.html``` it required an action attribute ```action="{% url 'review' %}"```|
 |Receiving an error when trying to run migrations for the booking app |fixed |I needed to remember to register my models in my admin.py file|
+
+# Deployment 
+
+Setting up a basic Django project and deploying to Heroku.
+
+Step 1: Installing Django and supporting libraries.
+
+1. Install Django and gunicorn: ```pip3 install 'django<4' gunicorn```
+2. Install supporting libraries: ```pip3 install dj_database_url==0.5.0 psycopg2```
+3. Install Cloudinary libraries: ```pip3 install dj3-cloudinary-storage
+pip3 install urllib3==1.26.15``` 
+4. Create requirements file: ```pip3 freeze --local > requirements.txt```
+5. Create project: ```django-admin startproject PROJ_NAME  .```
+6. Create app: ```python3 manage.py startapp APP_NAME```
+7. In settings.py file, add app to installed apps.
+8. In terminal, migrate changes: ```python3 manage.py migrate```
+9. Run server to test: ```python3 manage.py runserver```
+10. In settings.py file, paste hostname into ALLOWED_HOSTS.
+
+Step 2: Create a new external database on elephantsql.com.
+
+1. Log in to your ElephantSQL account.
+2. Click “Create New Instance”.
+3. Set up your plan - Give your plan a name, select the Tiny Turtle plan and leave the tag fields blank.
+4. Click "Select Region" and choose a data centre near you. 
+5. Click "Review", check details and click "Create instance".
+6. On ElephantSQL dashboard click on the name of the project you created.
+7. Copy your ElephantSQL database URL.
+
+Step 3: Deploying to Heroku.
+
+1. Create new Heroku App.
+2. Navigate to settings tab.
+3. Click "Reveal Config Vars".
+4.  Add a Config Var called DATABASE_URL (This is the URL you copied in step 2).
+5. Create an env.py file on top level directory.
+6. In env.py, ```import os``` and set environment variables: ```os.environ["DATABASE_URL"] = "Paste in ElephantSQL database URL"```
+7. Add in secret key: ```os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"```
+8. In heroku.com, add secret key to Config Vars.
+9. In settings.py, reference env.py:
+ ```
+import os 
+import dj_database_url 
+if os.path.isfile("env.py"): 
+import env
+```
+10. Remove the insecure secret key and replace: ```SECRET_KEY = os.environ.get('SECRET_KEY')```
+11. Comment out the old Database section.
+12. Add new Database section:
+```
+DATABASES = {
+
+'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+
+}
+```
+13. In terminal, make migrations: ```python3 manage.py migrate```
+
+Step 4: Store static and media files on Cloudinary.com.
+
+1. Copy your CLOUDINARY_URL from Cloudinary dashboard.
+2. Add Cloudinary URL to env.py: ```os.environ["CLOUDINARY_URL"] = "cloudinary://************************"```
+3. In Heroku, add Cloudinary URL to Config Vars.
+4. Add DISABLE_COLLECTSTATIC to Config Vars: ```DISABLE_COLLECTSTATIC, 1``` (remove before final deployment)
+5. In settings.py,  add Cloudinary libraries to installed apps (order is important).
+```
+INSTALLED_APPS = [
+…,
+'cloudinary_storage',
+'django.contrib.staticfiles',
+'cloudinary',
+…,
+]
+```
+6. Use Cloudinary to store media and static files.
+```
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+```
+7. Link file to the templates directory in Heroku (place under the BASE_DIR line): ```TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')```
+8. Change the templates directory to TEMPLATES_DIR (place within the TEMPLATES array)
+```
+TEMPLATES = [
+  {
+	…,
+	'DIRS': [TEMPLATES_DIR],
+	…,
+	  ],
+   },
+ },
+]
+```
+9.  Add Heroku Hostname to ALLOWED_HOSTS: ```ALLOWED_HOSTS = ["PROJ_NAME.herokuapp.com", "YOUR_HOSTNAME"]```
+10. Create a Procfile on the top level directory.
+11. In Procfile, add code: ```web: gunicorn PROJ_NAME.wsgi``` 
+12. Add, Commit and push files to GitHub.
+13. In Heroku, navigate to the deploy tab.
+14. Select GitHub as the deployment method.
+15. Search for GitHub repository, click connect to link up the GitHub repository to our Heroku app.
+16. You can choose to either automatic deploy or manually deploy the app.
+17. Automatic deploy will build the app each time it is pushed to GitHub. To enable this choose the branch you would like to deploy and click ```Enable Automatic Deploys```. 
+18. To manually deploy the app click ```Deploy Branch```.
+19. To view the deployed app click ```Open app``` at the top of the page.
