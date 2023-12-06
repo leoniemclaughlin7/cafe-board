@@ -279,3 +279,18 @@ These include:
 # Testing
 
 Café-Board was tested using both automated and manual testing methodology. A detailed overview of the testing process is available [here.](../docs/TESTING.md)
+
+# known Bugs
+
+All known bugs have been fixed, below is a list of bugs encountered and how they have been fixed.
+
+|Bug  | Status | Solution  |
+|--|--|--|
+|Saving Two forms as one instance in booking app| fixed| Resolved by using the ```and``` operator to confirm if the forms are valid and then saving the instance individually after all needed actions have been performed.  
+|In display_bookings I only wanted to display the booking for the customer that is currently signed in| fixed| Resolved by using the query set filter ```__in``` which matches the customer to the user.
+|The edit_booking function allowed users to enter other ids in the address bar and edit other users bookings| fixed| Resolved by using ```if  not customer.user == request.user:``` a conditional statement that checks if the user is the owner of the booking.
+|In order to find unavailable dates for the booking app I needed to find all confirmed bookings for any given date | fixed |Resolved by using ```annotate``` to get the sum of the number of attendees on any given date an filter this by the total number of booked attendees which would be 280|
+|In order to limit the number of attendees I needed to find a way to check the number of confirmed attendees on a given date.| fixed |Resolved by adding attendees as a parameter into this function and running this alongside the sum of attendees in a conditional check to see if it was over 20, which is the max attendees for any given time slot|
+|When sending emails via the contact us form, emails where being sent to admin from admin | fixed |Resolved by using the ```EmailMessage``` class and adding the following line of code, ```reply_to=[from_email]```|
+|Review form not posting data to the reviews section| fixed |As the form was posting to the same page ```index.html``` it required an action attribute ```action="{% url 'review' %}"```|
+|Receiving an error when trying to run migrations for the booking app |fixed |I needed to remember to register my models in my admin.py file|

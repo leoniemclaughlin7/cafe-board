@@ -154,7 +154,6 @@ nav {
 .submit-review {
     margin-top: 20px;
     text-align: center;
-
 }
 
 .submit-review button {
@@ -416,7 +415,7 @@ td > a {
 
 @media screen and (max-width: 366px) {
     .nav-link {
-        font-size: 77%;
+       font-size: 77%;
     }
 
 }
