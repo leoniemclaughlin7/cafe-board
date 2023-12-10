@@ -2,6 +2,36 @@
 
 Café-Board was tested using both automated and manual testing methodology.
 
+# Table Of Contents
+
+- [Testing](#testing)
+- [Table Of Contents](#table-of-contents)
+  - [Automated testing](#automated-testing)
+    - [Python testing](#python-testing)
+  - [Manual testing](#manual-testing)
+    - [Navigation Bar](#navigation-bar)
+    - [Hero Image](#hero-image)
+    - [About Section](#about-section)
+    - [Address and reviews section](#address-and-reviews-section)
+    - [Games](#games)
+    - [Menu](#menu)
+    - [Register](#register)
+    - [Sign in](#sign-in)
+    - [Booking](#booking)
+    - [Profile](#profile)
+    - [Logout](#logout)
+    - [Footer](#footer)
+    - [Contact us](#contact-us)
+  - [Validator Testing](#validator-testing)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [Lighthouse Testing](#lighthouse-testing)
+    - [CI Python Linter](#ci-python-linter)
+      - [Booking app](#booking-app)
+      - [Mail app](#mail-app)
+      - [Review app](#review-app)
+      - [Café-Board](#café-board)
+
 ## Automated testing
 
 ### Python testing
