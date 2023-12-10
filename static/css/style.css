@@ -361,7 +361,6 @@ td > a {
 }
 
 /* Games */
-
 .games-1 {
     border: 5px solid #7180AC;
 }
@@ -413,5 +412,19 @@ td > a {
 @media screen and (max-width: 366px) {
     .nav-link {
        font-size: 77%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+        text-align: center;
+    }
+
+    .welcome {
+        margin-bottom: 15px;
+    }
+
+    .bookings {
+        margin-bottom: 15px;
     }
 }

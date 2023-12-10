@@ -3,13 +3,13 @@
 <section class="container profile">
   <div class="row">
     <div
-      class="col-sm-6 welcome d-flex justify-content-center align-items-center">
+      class="col-lg-6 col-md-6 col-sm-12 welcome d-flex justify-content-center align-items-center">
         <h3>Welcome {{user.username}}!</h3>
     </div>
-    <div class="col-sm-3 text-center">
+    <div class="col-lg-3 col-md-3 text-center">
       <h3>Profile Information:</h3>
     </div>
-    <div class="col-sm-3">
+    <div class="col-lg-3 col-md-3">
       <span><strong>Username:</strong> {{ user.username }}</span><br />
       <span><strong>Email:</strong> {{ user.email }}</span><br />
       <a href="{% url 'edit_user' user.id %}" aria-label="Navigates to edit user form" id="edit-account">
