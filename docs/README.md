@@ -481,3 +481,11 @@ Securing URLs - Assistance with securing URLs in edit booking and edit user.
 Django nose - Assistance with determining coverage of python tests was carried out by using Django nose.
 
 * [Django testing docs - Coverage](https://django-testing-docs.readthedocs.io/en/latest/coverage.html)
+
+# Acknowledgements
+
+I would like to thank my mentor Lauren-Nicole Popich, my cohort facilitator Alan Bushell, the Code Institute team and the Slack community.
+
+Also a special thanks to [Niki Tester](https://github.com/Niki-Tester) who was a great help with some questions I had during this project.
+
+[Back to top](#cafe-board)
