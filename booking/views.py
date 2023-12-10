@@ -150,7 +150,12 @@ def edit_booking(request, booking_id, customer_id):
                                     booking.booking_date, booking.booking_time,
                                     booking.number_attending):
                     booking_form.save()
-                return redirect('display_booking')
+                    return redirect('display_booking')
+                    messages.add_message(request, messages.SUCCESS,
+                                     'Your booking request was edited successfully!')
+                else:
+                    messages.add_message(request, messages.ERROR,
+                                     'Date and time unavailable!')
         booking_form = BookingForm(instance=booking)
         customer_form = CustomerForm(instance=customer)
         unavailable_booking_dates = unavailable_dates()
