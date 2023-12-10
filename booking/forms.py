@@ -9,16 +9,12 @@ class CustomerForm(forms.ModelForm):
         fields = ('first_name', 'last_name', 'email', 'phone_number')
 
 
-# https://stackoverflow.com/questions/61077802/how-to-use-a-datepicker-in-a-modelform-in-django
-# https://stackoverflow.com/questions/2580955/disable-autocomplete-on-textfield-in-django
-# https://jqueryui.com/datepicker/
-
-
 class BookingForm(forms.ModelForm):
     """
     Booking form set up. It includes the widgets for the
     datepicker and timepicker. Autocomplete is also turned
-    off for these fields.
+    off for these fields. Assistance with implementing widgets:
+    https://stackoverflow.com/questions/61077802/how-to-use-a-datepicker-in-a-modelform-in-django
     """
     class Meta:
         model = Booking

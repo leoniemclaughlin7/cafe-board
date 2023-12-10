@@ -21,7 +21,7 @@
 }
 
 /* Footer */
-/* https: //stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page */
+/* https://stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page */
 footer {
     background-color: #2B4570;
     color: white;
@@ -144,7 +144,7 @@ nav {
     border: 5px solid #7180AC;
 }
 
-/* https: //stackoverflow.com/questions/21140338/convert-place-name-address-to-google-maps-url-and-iframe */
+/* https://stackoverflow.com/questions/21140338/convert-place-name-address-to-google-maps-url-and-iframe */
 .iframe {
     height: 300px;
     width: 100%;
@@ -200,7 +200,7 @@ nav {
 }
 
 /* Logo 
-https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-bootstrap*/
+https://stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-bootstrap*/
 .logo {
     height: 300px;
     width: 300px;
@@ -215,7 +215,6 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     font-size: 110%;
 }
 
-/*https://picjumbo.com/roasted-coffee-beans/*/
 #coffee-image {
     height: 200px;
     width: 200px;
@@ -224,7 +223,6 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     margin-top: 5px;
 }
 
-/*https://centreforhealthyaging.org/wp-content/uploads/2014/03/loose-tea-vs-teabag.jpg*/
 #tea-image {
     height: 200px;
     width: 200px;
@@ -233,7 +231,6 @@ https: //stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-boots
     margin-top: 5px;
 }
 
-/*https://www.marmiton.org/recettes/recette_pains-au-chocolat_29672.aspx*/
 #snack-image {
     height: 200px;
     width: 200px;
@@ -315,7 +312,7 @@ select {
     color: red !important;
 }
 
-/*https: //stackoverflow.com/questions/43492742/how-to-use-the-disabled-attribute-for-a-a-tag-in-html*/
+/*https://stackoverflow.com/questions/43492742/how-to-use-the-disabled-attribute-for-a-a-tag-in-html*/
 .highlighted-date {
     pointer-events: none;
 }
@@ -389,7 +386,7 @@ td > a {
     }
 }
 
-/*https: //www.sitepoint.com/bootstrap-grid-mastering-flexbox/#:~:text=Every%20direct%20child%20element%20of%20a%20flex%20container,sets%20the%20horizontal%20direction%20from%20right%20to%20left*/
+/*https://www.sitepoint.com/bootstrap-grid-mastering-flexbox/#:~:text=Every%20direct%20child%20element%20of%20a%20flex%20container,sets%20the%20horizontal%20direction%20from%20right%20to%20left*/
 @media screen and (max-width: 992px) {
     #logo-position {
         order: 1;
@@ -417,5 +414,4 @@ td > a {
     .nav-link {
        font-size: 77%;
     }
-
 }

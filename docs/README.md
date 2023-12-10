@@ -402,3 +402,82 @@ TEMPLATES = [
 17. Automatic deploy will build the app each time it is pushed to GitHub. To enable this choose the branch you would like to deploy and click ```Enable Automatic Deploys```. 
 18. To manually deploy the app click ```Deploy Branch```.
 19. To view the deployed app click ```Open app``` at the top of the page.
+
+# Credits
+
+## Images
+
+* [Hero image.](https://tampanewsforce.com/wp-content/uploads/2019/03/extremecoffee-1024x683.jpg)
+* [Card 1: Escapist,  coffee and boardgames.](https://nz.rs-cdn.com/images/nwsop-y0v9m/grid-gallery/464a01b7a9e10c995c5c6853e82a5ae1__6356/zoom474x378z120000cw474.jpg.webp)
+* [Card 2: Timeout, boardgame cafe people.](https://media.timeout.com/images/102903683/image.jpg)
+* [Card 3:  Pinterest, coffee and boardgame.](https://www.pinterest.ph/pin/474215035746611952/visual-search/?x=16&y=16.948717948717956&w=532&h=237&cropSource=6)
+* [Menu: Picjumbo, roasted coffee beans](https://picjumbo.com/roasted-coffee-beans/)
+* [Menu: Centerforhealthyaging, loose tea vs teabag.](https://centreforhealthyaging.org/wp-content/uploads/2014/03/loose-tea-vs-teabag.jpg)
+* [Menu: Marmiton, pains au chocolate](https://www.marmiton.org/recettes/recette_pains-au-chocolat_29672.aspx)
+
+## Code
+
+Footer - Assistance with having footer placed at bottom of page using bootstrap.
+
+* [Stack overflow-footer](https://stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page)
+
+Iframe - Assistance with converting place name address to google maps URL and Iframe.
+
+* [Stack overflow- Iframe](https://stackoverflow.com/questions/21140338/convert-place-name-address-to-google-maps-url-and-iframe)
+
+Logo - Assistance with centering an image using bootstrap and ordering of the logo with bootstrap flexbox.
+
+* [Stack overflow - Logo centering](https://stackoverflow.com/questions/43226511/how-can-i-center-an-image-in-bootstrap)
+* [Sitepoint - Logo bootstrap flexbox](https://www.sitepoint.com/bootstrap-grid-mastering-flexbox/#:~:text=Every%20direct%20child%20element%20of%20a%20flex%20container,sets%20the%20horizontal%20direction%20from%20right%20to%20left)
+
+Date picker -  Assistance with how to initialise a date picker widget, how to disable an array of dates and show an attribute as disabled using pointer events.
+
+* [Stack overflow - Initialise date picker widget](https://stackoverflow.com/questions/61077802/how-to-use-a-datepicker-in-a-modelform-in-django)
+* [Stack overflow - Date picker, disable array of dates](https://stackoverflow.com/questions/15400775/jquery-ui-datepicker-disable-array-of-dates)
+* [Stack overflow - Date picker, Using pointer events](https://stackoverflow.com/questions/43492742/how-to-use-the-disabled-attribute-for-a-a-tag-in-html)
+
+Modal - Pop up modal for deleting user account.
+
+* [Getbootstrap - Modal](https://getbootstrap.com/docs/5.1/components/modal/)
+
+Time picker - jQuery time picker.
+
+* [Timepicker](https://timepicker.co/#)
+
+Send emails -  Assistance with sending emails with Django and help with bug of sending to and from same email.
+
+* [Opensource - Send emails](https://opensource.com/article/22/12/django-send-emails-smtp)
+* [Stack overflow - Resolve sending emails from and to same address](https://stackoverflow.com/questions/59802624/contact-form-sending-emails-from-and-to-the-same-email-django)
+
+Testing python - The following two resources helped with all the python testing in this project.
+
+* [Djangoproject - Testing](https://docs.djangoproject.com/en/4.2/topics/testing/overview/)
+* [Mozilla - Django testing](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
+
+Review model - Assistance with positive integer field on Django models.
+
+* [Geeksforgeeks - Positive integer field](https://www.geeksforgeeks.org/positiveintegerfield-django-models/)
+
+Booking app - Limit number of attendees, assistance of finding the sum of the number of attendees column came from the link below.
+
+* [Stack overflow - Calculating the sum of a coloumn](https://stackoverflow.com/questions/8616343/django-calculate-the-sum-of-the-column-values-through-query)
+
+Assistance with the use of annotate in unavailable dates in the booking app.
+
+* [Stack overflow - Django annotate](https://stackoverflow.com/questions/60249631/how-to-use-django-annotate)
+
+Assistance with saving two forms at once in customer booking in booking app.
+
+* [Stack overflow - Save both forms](https://stackoverflow.com/questions/77218397/how-to-access-instances-of-models-in-view-in-order-to-save-both-forms-at-once?noredirect=1&lq=1)
+
+Assistance with the queryset filter __in, in display booking.
+
+* [W3schools - Queryset filter](https://www.w3schools.com/django/django_queryset_filter.php)
+
+Securing URLs - Assistance with securing URLs in edit booking and edit user.
+
+* [Codu - Securing URLs](https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_)
+
+Django nose - Assistance with determining coverage of python tests was carried out by using Django nose.
+
+* [Django testing docs - Coverage](https://django-testing-docs.readthedocs.io/en/latest/coverage.html)
