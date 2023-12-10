@@ -73,6 +73,26 @@ Café-Board was developed using Agile Development Methodology. A detailed overvi
 
 [Back to top](#café-board)
 
+# Technologies used
+
+* <b>Python</b> - This application was developed using Python.
+* <b>Django</b> - The Django framework was used to develop this application.
+* <b>Django AllAuth</b> - Used to create account, login and logout users of the site.
+* <b>Django Nose</b> - Django nose was used to determine the coverage of python tests.
+* <b>ElephantSQL</b> - ElephantSQL was used to host the external database.  
+* <b>Heroku</b> - Used for deployment.
+* <b>GitHub</b> - The code for this application is stored on GitHub.
+* <b>Git</b> - Used for version control.  
+* <b>Codeanywhere</b> - IDE used for creating the application.
+* <b>Bootstrap</b> - Bootstrap was used for the fast development of the layout and styling of Café-Board.
+* <b>Lucid chart</b> - Used to create the flowchart.
+* <b>DrawSQL</b> - Used to create the entity relationship diagram.
+* <b>Font Awesome</b> - Icons where used to provide visual feedback.
+* <b>HTML</b> - HTML was used to develop the templates in this project.
+* <b>CSS</b> - Custom CSS was created to aid with the styling of Café-Board.
+* <b>JavaScript</b> - Custom JavaScript was used in the development of this site.
+* <b>jQuery</b> - jQuery was used to develop the date and time pickers.
+
 # Features
 
 ## Existing features
