@@ -142,8 +142,14 @@ def edit_booking(request, booking_id, customer_id):
             booking_form = BookingForm(request.POST, instance=booking)
             customer_form = CustomerForm(request.POST, instance=customer)
             if customer_form.is_valid() and booking_form.is_valid():
-                booking_form.save()
                 customer_form.save()
+                booking = booking_form.save(commit=False)
+                booking.customer = customer
+                if check_availability(booking.booking_date,
+                                  booking.booking_time) and limit_no_attendees(
+                                    booking.booking_date, booking.booking_time,
+                                    booking.number_attending):
+                    booking_form.save()
                 return redirect('display_booking')
         booking_form = BookingForm(instance=booking)
         customer_form = CustomerForm(instance=customer)
