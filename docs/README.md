@@ -71,6 +71,8 @@ The colour palette for this website was derived from [Coolors](https://coolors.c
 
 Café-Board was developed using Agile Development Methodology. A detailed overview of the Agile process is available [here.](../docs/AGILE.md)
 
+[Back to top](#café-board)
+
 # Features
 
 ## Existing features
@@ -264,6 +266,8 @@ Expanded menu.
 
 <img src="../docs/readme_images/admin-booking.png">
 
+[Back to top](#café-board)
+
 ## Future features
 
 There are a number of future features which could be implemented as part of this project in the future.
@@ -403,6 +407,8 @@ TEMPLATES = [
 18. To manually deploy the app click ```Deploy Branch```.
 19. To view the deployed app click ```Open app``` at the top of the page.
 
+[Back to top](#café-board)
+
 # Credits
 
 ## Images
@@ -488,4 +494,4 @@ I would like to thank my mentor Lauren-Nicole Popich, my cohort facilitator Alan
 
 Also a special thanks to [Niki Tester](https://github.com/Niki-Tester) who was a great help with some questions I had during this project.
 
-[Back to top](#cafe-board)
+[Back to top](#café-board)
