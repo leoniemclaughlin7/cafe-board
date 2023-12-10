@@ -494,4 +494,4 @@ I would like to thank my mentor Lauren-Nicole Popich, my cohort facilitator Alan
 
 Also a special thanks to [Niki Tester](https://github.com/Niki-Tester) who was a great help with some questions I had during this project.
 
-[Back to top](#café--board)
+[Back to top](#café---board)
