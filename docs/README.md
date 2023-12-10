@@ -7,7 +7,6 @@ A live version of the project can be accessed here: [Café-Board](https://cafe-b
 <img src="../docs/readme_images/am-i-responsive-cafe-board.png">
 
 # Table Of Contents
-
 - [Cafe​́-Board](#café-board)
 - [Table Of Contents](#table-of-contents)
 - [User Experience Design](#user-experience-design)
@@ -113,7 +112,7 @@ The colour palette for this website was derived from [Coolors](https://coolors.c
 
 Café-Board was developed using Agile Development Methodology. A detailed overview of the Agile process is available [here.](../docs/AGILE.md)
 
-[back to top](#cafe​769-board)
+[back to top](#café-board)
 
 # Technologies used
 
@@ -328,7 +327,7 @@ Expanded menu.
 
 <img src="../docs/readme_images/admin-booking.png">
 
-[back to top](#cafe​769-board)
+[back to top](#café-board)
 
 ## Future features
 
@@ -346,7 +345,7 @@ These include:
 
 Café-Board was tested using both automated and manual testing methodology. A detailed overview of the testing process is available [here.](../docs/TESTING.md)
 
-[back to top](#cafe​769-board)
+[back to top](#café-board)
 
 # known Bugs
 
@@ -471,7 +470,7 @@ TEMPLATES = [
 18. To manually deploy the app click ```Deploy Branch```.
 19. To view the deployed app click ```Open app``` at the top of the page.
 
-[back to top](#cafe​769-board)
+[back to top](#café-board)
 
 # Credits
 
@@ -558,4 +557,4 @@ I would like to thank my mentor Lauren-Nicole Popich, my cohort facilitator Alan
 
 Also a special thanks to [Niki Tester](https://github.com/Niki-Tester) who was a great help with some questions I had during this project.
 
-[back to top](#cafe​769-board)
+[back to top](#café-board)
