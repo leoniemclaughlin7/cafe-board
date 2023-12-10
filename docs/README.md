@@ -6,6 +6,48 @@ A live version of the project can be accessed here: [Café-Board](https://cafe-b
 
 <img src="../docs/readme_images/am-i-responsive-cafe-board.png">
 
+# Table Of Contents
+
+- [Cafe​́-Board](#café-board)
+- [Table Of Contents](#table-of-contents)
+- [User Experience Design](#user-experience-design)
+  - [User Demographic](#user-demographic)
+  - [User Stories](#user-stories)
+  - [Flowchart](#flowchart)
+  - [Entity Relationship Diagram](#entity-relationship-diagram)
+  - [Wireframes](#wireframes)
+    - [Home](#home)
+    - [Booking](#booking)
+    - [Profile](#profile)
+  - [Design](#design)
+    - [Colours](#colours)
+- [Agile](#agile)
+- [Technologies used](#technologies-used)
+- [Features](#features)
+  - [Existing features](#existing-features)
+    - [Navigation bar](#navigation-bar)
+    - [Hero image with text overlay](#hero-image-with-text-overlay)
+    - [About section](#about-section)
+    - [Address and reviews section](#address-and-reviews-section)
+    - [Games](#games)
+    - [Menu](#menu)
+    - [Register an account](#register-an-account)
+    - [Sign in](#sign-in)
+    - [Booking](#booking-1)
+    - [Profile page](#profile-page)
+    - [Logout](#logout)
+    - [Footer](#footer)
+    - [Contact us](#contact-us)
+    - [Administration](#administration)
+  - [Future features](#future-features)
+- [Testing](#testing)
+- [known Bugs](#known-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Images](#images)
+  - [Code](#code)
+- [Acknowledgements](#acknowledgements)
+
 # User Experience Design
 
 ## User Demographic
@@ -71,7 +113,7 @@ The colour palette for this website was derived from [Coolors](https://coolors.c
 
 Café-Board was developed using Agile Development Methodology. A detailed overview of the Agile process is available [here.](../docs/AGILE.md)
 
-[Back to top](#café-board)
+[back to top](#cafe​769-board)
 
 # Technologies used
 
@@ -286,7 +328,7 @@ Expanded menu.
 
 <img src="../docs/readme_images/admin-booking.png">
 
-[Back to top](#café-board)
+[back to top](#cafe​769-board)
 
 ## Future features
 
@@ -303,6 +345,8 @@ These include:
 # Testing
 
 Café-Board was tested using both automated and manual testing methodology. A detailed overview of the testing process is available [here.](../docs/TESTING.md)
+
+[back to top](#cafe​769-board)
 
 # known Bugs
 
@@ -427,7 +471,7 @@ TEMPLATES = [
 18. To manually deploy the app click ```Deploy Branch```.
 19. To view the deployed app click ```Open app``` at the top of the page.
 
-[Back to top](#café-board)
+[back to top](#cafe​769-board)
 
 # Credits
 
@@ -514,4 +558,4 @@ I would like to thank my mentor Lauren-Nicole Popich, my cohort facilitator Alan
 
 Also a special thanks to [Niki Tester](https://github.com/Niki-Tester) who was a great help with some questions I had during this project.
 
-[Back to top](#Cafe​&#769;-Board)
+[back to top](#cafe​769-board)
