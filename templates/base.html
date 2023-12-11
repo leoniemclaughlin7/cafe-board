@@ -56,6 +56,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'menu' %}" aria-label="Navigates to the menu page">Menu</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'games' %}" aria-label="Navigates to the games page">Games</a>
+                </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'booking' %}" aria-label="Navigates to the booking page">Booking</a>
