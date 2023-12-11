@@ -409,9 +409,15 @@ td > a {
     }
 }
 
-@media screen and (max-width: 366px) {
+@media screen and (max-width: 446px) {
     .nav-link {
-       font-size: 77%;
+       font-size: 65%;
+    }
+}
+
+@media screen and (max-width: 357px) {
+    .nav-link {
+        font-size: 50%;
     }
 }
 
