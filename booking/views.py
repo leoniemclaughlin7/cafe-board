@@ -136,7 +136,7 @@ def edit_booking(request, booking_id, customer_id):
     if not customer.user == request.user:
         messages.error(request,
                        'Error, you are unauthorised to edit this booking')
-        return redirect(reverse('display_booking'))
+        return redirect(reverse('review'))
     else:
         if request.method == "POST":
             booking_form = BookingForm(request.POST, instance=booking)
@@ -188,7 +188,7 @@ def edit_user(request, user_id):
     if not user == request.user:
         messages.error(request,
                        'Error you are unauthorised to edit this users account')
-        return redirect(reverse('display_booking'))
+        return redirect(reverse('review'))
     else:
         if request.method == "POST":
             form = UserForm(request.POST, instance=user)
