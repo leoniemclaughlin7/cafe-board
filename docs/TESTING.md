@@ -181,7 +181,7 @@ Testing of the functionality of the website can be seen in the following tables.
 
 ### HTML
 
-No errors were returned when the site was passed through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcafe-board-0e3b1578d9eb.herokuapp.com%2F#l101c14)
+No errors were returned when all HTML pages where passed through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcafe-board-0e3b1578d9eb.herokuapp.com%2F#l101c14)
 
 <img  src="../docs/testing_images/HTML-validator.png">
 
@@ -192,6 +192,8 @@ No errors were returned when the CSS was passed through the official [Jigsaw val
 <img  src="../docs/testing_images/CSS-validator.png">
 
 ### Lighthouse Testing
+
+Lighthouse was run to audit performance, accessibility, best practices and SEO for the entire site.
 
 <img  src="../docs/testing_images/lighthouse-cb.png">
 
