@@ -30,7 +30,7 @@ As mentioned in the introduction there was a learning curve associated with usin
 
 ## MoSCoW
 
-MoSCoW analysis helps developers understand which tasks to prioritise. It is a process by which labels are added to issues. These labels include 'Must-have', 'Could-have', 'Should-have' and ' Wont-have'.  In my project I had nearly an equal amount of 'Must-have' and 'Should-have' labels. On reflection I should have prioritised more 'Must-have' I also did not use 'Wont-have' and 'Could-have' in this project and this is something I would considering using more of in future projects as I found this technique useful to determine important work to be carried out.  The image below shows a portion of the issues associated with this project and their labels in place.
+MoSCoW analysis helps developers understand which tasks to prioritise. It is a process by which labels are added to issues. These labels include 'Must-have', 'Could-have', 'Should-have' and ' Wont-have'. In my project I tried to ensure 'Should-have' prioritised user stories was not more than 60% of total. On reflection I should have prioritised more 'Must-have'. I also did not use 'Wont-have' and 'Could-have' in this project and this is something I would considering using more of in future projects as I found this technique useful to determine important work to be carried out.  The image below shows a portion of the issues associated with this project and their labels in place.
 
 <img src="../docs/agile_images/MoSCoW.png">
 
