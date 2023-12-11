@@ -31,7 +31,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['cafe-board-0e3b1578d9eb.herokuapp.com',
                  '8000-leoniemclaughlin7-cafe-b-p0oyzyihtz.us2.codeanyapp.com']
