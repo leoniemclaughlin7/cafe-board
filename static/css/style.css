@@ -177,6 +177,7 @@ nav {
 
 .address-reviews-position {
     padding-bottom: 25px;
+    box-sizing: border-box;
 }
 
 /* Submit buttons */
