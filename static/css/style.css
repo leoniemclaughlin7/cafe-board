@@ -156,6 +156,10 @@ nav {
     text-align: center;
 }
 
+.submit-review textarea {
+    width: 90%;
+}
+
 .submit-review button {
     background-color: #2B4570;
     color: white;
@@ -177,7 +181,6 @@ nav {
 
 .address-reviews-position {
     padding-bottom: 25px;
-    box-sizing: border-box;
 }
 
 /* Submit buttons */
