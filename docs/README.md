@@ -142,8 +142,8 @@ Café-Board was developed using Agile Development Methodology. A detailed overvi
 
 * The navigation bar is seen on all pages of this booking site. 
 * It changes depending if the user is logged in or not. 
-* When the user is not logged in it contains links to the home, menu, register and sign in page. 
-* When the user is logged in it shows links to the home, menu, booking, sign out and profile page. 
+* When the user is not logged in it contains links to the home, menu, games, register and sign in page. 
+* When the user is logged in it shows links to the home, menu, games, booking, sign out and profile page. 
 * When hovered over the links change colour to the sites background colour. 
 * To the left hand side of the navigation bar the name and the logo for café-board can be seen. This logo is clickable and will return the user back to the home page. 
 
